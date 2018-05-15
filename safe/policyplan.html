@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方针规划</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="nobg">
+<div class="row">
+    <div class="box col-md-12">
+        <section class="tile color transparent-white">
+            <div>
+                <div class="btn-g">
+                    <a rel="nofollow" href="#add" role="button" class="btn btn-sm btn-info" data-toggle="modal">新增</a>
+                    <a rel="nofollow" href="#edit" role="button" class="btn btn-sm btn-info" data-toggle="modal">编辑</a>
+                    <a rel="nofollow" href="#del" role="button" class="btn btn-sm btn-info" data-toggle="modal">删除</a>
+                    <a rel="nofollow" href="#look" role="button" class="btn btn-sm btn-info" data-toggle="modal">详情</a>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered"
+                   data-toggle="table"
+                   data-pagination="true"
+                   data-click-to-select="true"
+                   data-single-select="true"
+            >
+                <thead>
+                <tr>
+                    <th data-width="3%" data-field="state" data-checkbox="true"></th>
+                    <th data-width="5%">
+                        编号
+                    </th>
+                    <th style="width: 20%;">
+                        方针
+                    </th>
+                    <th>
+                        制定部门
+                    </th>
+
+                    <th>
+                        时间
+                    </th>
+                    <th>
+                        文件
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td><a href="javascript:void(0)">XXX文件</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td><a href="javascript:void(0)">XXX文件</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td><a href="javascript:void(0)">XXX文件</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+<div class="modal fade" id="add" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">
+                    新增方针规划
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="plan" class="col-sm-3 control-label">方针：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="plan"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="group" class="col-sm-3 control-label">制定部门：</label>
+                        <div class="col-sm-8">
+                            <select name="" class="form-control" id="group">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="col-sm-3 control-label">文件：</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="" id="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="speak" class="col-sm-3 control-label">描述：</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="speak" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="edit" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    编辑方针规划
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="plan" class="col-sm-3 control-label">方针：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="plan"/>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="group" class="col-sm-3 control-label">制定部门：</label>
+                        <div class="col-sm-8">
+                            <select name="" class="form-control" id="group">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="col-sm-3 control-label">文件：</label>
+                        <div class="col-sm-8">
+                            <input type="file" class="" id="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="speak" class="col-sm-3 control-label">描述：</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="speak" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="look" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">
+                    查看方针规划
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="plan" class="col-sm-3 control-label">方针：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control"></p>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="group" class="col-sm-3 control-label">制定部门：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="file" class="col-sm-3 control-label">文件：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="speak" class="col-sm-3 control-label">描述：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">时间：</label>
+                        <div class="col-sm-8">
+                            <p class="form-control"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="del" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title text-danger">
+                    提示
+                </h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center text-danger">删除操作后，数据不可恢复！</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-table/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+</body>
+</html>
