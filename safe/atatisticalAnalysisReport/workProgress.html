@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">月报表</li>
+        <li>季度报表</li>
+        <li>年度报表</li>
+
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">月报表
+            <div  id='monthly-report' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+        <div class="layui-tab-item">季度报表
+            <div  id='quarterly-report' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+        <div class="layui-tab-item">年度报表
+            <div  id='year-report' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+    </div>
+</div>
+
+<script src='../layui/jquery.min.js'></script>
+<script src='../layui/layui.all.js'></script>
+<script src='../layui/echarts.js'></script>
+<script>
+    var monthChart = echarts.init(document.getElementById('monthly-report'));
+    var monthOptions = {
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sep','Oct','nov','Dec'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'直接访问',
+                type:'bar',
+                barWidth: '60%',
+                data:[10, 52, 200, 334, 390, 330, 220,120,50,320,231,12]
+            }
+        ]
+    };
+    monthChart.setOption(monthOptions);
+    var quarterlyChart=echarts.init(document.getElementById('quarterly-report'))
+    var quarterlyOptions = {
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['1月-3月 ', '4月-6月', '7月-9月', '10月-12月'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'直接访问',
+                type:'bar',
+                barWidth: '60%',
+                data:[396, 1100, 330, 800]
+            }
+        ]
+    };
+    quarterlyChart.setOption(quarterlyOptions);
+    var yearChart=echarts.init(document.getElementById('year-report'))
+    var yearOptions = {
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['2012', '2013', '2014', '2015', '2016', '2017', '2018'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'直接访问',
+                type:'bar',
+                barWidth: '60%',
+                data:[1000,952, 2200, 3000, 1500, 870, 220]
+            }
+        ]
+    };
+    yearChart.setOption(yearOptions);
+</script>
+</body>
+</html>

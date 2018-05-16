@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title">
+        <li class="layui-this">车辆</li>
+        <li>设备</li>
+        <li>人员</li>
+
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">车辆
+            <div  id='car' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+        <div class="layui-tab-item">设备
+            <div  id='equipment' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+        <div class="layui-tab-item">人员
+            <div  id='person' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        </div>
+    </div>
+</div>
+
+<script src='../layui/jquery.min.js'></script>
+<script src='../layui/layui.all.js'></script>
+<script src='../layui/echarts.js'></script>
+<script>
+    var carCharts=echarts.init(document.getElementById('car'));
+   var cars= {
+        title : {
+            text: '车辆统计',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['乘用车','客车','商务车','专用车','牵引车']
+        },
+        series : [
+            {
+                name: '车辆统计',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'乘用车'},
+                    {value:310, name:'客车'},
+                    {value:234, name:'商务车'},
+                    {value:135, name:'专用车'},
+                    {value:500, name:'牵引车'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+   carCharts.setOption(cars)
+    var equipmentCharts=echarts.init(document.getElementById('equipment'));
+    var equipments= {
+        title : {
+            text: '设备统计',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['A设备','B设备','C设备','D设备','E设备','F设备','G设备']
+        },
+        series : [
+            {
+                name: '设备统计',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'A设备'},
+                    {value:310, name:'B设备'},
+                    {value:234, name:'C设备'},
+                    {value:135, name:'D设备'},
+                    {value:1000, name:'E设备'},
+                    {value:800, name:'F设备'},
+                    {value:136, name:'G设备'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    equipmentCharts.setOption(equipments)
+    var personCharts=echarts.init(document.getElementById('person'));
+    var persons= {
+        title : {
+            text: '人员统计',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['领导','技术人员','销售人员','生产人员','安全人员','产品人员']
+        },
+        series : [
+            {
+                name: '人员统计',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'领导'},
+                    {value:310, name:'技术人员'},
+                    {value:234, name:'销售人员'},
+                    {value:135, name:'生产人员'},
+                    {value:300, name:'安全人员'},
+                    {value:548, name:'产品人员'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    personCharts.setOption(persons)
+
+</script>
+</body>
+</html>
