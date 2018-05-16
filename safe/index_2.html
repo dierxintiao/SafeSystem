@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>安全管理系统</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar-title {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 800;
+            padding-left: 20px;
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .navbar-title:hover {
+            color: #fff;
+        }
+
+        .layui-layout-admin .layui-header {
+            background: #244dae;
+        }
+
+        .layui-nav-tree .layui-nav-item a:hover {
+            background: -webkit-linear-gradient(left, #366ab4, white); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(right, #366ab4, white); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(right, #366ab4, white); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, #366ab4, white); /* 标准的语法（必须放在最后） */
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">
+            <a class="navbar-title" href="index.html">
+                <strong>安全管理</strong>系统
+            </a>
+        </div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:void (0);" style="color: #fff;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    研究员
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="login.html" target="_self" style="color: #fff;">注销</a></li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域 -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <!-- <li class="layui-nav-item layui-nav-itemed"><a href="index.html">首页</a></li>-->
+                <li class="layui-nav-item layui-nav-itemed layui-this"><a href="allused.html">通用模块</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">管理模块</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="policyplan.html">方针规划</a></dd>
+                        <dd>
+                            <a href="javascript:void(0);">费用管理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="money-plan.html">费用预算</a></dd>
+                                <dd><a href="javascript:void(0);">标准配置</a></dd>
+                                <dd><a href="javascript:void(0);">费用台帐</a></dd>
+                                <dd><a href="javascript:void(0);">统计报表</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">法律法规</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">法规登记</a></dd>
+                                <dd><a href="javascript:void(0);">适用性评价</a></dd>
+                                <dd><a href="javascript:void(0);">合规性评价</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">文件管理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="filebox.html">文件登记</a></dd>
+                                <dd><a href="javascript:void(0);">文件修订</a></dd>
+                                <dd><a href="javascript:void(0);">文件发布</a></dd>
+                                <dd><a href="javascript:void(0);">共享查询</a></dd>
+                                <dd><a href="javascript:void(0);">文件获取</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">机构职责</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">委员会管理</a></dd>
+                                <dd><a href="javascript:void(0);">例会管理</a></dd>
+                                <dd><a href="javascript:void(0);">岗位/人员管理</a></dd>
+                                <dd><a href="javascript:void(0);">领导小组</a></dd>
+                                <dd><a href="javascript:void(0);">机构管理</a></dd>
+                                <dd><a href="javascript:void(0);">统计报表</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">培训教育</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">计划管理</a></dd>
+                                <dd><a href="javascript:void(0);">培训方案</a></dd>
+                                <dd><a href="javascript:void(0);">培训考试</a></dd>
+                                <dd><a href="javascript:void(0);">培训评价</a></dd>
+                                <dd><a href="javascript:void(0);">安全师资库</a></dd>
+                                <dd><a href="javascript:void(0);">安全教材库</a></dd>
+                                <dd><a href="javascript:void(0);">考试题库</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">协商沟通情况</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">安全建议</a></dd>
+                                <dd><a href="javascript:void(0);">通讯记录</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">'三同时'管理</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">车间/班组安全</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">人员台帐</a></dd>
+                                <dd><a href="javascript:void(0);">活动管理</a></dd>
+                                <dd><a href="javascript:void(0);">车间/班组档案</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">相关方管理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">基础信息</a></dd>
+                                <dd><a href="javascript:void(0);">活动管理</a></dd>
+                                <dd><a href="javascript:void(0);">安全告知记录</a></dd>
+                                <dd><a href="javascript:void(0);">安全协议</a></dd>
+                                <dd><a href="javascript:void(0);">评价</a></dd>
+                                <dd><a href="javascript:void(0);">优秀相关方</a></dd>
+                                <dd><a href="javascript:void(0);">黑名单</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">安全标识</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">标识登记</a></dd>
+                                <dd><a href="javascript:void(0);">标识维护</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">设施安全</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">设备信息</a></dd>
+                                <dd><a href="javascript:void(0);">设备档案</a></dd>
+                                <dd><a href="javascript:void(0);">设备维修检测</a></dd>
+                                <dd><a href="javascript:void(0);">设备登记</a></dd>
+                                <dd><a href="javascript:void(0);">统计分析</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">消防安全</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">危险物品/作业</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">危险物品</a></dd>
+                                <dd><a href="javascript:void(0);">危险物品双管理</a></dd>
+                                <dd><a href="javascript:void(0);">危险作业</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">交通安全</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">车辆管理</a></dd>
+                                <dd><a href="javascript:void(0);">驾驶员管理</a></dd>
+                                <dd><a href="javascript:void(0);">上岗证管理</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">职业危害作业</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">应急准备/响应</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">预案管理</a></dd>
+                                <dd><a href="javascript:void(0);">现场方案管理</a></dd>
+                                <dd><a href="javascript:void(0);">事故调查管理</a></dd>
+                                <dd><a href="javascript:void(0);">事故调查处理</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">事件/故处理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">事故信息</a></dd>
+                                <dd><a href="javascript:void(0);">事故调查</a></dd>
+                                <dd><a href="javascript:void(0);">调查处理</a></dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">安全检查</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">周期配置</a></dd>
+                        <dd><a href="javascript:void(0);">项目配置</a></dd>
+                        <dd><a href="javascript:void(0);">不定期检查</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">双重防控建设</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:void(0);">安全风险分级管控</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">策划危险源辨识</a></dd>
+                                <dd><a href="javascript:void(0);">策划危险源</a></dd>
+                                <dd><a href="javascript:void(0);">风险评价/等级确定</a></dd>
+                                <dd><a href="javascript:void(0);">危险源控制措施</a></dd>
+                                <dd><a href="javascript:void(0);">风险告知/预警</a></dd>
+                                <dd><a href="javascript:void(0);">危险源台帐</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">隐患排查治理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">隐患发现</a></dd>
+                                <dd><a href="javascript:void(0);">隐患评价</a></dd>
+                                <dd><a href="javascript:void(0);">隐患治理</a></dd>
+                                <dd><a href="javascript:void(0);">隐患监控治理</a></dd>
+                                <dd><a href="javascript:void(0);">隐患验证销账</a></dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">考核模块</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">考核项目配置</a></dd>
+                        <dd><a href="javascript:void(0);">考核成绩展示</a></dd>
+                        <dd><a href="javascript:void(0);">统计分析/报表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">统计分析/报表</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">自评模块</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">岗位管理</a></dd>
+                        <dd><a href="javascript:void(0);">达标配置</a></dd>
+                        <dd><a href="javascript:void(0);">达标模型</a></dd>
+                        <dd><a href="javascript:void(0);">达标考核</a></dd>
+                        <dd><a href="404.html">权限管理</a></dd>
+                        <dd><a href="javascript:void(0);">达标成绩展示</a></dd>
+                        <dd><a href="javascript:void(0);">达标自评</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">风险预警</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">预警参数</a></dd>
+                        <dd><a href="javascript:void(0);">预警模型</a></dd>
+                        <dd><a href="javascript:void(0);">预警结果</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">安全文化</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">文化手册</a></dd>
+                        <dd><a href="javascript:void(0);">文化活动</a></dd>
+                        <dd><a href="javascript:void(0);">图片管理</a></dd>
+                        <dd><a href="javascript:void(0);">文化学习</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">参数设置</a></dd>
+                        <dd><a href="javascript:void(0);">选择项管理</a></dd>
+                        <dd><a href="javascript:void(0);">组织机构管理</a></dd>
+                        <dd><a href="javascript:void(0);">人员管理</a></dd>
+                        <dd><a href="javascript:void(0);">岗位管理</a></dd>
+                        <dd><a href="javascript:void(0);">角色权限</a></dd>
+                        <dd><a href="javascript:void(0);">流程配置</a></dd>
+                        <dd><a href="javascript:void(0);">数据服务</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">智能化分析</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 右侧内容区域 -->
+    <div class="layui-body" style="overflow:hidden;">
+        <iframe id="iframe" src="allused.html" frameborder="0" width="100%" height="100%"></iframe>
+    </div>
+    <!-- 底部固定区域 -->
+    <div class="layui-footer">
+        安全管理系统
+    </div>
+</div>
+<script type="text/javascript" src="layui/jquery.min.js"></script>
+<script type="text/javascript" src="layui/layui.all.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function () {
+        var element = layui.element;
+    });
+    $('.layui-nav-item a').on('click', function (e) {
+        if (e && e.preventDefault) {
+            e.preventDefault();
+            var target = $(this).attr('href');
+            $("#iframe").attr('src', target);
+        } else {
+            window.event.returnValue = false;
+        }
+    })
+</script>
+</body>
+</html>
