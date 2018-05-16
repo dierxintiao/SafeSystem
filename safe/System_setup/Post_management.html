@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>岗位管理</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+
+<body style="padding: 15px;">
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>岗位管理</legend>
+</fieldset>
+<form action="" class="layui-form search">
+    <div class="layui-btn-group" style="margin-bottom: 10px;">
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">新增</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">修改</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="del">删除</a>
+    </div>
+
+    <table class="layui-table" id="test">
+
+    </table>
+
+    <div id="add" class="layui-hide" style="padding: 15px 0;">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">用户名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">用户密码:</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">性别:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">出生年月:</label>
+                <div class="layui-input-inline">
+                    <input type="date" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">电话:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">岗位名称:</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">备注:</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<script type="text/javascript" src="../layui/jquery.min.js"></script>
+<script type="text/javascript" src="../layui/layui.all.js"></script>
+</body>
+
+</html>
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+        form.render();
+    });
+
+    layui.use('table', function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#test',
+            url: '../json/Post_man.json',
+            height: '400',
+            cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,
+            cols: [
+                [{
+                    type: 'checkbox'
+                }, {
+                    field: 'id',
+                    title: 'ID',
+                    width: 80,
+                    align: 'center'
+                }, {
+                    field: 'user_name',
+                    title: '用户名',
+                    align: 'center'
+                }, {
+                    field: 'full_name',
+                    title: '姓名',
+                    align: 'center'
+                }, {
+                    field: 'sex',
+                    title: '性别',
+                    align: 'center'
+                }, {
+                    field: 'Post_name',
+                    title: '岗位名称',
+                    align: 'center'
+                }, {
+                    field: 'role',
+                    title: '角色',
+                    align: 'center'
+                }, {
+                    field: 'remarks',
+                    title: '备注',
+                    align: 'center'
+                }]
+            ],
+            page: true
+        });
+    });
+
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '人员管理',
+                    area: '800px',
+                    shade: 0,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2:function(index){
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            del: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                layer.open({
+                    type: 1,
+                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                    ,
+                    id: 'layerDemo' + type //防止重复弹出
+                    ,
+                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                    btn: ['确认', '取消'],
+                    btnAlign: 'c' //按钮居中
+                    ,
+                    shade: 0 //不显示遮罩
+                    ,
+                    yes: function (index) {
+                        layer.close(index);
+                    }
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>

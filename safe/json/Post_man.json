@@ -1,0 +1,82 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "user_name": "xiaoer",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"办公室",
+      "remarks":"无"
+    },
+    {
+      "id": "2",
+      "user_name": "zhangsan",
+      "Role_state":"已启用",
+      "Role_type": "普通角色",
+      "Ownership_organization":"人事科",
+      "remarks":"无"
+    },
+    {
+      "id": "3",
+      "user_name": "lisi",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"审计科",
+      "remarks":"无"
+    },
+    {
+      "id": "4",
+      "user_name": "wangwu",
+      "Role_state":"已启用",
+      "Role_type": "普通角色",
+      "Ownership_organization":"人事科",
+      "remarks":"无"
+    },
+    {
+      "id": "5",
+      "user_name": "zhaoliu",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"设备信息科",
+      "remarks":"无"
+    },
+    {
+      "id": "6",
+      "user_name": "mengqi",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"安全管理科",
+      "remarks":"无"
+    },
+    {
+      "id": "7",
+      "user_name": "yangba",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"办公室",
+      "remarks":"无"
+    },
+    {
+      "id": "8",
+      "user_name": "liujiu",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"审计科",
+      "remarks":"无"
+    },
+    {
+      "id": "9",
+      "user_name": "wangda",
+      "Role_state":"已启用",
+      "Role_type": "管理角色",
+      "Ownership_organization":"办公室",
+      "remarks":"无"
+    }
+
+  ]
+}
+
+
