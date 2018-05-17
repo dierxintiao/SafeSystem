@@ -1,5 +1,5 @@
 /** layui-v2.2.6 MIT License By https://www.layui.com */
-.search .layui-input, .layui-select, .layui-textarea{
+.search{
 	height: 30px;
 	line-height: 30px;
 }
@@ -1959,6 +1959,10 @@ a cite {
 	border-style: solid;
 	background-color: #fff;
 	border-radius: 2px
+}
+.layui-input-sm{
+	height: 30px;
+	line-height: 30px;
 }
 
 .layui-input::-webkit-input-placeholder, .layui-select::-webkit-input-placeholder, .layui-textarea::-webkit-input-placeholder {

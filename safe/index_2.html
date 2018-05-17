@@ -68,11 +68,19 @@
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
                 <!-- <li class="layui-nav-item layui-nav-itemed"><a href="index.html">首页</a></li>-->
-                <li class="layui-nav-item layui-nav-itemed layui-this"><a href="allused.html">通用模块</a></li>
+                <li class="layui-nav-item layui-this"><a href="allused.html">通用模块</a></li>
                 <li class="layui-nav-item">
                     <a href="javascript:void(0);">管理模块</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="policyplan.html">方针规划</a></dd>
+                        <dd>
+                            <a href="javascript:void(0);">方针规划</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="Management_module/Policy_management1.html">方针管理（起草者）</a></dd>
+                                <dd><a href="Management_module/Policy_management2.html">方针管理（管理者）</a></dd>
+                                <dd><a href="Management_module/Plan_management1.html">计划管理（基层）</a></dd>
+                                <dd><a href="Management_module/Plan_management2.html">计划管理（审核）</a></dd>
+                            </dl>
+                        </dd>
                         <dd>
                             <a href="javascript:void(0);">费用管理</a>
                             <dl class="layui-nav-child">

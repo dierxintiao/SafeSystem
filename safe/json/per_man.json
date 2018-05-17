@@ -9,6 +9,7 @@
       "full_name":"超级管理员",
       "sex": "男",
       "organ_name":"烟草公司",
+      "Post_name":"维修组长",
       "role":"管理员",
       "remarks":"无"
     },
@@ -18,6 +19,7 @@
       "full_name":"张三",
       "sex": "女",
       "organ_name":"设备信息科",
+      "Post_name":"维修人员",
       "role":"维修人员",
       "remarks":"无"
     },
@@ -27,6 +29,7 @@
       "full_name":"李四",
       "sex": "男",
       "organ_name":"设备信息科",
+      "Post_name":"维修人员",
       "role":"维修人员",
       "remarks":"无"
     },
@@ -36,6 +39,7 @@
       "full_name":"王五",
       "sex": "男",
       "organ_name":"烟叶生产中心",
+      "Post_name":"维修组长",
       "role":"管理员",
       "remarks":"无"
     },
@@ -45,6 +49,7 @@
       "full_name":"赵六",
       "sex": "男",
       "organ_name":"烟叶技术中心",
+      "Post_name":"计划上报",
       "role":"计划上报",
       "remarks":"无"
     },
@@ -54,6 +59,7 @@
       "full_name":"孟奇",
       "sex": "女",
       "organ_name":"烟叶生产中心",
+      "Post_name":"计划上报",
       "role":"计划上报",
       "remarks":"无"
     },
@@ -63,6 +69,7 @@
       "full_name":"杨八",
       "sex": "男",
       "organ_name":"设备信息科",
+      "Post_name":"配件出入库",
       "role":"配件出入库",
       "remarks":"无"
     },
@@ -72,6 +79,7 @@
       "full_name":"刘九",
       "sex": "男",
       "organ_name":"烟叶生产中心",
+      "Post_name":"计划上报",
       "role":"计划上报",
       "remarks":"无"
     },
@@ -81,6 +89,7 @@
       "full_name":"王大",
       "sex": "男",
       "organ_name":"烟叶经营科",
+      "Post_name":"计划上报",
       "role":"计划上报",
       "remarks":"无"
     }
