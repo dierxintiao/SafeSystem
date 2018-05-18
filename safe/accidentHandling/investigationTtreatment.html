@@ -13,25 +13,8 @@
         .layui-table-body {
             overflow: hidden;
         }
-        .layui-table tbody tr:hover{
-            background-color: #fff;
-        }
-        .layui-input{
-            width: 212px;
-            height: 25px;
-        }
-        .left {
-            width: 200px;
-            float: left;
-            border-right: 2px solid #f0f4ff;
-            height: 100%;
-            margin-right: 10px
-        }
-
-        .right {
-            height: 100%;
-            overflow: hidden;
-            padding: 10px
+        .layui-layer-content{
+            padding: 10px;
         }
 
         .magin20 {
@@ -40,16 +23,16 @@
 
         .search {
             display: inline-block;
-            width: 200px;
+            width: 260px;
             float: right;
             position: relative;
-            padding-right: 10px;
         }
 
         .search .padding35 {
-            padding-right: 35px;
-            height: 38px;
-            line-height: 38px;
+            width: 212px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
         }
 
         .icon {
@@ -57,26 +40,33 @@
             right: 10px;
             top: 10px
         }
+        .layui-col-md2{
+            height: 100%;
+            border-right: 2px solid #f0f4ff;
+        }
+        .layui-col-md10{
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-<div class='left'>
+<div class='layui-col-md2'>
     <ul id="treeDemo" class="ztree"></ul>
 </div>
-<div class='right'>
+<div class='layui-col-md10'>
     <div class="layui-btn-group magin20">
-        <button class="layui-btn layui-btn-normal">查询</button>
-        <button class="layui-btn layui-btn-normal">重置</button>
-        <button class="layui-btn layui-btn-normal" data-method="setTop" id='addInfo'>增加</button>
-        <button class="layui-btn layui-btn-normal" data-method="setTop" id='modifyBtn'>修改</button>
-        <button class="layui-btn layui-btn-normal">删除</button>
-        <button class="layui-btn layui-btn-normal" data-method="setTop" id='detailBtn'>查看详情</button>
-        <button class="layui-btn layui-btn-normal">导出</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">查询</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">重置</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
     </div>
     <div class='search'>
-        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+        <input type="text" name="title"  placeholder="请输入..." autocomplete="off"
                class="layui-input padding35">
-        <i class="layui-icon layui-icon-search icon"></i>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">搜索</button>
     </div>
     <table class="layui-hide" id="test"></table>
 </div>
@@ -109,14 +99,12 @@
             <td>事故分类</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010">安全生产事故</option>
                             <option value="021">生产事故</option>
                             <option value="0571">消防隐患</option>
                         </select>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -124,20 +112,18 @@
             <td>事故级别</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010">一般</option>
                             <option value="021">二级</option>
                             <option value="0571">三级</option>
                         </select>
-                    </div>
                 </div>
             </td>
             <td>经济损失</td>
             <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
-                       autocomplete="off" class="layui-input" style='display: inline-block'>万元
+                <input type="text" name="title" required lay-verify="required" placeholder="2"
+                       autocomplete="off" class="layui-input" style='display: inline-block'>
             </td>
         </tr>
         <tr>
@@ -149,14 +135,12 @@
             <td>事故责任分类</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010">主要事故责任</option>
                             <option value="021">其他事故责任</option>
                             <option value="0571">三级</option>
                         </select>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -199,14 +183,12 @@
             <td>部门</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010" selected>南区分公司</option>
                             <option value="021">南区分公司1</option>
                             <option value="0571">北区分公司</option>
                         </select>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -217,14 +199,12 @@
             <td>事故分类</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010">安全生产事故</option>
                             <option value="021" selected>生产事故</option>
                             <option value="0571">消防隐患</option>
                         </select>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -232,20 +212,18 @@
             <td>事故级别</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010" selected>一般</option>
                             <option value="021">二级</option>
                             <option value="0571">三级</option>
                         </select>
-                    </div>
                 </div>
             </td>
             <td>经济损失</td>
             <td>
                 <input type="text" name="title" required lay-verify="required" placeholder="" value=10
-                       autocomplete="off" class="layui-input" style='display: inline-block'>万元
+                       autocomplete="off" class="layui-input" style='display: inline-block'>
             </td>
         </tr>
         <tr>
@@ -257,14 +235,12 @@
             <td>事故责任分类</td>
             <td>
                 <div class="layui-form">
-                    <div class="layui-inline">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
                             <option value="010">主要事故责任</option>
                             <option value="021" selected>其他事故责任</option>
                             <option value="0571">三级</option>
                         </select>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -340,14 +316,13 @@
                 责任分类
             </td>
             <td><div class="layui-form">
-                <div class="layui-inline">
                     <select name="city" lay-verify="required">
                         <option value="">请选择</option>
                         <option value="010">安全生产事故</option>
                         <option value="021" selected>生产事故</option>
                         <option value="0571">消防隐患</option>
                     </select>
-                </div>
+
             </div></td>
         </tr>
         <tr>
@@ -441,6 +416,7 @@
                 , {field: 'enclosure', title: '附件', width: '10%'}
             ]]
             , page: true
+            ,even:true
         });
     });
     // 增加

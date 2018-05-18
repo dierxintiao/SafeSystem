@@ -1952,9 +1952,9 @@ a cite {
 }
 
 .layui-input, .layui-select, .layui-textarea {
-	height: 38px;
+	height: 30px;
 	line-height: 1.3;
-	line-height: 38px \9;
+	line-height: 30px \9;
 	border-width: 1px;
 	border-style: solid;
 	background-color: #fff;
@@ -3397,7 +3397,7 @@ body .layui-table-tips .layui-layer-content {
 	width: 0;
 	height: 0;
 	border-style: solid dashed dashed;
-	border-color: #fff transparent transparent;
+	border-color: #555 transparent transparent;
 	overflow: hidden;
 	cursor: pointer;
 	transition: all .2s;
@@ -3407,13 +3407,13 @@ body .layui-table-tips .layui-layer-content {
 	right: 3px;
 	margin-top: -3px;
 	border-width: 6px;
-	border-top-color: rgba(255, 255, 255, .7)
+	border-top-color: rgba(85, 85, 85, .7)
 }
 
 .layui-nav .layui-nav-mored, .layui-nav-itemed > a .layui-nav-more {
 	margin-top: -9px;
 	border-style: dashed dashed solid;
-	border-color: transparent transparent #fff
+	border-color: transparent transparent #555
 }
 
 .layui-nav-child {
