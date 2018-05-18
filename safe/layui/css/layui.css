@@ -1,5 +1,5 @@
 /** layui-v2.2.6 MIT License By https://www.layui.com */
-.search .layui-input, .layui-select, .layui-textarea{
+.search{
 	height: 30px;
 	line-height: 30px;
 }
