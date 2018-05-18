@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        .layui-table-body {
+            overflow: hidden;
+        }
+        .layui-table tbody tr:hover{
+            background-color: #fff;
+        }
+        .layui-input{
+            width: 212px;
+            height: 25px;
+        }
+        .left {
+            width: 200px;
+            float: left;
+            border-right: 2px solid #f0f4ff;
+            height: 100%;
+            margin-right: 10px
+        }
+
+        .right {
+            height: 100%;
+            overflow: hidden;
+            padding: 10px
+        }
+
+        .magin20 {
+            margin-bottom: 20px
+        }
+
+        .search {
+            display: inline-block;
+            width: 200px;
+            float: right;
+            position: relative;
+            padding-right: 10px;
+        }
+
+        .search .padding35 {
+            padding-right: 35px;
+            height: 38px;
+            line-height: 38px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px
+        }
+    </style>
+</head>
+<body>
+<div class='left'>
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+<div class='right'>
+    <div class="layui-btn-group magin20">
+        <button class="layui-btn layui-btn-normal">查询</button>
+        <button class="layui-btn layui-btn-normal">重置</button>
+        <button class="layui-btn layui-btn-normal" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal" data-method="setTop" id='modifyBtn'>修改</button>
+        <button class="layui-btn layui-btn-normal">删除</button>
+        <button class="layui-btn layui-btn-normal" data-method="setTop" id='detailBtn'>查看详情</button>
+        <button class="layui-btn layui-btn-normal">导出</button>
+    </div>
+    <div class='search'>
+        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off"
+               class="layui-input padding35">
+        <i class="layui-icon layui-icon-search icon"></i>
+    </div>
+    <table class="layui-hide" id="test"></table>
+</div>
+
+<div id='popup' class="layui-hide">
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>填报日期</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
+                       autocomplete="off" class="layui-input"></td>
+            <td>部门</td>
+            <td>
+                <div class="layui-form">
+                    <div class="layui-inline">
+                        <select name="city" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="010">南区分公司</option>
+                            <option value="021">南区分公司1</option>
+                            <option value="0571">北区分公司</option>
+                        </select>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>发生时间</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
+                       autocomplete="off" class="layui-input"></td>
+            <td>事件地点</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input">
+            </td>
+        </tr>
+        <tr>
+            <td>组织人</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="经理"
+                       autocomplete="off" class="layui-input">
+            </td>
+            <td>参加人数</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
+                       autocomplete="off" class="layui-input">
+            </td>
+        </tr>
+        <tr>
+            <td>参加人员姓名</td>
+            <td colspan=3>
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>事件内容</td>
+            <td colspan="3">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>附件</td>
+            <td colspan="3">
+                <input type="file" name="title">
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id='modify' class="layui-hide">
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>填报日期</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2018-01-01'
+                       autocomplete="off" class="layui-input"></td>
+            <td>部门</td>
+            <td>
+                <div class="layui-form">
+                    <div class="layui-inline">
+                        <select name="city" lay-verify="required">
+                            <option value="">请选择</option>
+                            <option value="010">南区分公司</option>
+                            <option value="021" selected>南区分公司1</option>
+                            <option value="0571">北区分公司</option>
+                        </select>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>发生时间</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2017-12-12'
+                       autocomplete="off" class="layui-input"></td>
+            <td>事件地点</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入" value='南区分公司'
+                       autocomplete="off" class="layui-input">
+            </td>
+        </tr>
+        <tr>
+            <td>组织人</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="经理" value='经理A'
+                       autocomplete="off" class="layui-input">
+            </td>
+            <td>参加人数</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
+                       autocomplete="off" class="layui-input" value=5>
+            </td>
+        </tr>
+        <tr>
+            <td>参加人员姓名</td>
+            <td colspan=3>
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">张三，李四，张三，李四，张三，李四，张三，李四</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>事件内容</td>
+            <td colspan="3">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>附件</td>
+            <td colspan="3">
+                <input type="file" name="title">
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id='detail' class="layui-hide">
+    <div style='padding: 10px 0 10px 10px'>
+        事件发生时间从<input type="text" name="title" required  placeholder=""
+                      autocomplete="off" class="layui-input" style='display: inline-block'>
+        事件发生时间到<input type="text" name="title" required
+                      autocomplete="off" class="layui-input" style='display: inline-block'>
+        <button class="layui-btn layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px'>导出</button>
+        <button class="layui-btn layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px'>统计</button>
+    </div>
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>统计项目</td>
+            <td colspan=2>预案事件</td>
+            <td>统计项目</td>
+            <td colspan=2>预案事件</td>
+        </tr>
+        <tr>
+            <td>事件起数（起）</td>
+            <td>一般</td>
+            <td>重大</td>
+            <td>事件起数（起）</td>
+            <td>一般</td>
+            <td>重大</td>
+        </tr>
+        <tr>
+            <td>经济支出</td>
+            <td>2</td>
+            <td>0</td>
+            <td>经济支出</td>
+            <td>2</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>通信时间（小时）</td>
+            <td>
+                0.03
+            </td>
+            <td>0.00</td>
+            <td>
+                责任人
+            </td>
+            <td><div class="layui-form">
+                <div class="layui-inline">
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">经理A</option>
+                        <option value="021" selected>经理</option>
+                        <option value="0571">经理B</option>
+                    </select>
+                </div>
+            </div></td>
+        </tr>
+        <tr>
+            <td>参加人数</td>
+            <td>
+                参见人数：0
+            </td>
+            <td>缺席人数：0</td>
+            <td>
+                主要事件负责人责任
+            </td>
+            <td colspan=2>
+                经理
+            </td>
+        </tr>
+        <tr>
+            <td>代表人</td>
+            <td>
+            </td>
+            <td>审核人</td>
+            <td>
+            </td>
+            <td>公司主管领导</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src='../zTree_v3-master/js/jquery-1.4.4.min.js'></script>
+<script src='../zTree_v3-master/js/jquery.ztree.core.min.js'></script>
+<script src='../layui/layui.all.js'></script>
+<SCRIPT LANGUAGE="JavaScript">
+    var zTreeObj;
+    var setting = {};
+    var zNodes = [
+        {
+            name: "父节点1", open: true, children: [
+                {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}, {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}
+            ]
+        },
+        {
+            name: "父节点2", open: false, children: [
+                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}, {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}]
+        },
+        {
+            name: "父节点3", open: false, children: [
+                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}]
+        },
+        {
+            name: "父节点4", open: false, children: [
+                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test'
+            , url: './fieldPlanManagement.json'
+            , cols: [[
+                {type: 'checkbox'}
+                , {field: 'id', title: '部门', width: '15%'}
+                , {field: 'number', title: '预案编号', width: '12%'}
+                , {field: 'times', title: '发生时间', width: '13%'}
+                , {field: 'category', title: '事件地点', width: '16%'}
+                , {field: 'level', title: '事件内容', width: '10%'}
+                , {field: 'interdiction', title: '组织人', width: '10%'}
+                , {field: 'price', title: '参加人数', width: '10%'}
+                , {field: 'enclosure', title: '附件', width: '10%'}
+            ]]
+            , page: true
+        });
+    });
+    // 增加
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '新增'
+                    , area: '900px'
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#popup')
+                    , btn: ['保存', '关闭'] //只是为了演示
+                    , yes: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#addInfo').on('click', function () {
+            $("#popup").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+    // 修改
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '修改'
+                    , area: '900px'
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#modify')
+                    , btn: ['保存', '关闭'] //只是为了演示
+                    , yes: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#modifyBtn').on('click', function () {
+            $("#modify").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+    // 详情
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '详情'
+                    , area: ['100%','100%']
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#detail')
+                    , btn: ['保存', '关闭'] //只是为了演示
+                    ,  yes: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#detailBtn').on('click', function () {
+            $("#detail").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+</SCRIPT>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "北区分公司",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    },
+    {
+      "id": "北区分公司",
+      "number": "A20091005",
+      "times": "2009-10-16",
+      "category": "北区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理",
+      "price": 1,
+      "enclosure": ""
+    },
+    {
+      "id": "南区分公司1",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    },
+    {
+      "id": "南区分公司2",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    },
+    {
+      "id": "北区分公司",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    },
+    {
+      "id": "北区分公司",
+      "number": "A20091005",
+      "times": "2009-10-16",
+      "category": "北区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理",
+      "price": 1,
+      "enclosure": ""
+    },
+    {
+      "id": "南区分公司1",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    },
+    {
+      "id": "南区分公司2",
+      "number": "A20091005",
+      "times": "2009-10-15",
+      "category": "南区分公司",
+      "level": "事件内容事件内容事件内容事件内容",
+      "interdiction": "经理A",
+      "price": 10,
+      "enclosure": ""
+    }
+  ]
+}
