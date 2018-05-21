@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-tab-content{
+            padding: 0;
+        }
+        .left,.right{
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .left{
+            border-right: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
 <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
@@ -14,14 +28,200 @@
 
     </ul>
     <div class="layui-tab-content">
-        <div class="layui-tab-item layui-show">检查
-            <div  id='inspect' style='width: 600px;height: 200px;margin: 0 auto'></div>
+        <div class="layui-tab-item layui-show">
+            <div class='left'>
+                <div id='inspect' style='width: 100%;height: 200px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div id='inspect-line' style='width: 100%;height: 300px;margin: 10px auto 0;'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        <div class="layui-tab-item">培训
-            <div  id='train' style='width: 600px;height: 200px;margin: 0 auto'></div>
+        <div class="layui-tab-item">
+            <div class='left'>
+                <div  id='train' style='width: 100%;height: 200px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div  id='train-line' style='width: 100%;height: 300px;margin: 10px auto 0;'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        <div class="layui-tab-item">计划
-            <div  id='plan' style='width: 600px;height: 200px;margin: 0 auto'></div>
+        <div class="layui-tab-item">
+            <div class='left'>
+                <div  id='plan' style='width: 100%;height: 200px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div  id='plan-line' style='width: 100%;height: 300px;margin: 10px auto 0;'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
@@ -82,7 +282,35 @@
         ]
     };
     inspectCharts.setOption(inspects)
-    var trainCharts=echarts.init(document.getElementById('train'))
+    var inspectLineCharts=echarts.init(document.getElementById('inspect-line'))
+    var inspectLines={
+        title: {
+            text: '检查',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+    }
+    inspectLineCharts.setOption(inspectLines)
+
+
+    var trainContainer = document.getElementById('train');
+    var resizeTrainContainer = function () {
+        trainContainer.style.width = $('.left').width()+'px';
+    };
+    resizeTrainContainer();
+    var trainCharts = echarts.init(trainContainer);
+    // var trainCharts=echarts.init(document.getElementById('train'))
     var trains = {
         tooltip : {
             trigger: 'item',
@@ -134,7 +362,43 @@
         ]
     };
     trainCharts.setOption(trains)
-    var planCharts=echarts.init(document.getElementById('plan'))
+
+    var trainLineContainer = document.getElementById('train-line');
+    var resizeTrainLineContainer = function () {
+        trainLineContainer.style.width = $('.left').width()+'px';
+    };
+    resizeTrainLineContainer();
+    var trainLineCharts = echarts.init(trainLineContainer);
+    // var trainCharts=echarts.init(document.getElementById('train'))
+    var trainLines = {
+        title: {
+            text: '培训',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [12, 5, 20, 30, 35, 60, 80],
+            type: 'line'
+        }]
+    };
+    trainLineCharts.setOption(trainLines)
+
+
+
+    var planContainer = document.getElementById('plan');
+    var resizePlanContainer = function () {
+        planContainer.style.width = $('.left').width()+'px';
+    };
+    resizePlanContainer();
+    var planCharts = echarts.init(planContainer);
+    // var planCharts=echarts.init(document.getElementById('plan'))
     var plans = {
         tooltip : {
             trigger: 'item',
@@ -186,6 +450,33 @@
         ]
     };
     planCharts.setOption(plans)
+
+    var planLineContainer = document.getElementById('plan-line');
+    var resizePlanLineContainer = function () {
+        planLineContainer.style.width = $('.left').width()+'px';
+    };
+    resizePlanLineContainer();
+    var planLineCharts = echarts.init(planLineContainer);
+    // var planCharts=echarts.init(document.getElementById('plan'))
+    var planLines = {
+        title: {
+            text: '计划',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [120, 86, 20, 30, 35, 60, 180],
+            type: 'line'
+        }]
+    };
+    planLineCharts.setOption(planLines)
 </script>
 </body>
 </html>
