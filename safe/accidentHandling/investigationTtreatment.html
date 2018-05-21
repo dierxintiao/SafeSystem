@@ -18,7 +18,7 @@
         }
 
         .magin20 {
-            margin-bottom: 20px
+            margin-bottom: 10px
         }
 
         .search {
@@ -55,8 +55,6 @@
 </div>
 <div class='layui-col-md10'>
     <div class="layui-btn-group magin20">
-        <button class="layui-btn layui-btn-normal layui-btn-sm">查询</button>
-        <button class="layui-btn layui-btn-normal layui-btn-sm">重置</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
@@ -276,11 +274,10 @@
 <div id='detail' class="layui-hide">
     <div style='padding: 10px 0 10px 10px'>
         事故发生时间从<input type="text" name="title" required  placeholder=""
-                      autocomplete="off" class="layui-input" style='display: inline-block'>
+                      autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
         事故发生时间到<input type="text" name="title" required
-                      autocomplete="off" class="layui-input" style='display: inline-block'>
+                      autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
         <button class="layui-btn layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px'>导出</button>
-        <button class="layui-btn layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px'>统计</button>
     </div>
     <table class="layui-table">
         <tbody>
@@ -398,7 +395,7 @@
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-    var _h = $(window).height()-50;
+    var _h = $(window).height()-40;
     layui.use('table', function () {
         var table = layui.table;
         table.render({
@@ -529,7 +526,7 @@
                     , maxmin: true
                     , offset: 'auto'
                     , content: $('#detail')
-                    , btn: ['保存', '关闭'] //只是为了演示
+                    , btn: ['关闭'] //只是为了演示
                     ,  yes: function (index) {
                         $("#detail").addClass('layui-hide');
                         layer.close(index);
