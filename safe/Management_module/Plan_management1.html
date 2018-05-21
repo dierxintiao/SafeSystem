@@ -32,20 +32,21 @@
                     <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
                 </div>
 
-                <table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}">
-                    <thead>
-                    <tr>
-                        <th lay-data="{checkbox:true}"></th>
-                        <th lay-data="{field:'id'}">ID</th>
-                        <th lay-data="{field:'title'}">标题</th>
-                        <th lay-data="{field:'type'}">类别</th>
-                        <th lay-data="{field:'time'}">时间</th>
-                        <th lay-data="{field:'Enclosure'}">附件</th>
-                        <th lay-data="{field:'state'}">状态</th>
-                        <th lay-data="{field:'remarks'}">备注</th>
-                    </tr>
-                    </thead>
-                </table>
+                <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_1">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th lay-data="{checkbox:true}"></th>-->
+                        <!--<th lay-data="{field:'id'}">ID</th>-->
+                        <!--<th lay-data="{field:'title'}">标题</th>-->
+                        <!--<th lay-data="{field:'type'}">类别</th>-->
+                        <!--<th lay-data="{field:'time'}">时间</th>-->
+                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                        <!--<th lay-data="{field:'state'}">状态</th>-->
+                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                <!--</table>-->
+                <table id="test_1"></table>
             </div>
             <div class="layui-tab-item">
                 <div class="layui-btn-group" style="margin-bottom: 10px;">
@@ -63,20 +64,21 @@
                     <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
                 </div>
 
-                <table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}">
-                    <thead>
-                    <tr>
-                        <th lay-data="{checkbox:true}"></th>
-                        <th lay-data="{field:'id'}">ID</th>
-                        <th lay-data="{field:'title'}">标题</th>
-                        <th lay-data="{field:'type'}">类别</th>
-                        <th lay-data="{field:'time'}">时间</th>
-                        <th lay-data="{field:'Enclosure'}">附件</th>
-                        <th lay-data="{field:'state'}">状态</th>
-                        <th lay-data="{field:'remarks'}">备注</th>
-                    </tr>
-                    </thead>
-                </table>
+                <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_2">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th lay-data="{checkbox:true}"></th>-->
+                        <!--<th lay-data="{field:'id'}">ID</th>-->
+                        <!--<th lay-data="{field:'title'}">标题</th>-->
+                        <!--<th lay-data="{field:'type'}">类别</th>-->
+                        <!--<th lay-data="{field:'time'}">时间</th>-->
+                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                        <!--<th lay-data="{field:'state'}">状态</th>-->
+                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                <!--</table>-->
+                <table id="test_2"></table>
             </div>
             <div class="layui-tab-item">
                 <div class="layui-btn-group" style="margin-bottom: 10px;">
@@ -94,75 +96,76 @@
                     <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
                 </div>
 
-                <table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}">
-                    <thead>
-                    <tr>
-                        <th lay-data="{checkbox:true}"></th>
-                        <th lay-data="{field:'id'}">ID</th>
-                        <th lay-data="{field:'title'}">标题</th>
-                        <th lay-data="{field:'type'}">类别</th>
-                        <th lay-data="{field:'time'}">时间</th>
-                        <th lay-data="{field:'Enclosure'}">附件</th>
-                        <th lay-data="{field:'state'}">状态</th>
-                        <th lay-data="{field:'remarks'}">备注</th>
-                    </tr>
-                    </thead>
-                </table>
+                <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_3">-->
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th lay-data="{checkbox:true}"></th>-->
+                        <!--<th lay-data="{field:'id'}">ID</th>-->
+                        <!--<th lay-data="{field:'title'}">标题</th>-->
+                        <!--<th lay-data="{field:'type'}">类别</th>-->
+                        <!--<th lay-data="{field:'time'}">时间</th>-->
+                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                        <!--<th lay-data="{field:'state'}">状态</th>-->
+                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                <!--</table>-->
+                <table id="test_3"></table>
             </div>
         </div>
     </div>
 
     <div id="draw" class="layui-hide" style="padding: 15px;">
-        <div class="layui-form-item">
-            <label class="layui-form-label">计划类型:</label>
-            <div class="layui-input-block">
-                <select name="interest" lay-filter="aihao">
-                    <option value=""></option>
-                    <option value="0">规划</option>
-                    <option value="1" selected="">方针</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">计划名称:</label>
-            <div class="layui-input-block">
-                <input type="text" name="title" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">规划单位:</label>
-                <div class="layui-input-inline">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">计划类型</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-block" style="margin-left: 0;">
+                        <div class="layui-input-inline">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">规划</option>
+                                <option value="1" selected="">方针</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">计划名称</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">规划单位</td>
+                <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">执行部门:</label>
-                <div class="layui-input-inline">
+                </td>
+                <td width="20%">执行部门</td>
+                <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">日期:</label>
-                <div class="layui-input-inline">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">日期</td>
+                <td width="30%">
                     <input type="date" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">附件:</label>
-                <div class="layui-input-inline" style="padding-left: 10px;padding-top: 7px;">
-                    <input type="file" name="file" id="test_1">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">备注:</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-            </div>
-        </div>
+                </td>
+                <td width="20%">附件</td>
+                <td width="30%">
+                    <input type="file" name="file">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">备注</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
     </div>
 </form>
 
@@ -172,9 +175,204 @@
 
 </html>
 <script>
-    layui.use('form', function () {
+
+    layui.use(['form','table'], function () {
         var form = layui.form;
         form.render();
+        var table = layui.table;
+        table.render();
+    });
+    var _h = $(window).height() - 120;
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test_1',
+            height: _h,
+            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            cols: [
+                [{
+                    type: 'checkbox'
+                }, {
+                    field: 'id',
+                    title: 'ID',
+                    width: 80,
+                    align: 'center'
+                }, {
+                    field: 'number',
+                    title: '编号',
+                    align: 'center'
+                }, {
+                    field: 'year',
+                    title: '年度',
+                    align: 'center'
+                }, {
+                    field: 'project',
+                    title: '项目',
+                    align: 'center'
+                }, {
+                    field: 'department',
+                    title: '部门',
+                    align: 'center'
+                }, {
+                    field: 'type',
+                    title: '类别',
+                    align: 'center'
+                }, {
+                    field: 'people',
+                    title: '填报人',
+                    align: 'center'
+                }, {
+                    field: 'date',
+                    title: '填报时间',
+                    align: 'center'
+                }, {
+                    field: 'spend',
+                    title: '去年花费',
+                    align: 'center'
+                }, {
+                    field: 'standard',
+                    title: '标准',
+                    align: 'center'
+                }, {
+                    field: 'budget',
+                    title: '预算',
+                    align: 'center'
+                }, {
+                    field: 'state',
+                    title: '状态',
+                    align: 'center'
+                }]
+            ],
+            page: true
+        });
+    });
+
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test_2',
+            height: _h,
+            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            cols: [
+                [{
+                    type: 'checkbox'
+                }, {
+                    field: 'id',
+                    title: 'ID',
+                    width: 80,
+                    align: 'center'
+                }, {
+                    field: 'number',
+                    title: '编号',
+                    align: 'center'
+                }, {
+                    field: 'year',
+                    title: '年度',
+                    align: 'center'
+                }, {
+                    field: 'project',
+                    title: '项目',
+                    align: 'center'
+                }, {
+                    field: 'department',
+                    title: '部门',
+                    align: 'center'
+                }, {
+                    field: 'type',
+                    title: '类别',
+                    align: 'center'
+                }, {
+                    field: 'people',
+                    title: '填报人',
+                    align: 'center'
+                }, {
+                    field: 'date',
+                    title: '填报时间',
+                    align: 'center'
+                }, {
+                    field: 'spend',
+                    title: '去年花费',
+                    align: 'center'
+                }, {
+                    field: 'standard',
+                    title: '标准',
+                    align: 'center'
+                }, {
+                    field: 'budget',
+                    title: '预算',
+                    align: 'center'
+                }, {
+                    field: 'state',
+                    title: '状态',
+                    align: 'center'
+                }]
+            ],
+            page: true
+        })
+    });
+
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test_3',
+            height: _h,
+            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            cols: [
+                [{
+                    type: 'checkbox'
+                }, {
+                    field: 'id',
+                    title: 'ID',
+                    width: 80,
+                    align: 'center'
+                }, {
+                    field: 'number',
+                    title: '编号',
+                    align: 'center'
+                }, {
+                    field: 'year',
+                    title: '年度',
+                    align: 'center'
+                }, {
+                    field: 'project',
+                    title: '项目',
+                    align: 'center'
+                }, {
+                    field: 'department',
+                    title: '部门',
+                    align: 'center'
+                }, {
+                    field: 'type',
+                    title: '类别',
+                    align: 'center'
+                }, {
+                    field: 'people',
+                    title: '填报人',
+                    align: 'center'
+                }, {
+                    field: 'date',
+                    title: '填报时间',
+                    align: 'center'
+                }, {
+                    field: 'spend',
+                    title: '去年花费',
+                    align: 'center'
+                }, {
+                    field: 'standard',
+                    title: '标准',
+                    align: 'center'
+                }, {
+                    field: 'budget',
+                    title: '预算',
+                    align: 'center'
+                }, {
+                    field: 'state',
+                    title: '状态',
+                    align: 'center'
+                }]
+            ],
+            page: true
+        });
     });
 
     layui.use('layer', function () { //独立版的layer无需执行这一句
@@ -220,21 +418,29 @@
             modal: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
-                layer.open({
-                    type: 1,
-                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                // layer.open({
+                //     type: 1,
+                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                //     ,
+                //     id: 'layerDemo' + type //防止重复弹出
+                //     ,
+                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                //     btn: ['确认', '取消'],
+                //     btnAlign: 'c' //按钮居中
+                //     ,
+                //     shade: 0.2 //不显示遮罩
+                //     ,
+                //     yes: function (index) {
+                //         layer.close(index);
+                //     }
+                // });
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    id: 'layerDemo' + type //防止重复弹出
-                    ,
-                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                    btn: ['确认', '取消'],
-                    btnAlign: 'c' //按钮居中
-                    ,
-                    shade: 0.2 //不显示遮罩
-                    ,
-                    yes: function (index) {
-                        layer.close(index);
-                    }
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
                 });
             }
         };
@@ -251,14 +457,5 @@
                 method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
-    });
-
-    //绑定原始文件域
-    upload.render({
-        elem: '#test_1',
-        url: '/upload/',
-        done: function (res) {
-            console.log(res)
-        }
     });
 </script>

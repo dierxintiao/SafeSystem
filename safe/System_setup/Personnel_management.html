@@ -20,63 +20,55 @@
 
     </table>
 
-    <div id="add" class="layui-hide" style="padding: 15px 0;">
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">用户名称:</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">用户密码:</label>
-                <div class="layui-input-inline">
-                    <input type="password" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">姓名:</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">性别:</label>
-                <div class="layui-input-inline">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">出生年月:</label>
-                <div class="layui-input-inline">
+    <div id="add" class="layui-hide" style="padding: 10px;">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">用户名称</td>
+                <td width="30%">
                     <input type="date" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">电话:</label>
-                <div class="layui-input-inline">
+                </td>
+                <td width="20%">用户密码</td>
+                <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">机构名称:</label>
-                <div class="layui-input-inline">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">姓名</td>
+                <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
-                </div>
-            </div>
-        </div>
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">备注:</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-            </div>
-        </div>
+                </td>
+                <td width="20%">性别</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">出生年月</td>
+                <td width="30%">
+                    <input type="date" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">电话</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">机构名称</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%"></td>
+                <td width="30%">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">备注</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div id="permiss" class="layui-hide" style="padding: 15px 0;">
@@ -104,14 +96,14 @@
         var form = layui.form;
         form.render();
     });
-
+    var _h = $(window).height()-60;
     layui.use('table', function () {
         var table = layui.table;
 
         table.render({
             elem: '#test',
             url: '../json/per_man.json',
-            height: '400',
+            height: _h,
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
             cols: [
@@ -165,7 +157,7 @@
                     ,
                     title: '人员管理',
                     area: '800px',
-                    shade: 0,
+                    shade: 0.2,
                     maxmin: true,
                     offset: 'auto',
                     content: $('#add'),
@@ -200,7 +192,7 @@
                     ,
                     title: '人员管理',
                     area: '800px',
-                    shade: 0,
+                    shade: 0.2,
                     maxmin: true,
                     offset: 'auto',
                     content: $('#permiss'),
@@ -230,21 +222,30 @@
             del: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
-                layer.open({
-                    type: 1,
-                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                // layer.open({
+                //     type: 1,
+                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                //     ,
+                //     id: 'layerDemo' + type //防止重复弹出
+                //     ,
+                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                //     btn: ['确认', '取消'],
+                //     btnAlign: 'c' //按钮居中
+                //     ,
+                //     shade: 0 //不显示遮罩
+                //     ,
+                //     yes: function (index) {
+                //         layer.close(index);
+                //     }
+                // });
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    id: 'layerDemo' + type //防止重复弹出
-                    ,
-                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                    btn: ['确认', '取消'],
-                    btnAlign: 'c' //按钮居中
-                    ,
-                    shade: 0 //不显示遮罩
-                    ,
-                    yes: function (index) {
-                        layer.close(index);
-                    }
+                    shade: 0.2,
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
                 });
             }
         };
