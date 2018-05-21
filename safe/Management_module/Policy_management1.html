@@ -30,16 +30,18 @@
 
     </table>
 
-    <div id="add" class="layui-hide" style="padding: 10px;">
+    <div id="add" class="layui-hide" style="padding: 15px;">
         <table class="layui-table">
             <tr>
                 <td width="20%">类型</td>
                 <td colspan="3" width="80%">
-                    <select name="interest" lay-filter="aihao">
-                        <option value=""></option>
-                        <option value="0">规划</option>
-                        <option value="1" selected="">方针</option>
-                    </select>
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0">规划</option>
+                            <option value="1" selected="">方针</option>
+                        </select>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -187,7 +189,7 @@
         table.render({
             elem: '#test',
             url: '../json/poli_man.json',
-            height: '500',
+            height: '400',
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
             cols: [
@@ -227,7 +229,6 @@
             page: true
         });
     });
-
 
     layui.use('layer', function () { //独立版的layer无需执行这一句
         var $ = layui.jquery,
@@ -340,33 +341,23 @@
                 });
             },
             modal: function (othis) {
-                var that = this;
                 var type = othis.data('type'),
                     text = othis.text();
-                // layer.open({
-                //     type: 1,
-                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
-                //     ,
-                //     id: 'layerDemo' + type //防止重复弹出
-                //     ,
-                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                //     btn: ['确认', '取消'],
-                //     btnAlign: 'c' //按钮居中
-                //     ,
-                //     shade: 0.2 //不显示遮罩
-                //     ,
-                //     yes: function (index) {
-                //         console.log(that);
-                //         that.click();
-                //         layer.close(index);
-                //     }
-                // });
-                layer.confirm('确定要' + text + '么？', {
-                    btn: ['确认', '取消'] //按钮
-                }, function () {
-                    layer.msg('操作成功', {icon: 1});
-                }, function (msg) {
-                    layer.msg('已取消', {icon: 2});
+                layer.open({
+                    type: 1,
+                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                    ,
+                    id: 'layerDemo' + type //防止重复弹出
+                    ,
+                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                    btn: ['确认', '取消'],
+                    btnAlign: 'c' //按钮居中
+                    ,
+                    shade: 0.2 //不显示遮罩
+                    ,
+                    yes: function (index) {
+                        layer.close(index);
+                    }
                 });
             }
         };
