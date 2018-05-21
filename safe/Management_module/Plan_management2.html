@@ -104,57 +104,67 @@
     </div>
 
     <div id="approval" class="layui-hide" style="padding: 15px;">
-        <div class="layui-form-item">
-            <label class="layui-form-label">审批结果:</label>
-            <div class="layui-input-block">
-                <select name="interest" lay-filter="aihao">
-                    <option value=""></option>
-                    <option value="0">通过</option>
-                    <option value="1" selected="">不通过</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">审批意见:</label>
-            <div class="layui-input-block">
-                <input type="text" name="title" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">审批文件:</label>
-                <div class="layui-input-block" style="padding-left: 10px;padding-top: 7px;">
-                    <input type="file" name="file" id="test_1">
-                </div>
-            </div>
-        </div>
+        <table class="layui-table">
+            <tr>
+                <td width="20%">审批结果</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0">通过</option>
+                            <option value="1" selected="">不通过</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">审批意见</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">审批文件文件</td>
+                <td width="80%">
+                    <input type="file" name="file">
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div id="lower" class="layui-hide" style="padding: 15px;">
-        <div class="layui-form-item">
-            <label class="layui-form-label">下发部门:</label>
-            <div class="layui-input-block">
-                <select name="interest" lay-filter="aihao">
-                    <option value=""></option>
-                    <option value="0">通过</option>
-                    <option value="1" selected="">不通过</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">审批意见:</label>
-            <div class="layui-input-block">
-                <input type="text" name="title" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <div class="layui-inline">
-                <label class="layui-form-label">审批文件:</label>
-                <div class="layui-input-block" style="padding-left: 10px;padding-top: 7px;">
-                    <input type="file" name="file" id="test_1">
-                </div>
-            </div>
-        </div>
+        <table class="layui-table">
+            <tr>
+                <td width="20%">下发部门</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0">维修部</option>
+                            <option value="1" selected="">技术部</option>
+                            <option value="2">审核部</option>
+                            <option value="3">办公室</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">审批意见</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">审批文件文件</td>
+                <td width="80%">
+                    <input type="file" name="file">
+                </td>
+            </tr>
+        </table>
     </div>
 </form>
 
@@ -260,12 +270,4 @@
         });
     });
 
-    //绑定原始文件域
-    upload.render({
-        elem: '#test_1',
-        url: '/upload/',
-        done: function (res) {
-            console.log(res)
-        }
-    });
 </script>
