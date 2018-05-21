@@ -389,11 +389,12 @@
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-
+    var _h = $(window).height()-50;
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test'
+            ,height: _h
             , url: './accidentInformation.json'
             , cols: [[
                 {type: 'checkbox'}
