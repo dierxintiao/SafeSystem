@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>方针管理（起草者）</title>
-    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/layui/css/select.css">
 </head>
 
 <body style="padding: 15px;">
-<form action="" class="layui-form search layui-form-pane">
+<form action="" class="layui-form">
     <div class="layui-btn-group" style="margin-bottom: 10px;">
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">起草</a>
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">编辑</a>
@@ -25,21 +26,18 @@
         </div>
         <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
     </div>
-
     <table class="layui-table" id="test">
-
     </table>
-
     <div id="add" class="layui-hide" style="padding: 15px;">
         <table class="layui-table">
             <tr>
                 <td width="20%">类型</td>
                 <td colspan="3" width="80%">
                     <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">规划</option>
-                            <option value="1" selected="">方针</option>
+                        <select name="">
+                            <option value="">方针</option>
+                            <option>规划</option>
+
                         </select>
                     </div>
                 </td>
@@ -80,17 +78,19 @@
             </tr>
         </table>
     </div>
-
     <div id="Collection" class="layui-hide" style="padding: 15px;">
         <table class="layui-table">
             <tr>
                 <td width="20%">征集对象</td>
                 <td colspan="3" width="80%">
                     <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">规划</option>
-                            <option value="1" selected="">方针</option>
+                        <select name="interest" multiple>
+                            <option value="">张三</option>
+                            <option value="">李四</option>
+                            <option value="">赵五</option>
+                            <option value="">周杰</option>
+                            <option value="">范冰冰</option>
+                            <option value="">王思聪</option>
                         </select>
                     </div>
                 </td>
@@ -103,7 +103,6 @@
             </tr>
         </table>
     </div>
-
     <div id="revise" class="layui-hide" style="padding: 15px;">
         <div class="layui-form-item">
             <label class="layui-form-label">类型:</label>
@@ -171,18 +170,14 @@
         </div>
     </div>
 </form>
-
-<script type="text/javascript" src="../layui/jquery.min.js"></script>
-<script type="text/javascript" src="../layui/layui.all.js"></script>
-</body>
-
-</html>
+<script type="text/javascript" src="../assets/layui/layui.js"></script>
 <script>
-    layui.use('form', function () {
+
+    layui.use(['form','code'], function () {
         var form = layui.form;
+        $ = layui.$;
         form.render();
     });
-
     layui.use('table', function () {
         var table = layui.table;
 
@@ -229,7 +224,6 @@
             page: true
         });
     });
-
     layui.use('layer', function () { //独立版的layer无需执行这一句
         var $ = layui.jquery,
             layer = layui.layer; //独立版的layer无需执行这一句
@@ -387,13 +381,7 @@
             active[method] ? active[method].call(this, othis) : '';
         });
     });
-
-    //绑定原始文件域
-    upload.render({
-        elem: '#test_1',
-        url: '/upload/',
-        done: function (res) {
-            console.log(res)
-        }
-    });
 </script>
+</body>
+
+</html>
