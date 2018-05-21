@@ -8,7 +8,6 @@
 </head>
 
 <body style="padding: 15px;">
-
 <form action="" class="layui-form search layui-form-pane">
     <div class="layui-btn-group" style="margin-bottom: 10px;">
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">起草</a>
@@ -183,14 +182,14 @@
         var form = layui.form;
         form.render();
     });
-    var _h = $(window).height()-60;
+
     layui.use('table', function () {
         var table = layui.table;
 
         table.render({
             elem: '#test',
             url: '../json/poli_man.json',
-            height: _h,
+            height: '400',
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
             cols: [
