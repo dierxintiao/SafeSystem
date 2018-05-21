@@ -3397,7 +3397,7 @@ body .layui-table-tips .layui-layer-content {
 	width: 0;
 	height: 0;
 	border-style: solid dashed dashed;
-	border-color: #555 transparent transparent;
+	border-color: #fff transparent transparent;
 	overflow: hidden;
 	cursor: pointer;
 	transition: all .2s;
@@ -3407,13 +3407,13 @@ body .layui-table-tips .layui-layer-content {
 	right: 3px;
 	margin-top: -3px;
 	border-width: 6px;
-	border-top-color: rgba(85, 85, 85, .7)
+	border-top-color: rgba(255, 255, 255, .7)
 }
 
 .layui-nav .layui-nav-mored, .layui-nav-itemed > a .layui-nav-more {
 	margin-top: -9px;
 	border-style: dashed dashed solid;
-	border-color: transparent transparent #555
+	border-color: transparent transparent #fff
 }
 
 .layui-nav-child {
