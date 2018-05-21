@@ -8,9 +8,6 @@
 </head>
 
 <body style="padding: 15px;">
-<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>方针管理</legend>
-</fieldset>
 <form action="" class="layui-form search layui-form-pane">
     <div class="layui-btn-group" style="margin-bottom: 10px;">
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="proposal">建议</a>
@@ -81,14 +78,14 @@
         var form = layui.form;
         form.render();
     });
-
+    var _h = $(window).height()-60;
     layui.use('table', function () {
         var table = layui.table;
 
         table.render({
             elem: '#test',
             url: '../json/poli_man.json',
-            height: '400',
+            height: _h,
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
             cols: [
