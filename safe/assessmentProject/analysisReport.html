@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .box {
+            padding: 10px;
+            font-size: 0;
+        }
+
+        #pie, #line {
+            width: 49%;
+            height: 400px;
+            display: inline-block;
+            border: 1px solid #eee;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        #pie{
+            width: 49%;
+            margin-right: 22px;
+        }
+    </style>
+</head>
+<body>
+<div class='box'>
+    <div id='pie'></div>
+    <div id='line'></div>
+</div>
+
+
+<script src='../assets/layui/jquery.min.js'></script>
+<script src='../assets/layui/layui.all.js'></script>
+<script src='../assets/layui/echarts.js'></script>
+<script>
+    var pieChart = echarts.init(document.getElementById('pie'));
+    var pieOptions = {
+        title : {
+            text: '结果统计分析',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['工作态度','遵守纪律','业务素养','工作协调','业绩考核','专业技能','改善能力','沟通能力','解决问题能力','个人执行力']
+        },
+        series : [
+            {
+                name: '结果统计分析',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:2, name:'工作态度'},
+                    {value:2, name:'遵守纪律'},
+                    {value:1, name:'业务素养'},
+                    {value:3, name:'工作协调'},
+                    {value:5, name:'业绩考核'},
+                    {value:2, name:'专业技能'},
+                    {value:5, name:'改善能力'},
+                    {value:4, name:'沟通能力'},
+                    {value:3, name:'解决问题能力'},
+                    {value:2, name:'个人执行力'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    pieChart.setOption(pieOptions);
+    var lineChart = echarts.init(document.getElementById('line'))
+    var lineOptions = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        legend: {
+            data:['统计分析','平均值']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['工作态度','遵守纪律','业务素养','工作协调','业绩考核','专业技能','改善能力','沟通能力','解决问题能力','个人执行力'],
+                axisPointer: {
+                    type: 'shadow'
+                },
+                axisLabel: {
+                    interval:0,
+                    rotate:40
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '统计分析',
+                min: 0,
+                max: 5,
+                interval: 1,
+
+            },
+            {
+                type: 'value',
+                name: '平均值',
+                min: 0,
+                max: 10,
+                interval: 2,
+
+            }
+        ],
+        series: [
+            {
+                name:'统计分析',
+                type:'bar',
+                data:[2,1,2,3,5,2,5,1,2,3]
+            },
+
+            {
+                name:'平均值',
+                type:'line',
+                yAxisIndex: 1,
+                data:[5,2,4,3,5,1,2,1,3,4]
+            }
+        ]
+    };
+    lineChart.setOption(lineOptions);
+</script>
+</body>
+</html>

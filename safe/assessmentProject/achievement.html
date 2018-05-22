@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        .layui-table-body {
+            overflow: hidden;
+        }
+
+        .layui-layer-content {
+            padding: 10px;
+        }
+        .layui-table-cell{
+            height: auto;
+        }
+        .box{
+            padding: 10px;
+        }
+        .magin20 {
+            margin-bottom: 10px
+        }
+
+        .search {
+            display: inline-block;
+            width: 260px;
+            float: right;
+            position: relative;
+        }
+
+        .search .padding35 {
+            width: 212px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px
+        }
+
+    </style>
+</head>
+<body>
+<div class='box'>
+    <div class="layui-btn-group magin20">
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
+    </div>
+    <div class='search'>
+        <input type="text" name="title" placeholder="请输入..." autocomplete="off"
+               class="layui-input padding35">
+        <button class="layui-btn layui-btn-normal layui-btn-sm">搜索</button>
+    </div>
+    <table class="layui-hide" id="test"></table>
+</div>
+
+<div id='popup' class="layui-hide">
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input"></td>
+            <td>结果</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input"></td>
+            <td>个人执行力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input"></td>
+        </tr>
+        <tr>
+            <td>工作态度</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>遵守纪律</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>业务素养</td>
+            <td ><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+        </tr>
+        <tr>
+            <td>工作协调</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>业绩考核</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>专业技能</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+        </tr>
+        <tr>
+            <td>改善能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>沟通能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+            <td>解决问题能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                                 autocomplete="off" class="layui-input"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id='modify' class="layui-hide">
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td>张三</td>
+            <td>结果</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value='优'></td>
+            <td>个人执行力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=2></td>
+        </tr>
+        <tr>
+            <td>工作态度</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=2></td>
+            <td>遵守纪律</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=3></td>
+            <td>业务素养</td>
+            <td ><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                        autocomplete="off" class="layui-input" value=1></td>
+        </tr>
+        <tr>
+            <td>工作协调</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=5></td>
+            <td>业绩考核</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=2></td>
+            <td>专业技能</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=5></td>
+        </tr>
+        <tr>
+            <td>改善能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=3></td>
+            <td>沟通能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=2></td>
+            <td>解决问题能力</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value=3></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id='detail' class="layui-hide">
+    <table class="layui-table">
+        <tbody>
+        <tr>
+            <td>姓名</td>
+            <td>张三</td>
+            <td>结果</td>
+            <td>优</td>
+        </tr>
+        <tr>
+            <td>工作态度</td>
+            <td>2 </td>
+            <td colspan=2>描述：对职责范围内的事是否主动积极完成。不主动、不积极每次扣1分，下不保底<br/>是否能勇于承担责任，工作不推诿。每发生一次推诿现象，扣1分</td>
+        </tr>
+        <tr>
+            <td>遵守纪律</td>
+            <td>2 </td>
+            <td colspan=2>描述：是否能严格遵守公司《劳动纪律管理制度》。每违反一次，扣0.5分</td>
+        </tr>
+        <tr>
+            <td>业务素养</td>
+            <td>3</td>
+            <td colspan=2>描述：思想觉悟状况、工作是否任劳任怨，诚恳敬业</td>
+        </tr>
+        <tr>
+            <td>工作协调</td>
+            <td>1</td>
+            <td colspan=2>描述：思想觉悟状况、工作是否任劳任怨，诚恳敬业</td>
+        </tr>
+        <tr>
+            <td>业绩考核</td>
+            <td>3</td>
+            <td colspan=2>描述：负责公司对项目部绩效考核管理制度的执行，按时完成项目部的绩效考核</td>
+        </tr>
+        <tr>
+            <td>专业技能</td>
+            <td>5</td>
+            <td colspan=2>描述：负责公司对项目部绩效考核管理制度的执行，按时完成项目部的绩效考核</td>
+        </tr>
+        <tr>
+            <td>改善能力</td>
+            <td>2</td>
+            <td colspan=2>描述：负责公司对项目部绩效考核管理制度的执行，按时完成项目部的绩效考核</td>
+        </tr>
+        <tr>
+            <td>沟通能力</td>
+            <td>5</td>
+            <td colspan=2>描述：负责公司对项目部绩效考核管理制度的执行，按时完成项目部的绩效考核</td>
+        </tr>
+        <tr>
+            <td>解决问题能力</td>
+            <td>3</td>
+            <td colspan=2>描述：负责公司对项目部绩效考核管理制度的执行，按时完成项目部的绩效考核</td>
+        </tr>
+        <tr>
+            <td>个人执行力</td>
+            <td>2 </td>
+            <td colspan=2>描述：全面落实相关工作计划和工作任务，完成工作全面落实相关工作计划和工作任务，完成工作</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src='../zTree_v3-master/js/jquery-1.4.4.min.js'></script>
+<script src='../assets/layui/layui.all.js'></script>
+<SCRIPT LANGUAGE="JavaScript">
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test'
+            , height: 'full-40'
+            , url: './achievement.json'
+            , cols: [[
+                {type: 'checkbox'}
+                ,{field: 'name', title: '姓名'}
+                , {field: 'attitude', title: '工作态度'}
+                , {field: 'discipline', title: '遵守纪律'}
+                , {field: 'literacy', title: '业务素养'}
+                , {field: 'coordination', title: '工作协调'}
+                , {field: 'assessment', title: '业绩考核'}
+                , {field: 'professional', title: '专业技能'}
+                , {field: 'improve', title: '改善能力'}
+                , {field: 'communication', title: '沟通能力'}
+                , {field: 'problem-solving', title: '解决问题能力'}
+                , {field: 'executive', title: '个人执行力'}
+                , {field: 'result', title: '结果'}
+            ]]
+            , page: true
+            , even: true
+        });
+    });
+    // 增加
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '新增'
+                    , area: '900px'
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#popup')
+                    , btn: ['保存', '关闭'] //只是为了演示
+                    , yes: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#popup").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#addInfo').on('click', function () {
+            $("#popup").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+    // 修改
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '修改'
+                    , area: '900px'
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#modify')
+                    , btn: ['保存', '关闭'] //只是为了演示
+                    , yes: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#modify").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#modifyBtn').on('click', function () {
+            $("#modify").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+    // 详情
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    , title: '详情'
+                    , area: ['100%', '100%']
+                    , shade: 0.2
+                    , maxmin: true
+                    , offset: 'auto'
+                    , content: $('#detail')
+                    , btn: ['关闭'] //只是为了演示
+                    , yes: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                    }
+                    , btn2: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index) {
+                        $("#detail").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    , zIndex: layer.zIndex //重点1
+                    , success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            }
+
+        };
+
+        $('#detailBtn').on('click', function () {
+            $("#detail").removeClass('layui-hide');
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+    });
+
+</SCRIPT>
+</body>
+</html>
