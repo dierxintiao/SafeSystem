@@ -309,12 +309,12 @@
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-    var _h = $(window).height()-40;
+
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test'
-            ,height: _h
+            ,height: 'full-40'
             , url: './fieldPlanManagement.json'
             , cols: [[
                 {type: 'checkbox'}

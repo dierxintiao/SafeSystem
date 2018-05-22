@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+        .layui-table-body {
+            overflow: hidden;
+        }
+
+        .layui-layer-content {
+            padding: 10px;
+        }
+
+        .magin20 {
+            margin-bottom: 10px
+        }
+
+        .search {
+            display: inline-block;
+            width: 260px;
+            float: right;
+            position: relative;
+        }
+
+        .search .padding35 {
+            width: 212px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px
+        }
+
+        .layui-col-md2 {
+            height: 100%;
+            border-right: 2px solid #f0f4ff;
+        }
+
+        .layui-col-md10 {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class='layui-col-md2'>
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+<div class='layui-col-md10'>
+    <div class="layui-btn-group magin20">
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
+    </div>
+    <div class='search'>
+        <input type="text" name="title" placeholder="请输入..." autocomplete="off"
+               class="layui-input padding35">
+        <button class="layui-btn layui-btn-normal layui-btn-sm">搜索</button>
+    </div>
+    <table class="layui-hide" id="test"></table>
+</div>
+<script src='../zTree_v3-master/js/jquery-1.4.4.min.js'></script>
+<script src='../zTree_v3-master/js/jquery.ztree.core.min.js'></script>
+<script src='../assets/layui/layui.all.js'></script>
+<SCRIPT LANGUAGE="JavaScript">
+    var zTreeObj;
+    var setting = {};
+    var zNodes = [
+        {
+            name: "父节点1", open: true, children: [
+                {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}, {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}
+            ]
+        },
+        {
+            name: "父节点2", open: true, children: [
+                {name: "子节点1"}, {name: "子节点2"}]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+    var _h = $(window).height() - 40;
+    layui.use('table', function () {
+        var table = layui.table;
+        table.render({
+            elem: '#test'
+            , height: _h
+            , url: './patroInspection.json'
+            , cols: [[
+                {field: 'name', title: '巡检点名称'}
+                , {field: 'state', title: '预警状态'}
+                , {field: 'equipmentState', title:'设备状态'}
+                , {field: 'building', title: '所属建筑物'}
+                , {field: 'floor', title: '所属楼层'}
+                , {field: 'address', title: '设备地址'}
+                , {field: 'person', title: '巡检人'}
+                , {field: 'time', title: '上次巡检时间'}
+                , {field: 'operation', title: '操作'}
+            ]]
+            , page: true
+            , even: true
+        });
+    });
+
+</SCRIPT>
+</body>
+</html>

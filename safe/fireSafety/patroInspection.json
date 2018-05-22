@@ -1,0 +1,139 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "name": "13讯响器",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A1楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:46",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "15消火栓",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A2楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "03点型感烟",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A3楼",
+      "floor": "2层",
+      "address": "2层竖井配电房",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "消火栓按钮",
+      "state": "<div style='background:yellow;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "宿舍楼1",
+      "floor": "4层",
+      "address": "后MIG",
+      "person": "负责人",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "13讯响器",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A1楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:46",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "15消火栓",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A2楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "03点型感烟",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A3楼",
+      "floor": "2层",
+      "address": "2层竖井配电房",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "消火栓按钮",
+      "state": "<div style='background:yellow;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "宿舍楼1",
+      "floor": "4层",
+      "address": "后MIG",
+      "person": "负责人",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "13讯响器",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A1楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:46",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "15消火栓",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A2楼",
+      "floor": "2层",
+      "address": "2层走廊2",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "03点型感烟",
+      "state": "<div style='background:red;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "办公A3楼",
+      "floor": "2层",
+      "address": "2层竖井配电房",
+      "person": "",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    },
+    {
+      "name": "消火栓按钮",
+      "state": "<div style='background:yellow;width:10px;height:10px;border-radius:100%;margin:10px auto 0'></div>",
+      "equipmentState": "激活",
+      "building": "宿舍楼1",
+      "floor": "4层",
+      "address": "后MIG",
+      "person": "负责人",
+      "time": "2017-05-12 17:40:45",
+      "operation":"历史巡查信息"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "department": "生产一部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼2层走廊2",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    },
+    {
+      "department": "生产二部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼3层",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    },
+    {
+      "department": "生产一部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼2层",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    },
+    {
+      "department": "生产一部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼2层走廊2",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    },
+    {
+      "department": "生产二部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼3层",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    },
+    {
+      "department": "生产一部",
+      "times": "2017-05-12 17:40:46",
+      "address": "办公A1楼2层",
+      "person": "",
+      "cause": "事故原因分析事故原因分析事故原因分析",
+      "enclosure": ""
+    }
+  ]
+}
