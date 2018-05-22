@@ -182,12 +182,13 @@
         var table = layui.table;
         table.render();
     });
-    var _h = $(window).height() - 120;
+
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test_1',
-            height: _h,
+            url:'../json/poli_man.json',
+            height: 'full-120',
             cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             cols: [
                 [{
@@ -198,52 +199,39 @@
                     width: 80,
                     align: 'center'
                 }, {
-                    field: 'number',
-                    title: '编号',
-                    align: 'center'
-                }, {
-                    field: 'year',
-                    title: '年度',
-                    align: 'center'
-                }, {
-                    field: 'project',
-                    title: '项目',
-                    align: 'center'
-                }, {
-                    field: 'department',
-                    title: '部门',
+                    field: 'title',
+                    title: '标题',
                     align: 'center'
                 }, {
                     field: 'type',
                     title: '类别',
                     align: 'center'
                 }, {
-                    field: 'people',
-                    title: '填报人',
+                    field: 'time',
+                    title: '时间',
                     align: 'center'
                 }, {
-                    field: 'date',
-                    title: '填报时间',
-                    align: 'center'
-                }, {
-                    field: 'spend',
-                    title: '去年花费',
-                    align: 'center'
-                }, {
-                    field: 'standard',
-                    title: '标准',
-                    align: 'center'
-                }, {
-                    field: 'budget',
-                    title: '预算',
+                    field: 'Enclosure',
+                    title: '附件',
                     align: 'center'
                 }, {
                     field: 'state',
                     title: '状态',
                     align: 'center'
+                }, {
+                    field: 'remarks',
+                    title: '备注',
+                    align: 'center'
                 }]
             ],
-            page: true
+            page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                //,curr: 5 //设定初始在第 5 页
+                , groups: 1 //只显示 1 个连续页码
+                , first: false //不显示首页
+                , last: false //不显示尾页
+
+            }
         });
     });
 
@@ -251,7 +239,8 @@
         var table = layui.table;
         table.render({
             elem: '#test_2',
-            height: _h,
+            url:'../json/poli_man.json',
+            height: 'full-120',
             cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             cols: [
                 [{
@@ -262,48 +251,28 @@
                     width: 80,
                     align: 'center'
                 }, {
-                    field: 'number',
-                    title: '编号',
-                    align: 'center'
-                }, {
-                    field: 'year',
-                    title: '年度',
-                    align: 'center'
-                }, {
-                    field: 'project',
-                    title: '项目',
-                    align: 'center'
-                }, {
-                    field: 'department',
-                    title: '部门',
+                    field: 'title',
+                    title: '标题',
                     align: 'center'
                 }, {
                     field: 'type',
                     title: '类别',
                     align: 'center'
                 }, {
-                    field: 'people',
-                    title: '填报人',
+                    field: 'time',
+                    title: '时间',
                     align: 'center'
                 }, {
-                    field: 'date',
-                    title: '填报时间',
-                    align: 'center'
-                }, {
-                    field: 'spend',
-                    title: '去年花费',
-                    align: 'center'
-                }, {
-                    field: 'standard',
-                    title: '标准',
-                    align: 'center'
-                }, {
-                    field: 'budget',
-                    title: '预算',
+                    field: 'Enclosure',
+                    title: '附件',
                     align: 'center'
                 }, {
                     field: 'state',
                     title: '状态',
+                    align: 'center'
+                }, {
+                    field: 'remarks',
+                    title: '备注',
                     align: 'center'
                 }]
             ],
@@ -315,7 +284,8 @@
         var table = layui.table;
         table.render({
             elem: '#test_3',
-            height: _h,
+            url:'../json/poli_man.json',
+            height: 'full-120',
             cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             cols: [
                 [{
@@ -326,48 +296,28 @@
                     width: 80,
                     align: 'center'
                 }, {
-                    field: 'number',
-                    title: '编号',
-                    align: 'center'
-                }, {
-                    field: 'year',
-                    title: '年度',
-                    align: 'center'
-                }, {
-                    field: 'project',
-                    title: '项目',
-                    align: 'center'
-                }, {
-                    field: 'department',
-                    title: '部门',
+                    field: 'title',
+                    title: '标题',
                     align: 'center'
                 }, {
                     field: 'type',
                     title: '类别',
                     align: 'center'
                 }, {
-                    field: 'people',
-                    title: '填报人',
+                    field: 'time',
+                    title: '时间',
                     align: 'center'
                 }, {
-                    field: 'date',
-                    title: '填报时间',
-                    align: 'center'
-                }, {
-                    field: 'spend',
-                    title: '去年花费',
-                    align: 'center'
-                }, {
-                    field: 'standard',
-                    title: '标准',
-                    align: 'center'
-                }, {
-                    field: 'budget',
-                    title: '预算',
+                    field: 'Enclosure',
+                    title: '附件',
                     align: 'center'
                 }, {
                     field: 'state',
                     title: '状态',
+                    align: 'center'
+                }, {
+                    field: 'remarks',
+                    title: '备注',
                     align: 'center'
                 }]
             ],

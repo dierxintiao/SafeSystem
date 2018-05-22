@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-tab-content{
+            padding: 0;
+        }
+        .left,.right{
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .left{
+            border-right: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+<div class="layui-tab layui-tab-brief">
     <ul class="layui-tab-title">
         <li class="layui-this">车辆</li>
         <li>设备</li>
@@ -14,14 +28,201 @@
 
     </ul>
     <div class="layui-tab-content">
-        <div class="layui-tab-item layui-show">车辆
-            <div  id='car' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        <div class="layui-tab-item layui-show">
+            <div class='left'>
+                <div id='car' style='width: 100%;height: 300px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div id='car-line' style='width: 100%;height: 300px;margin: 10px auto 0'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        <div class="layui-tab-item">设备
-            <div  id='equipment' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        <div class="layui-tab-item">
+            <div class='left'>
+                <div id='equipment'
+                     style='width: 100%;height: 300px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div id='equipment-line' style='width: 100%;height: 300px;margin: 10px auto 0'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        <div class="layui-tab-item">人员
-            <div  id='person' style='width: 600px;height: 400px;margin: 0 auto'></div>
+        <div class="layui-tab-item">
+            <div class='left'>
+                <div id='person' style='width: 100%;height: 300px;margin: 0 auto;border-bottom: 1px solid #eee'></div>
+                <div id='person-line' style='width: 100%;height: 300px;margin: 10px auto 0;'></div>
+            </div>
+            <div class='right'>
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>许闲心</td>
+                        <td>2016-11-28</td>
+                        <td>于千万年之中，时间的无涯的荒野里…</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 </div>
@@ -30,34 +231,34 @@
 <script src='../assets/layui/layui.all.js'></script>
 <script src='../assets/layui/echarts.js'></script>
 <script>
-    var carCharts=echarts.init(document.getElementById('car'));
-   var cars= {
-        title : {
+    var carCharts = echarts.init(document.getElementById('car'));
+    var cars = {
+        title: {
             text: '车辆统计',
             subtext: '',
-            x:'center'
+            x: 'center'
         },
-        tooltip : {
+        tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['乘用车','客车','商务车','专用车','牵引车']
+            data: ['乘用车', '客车', '商务车', '专用车', '牵引车']
         },
-        series : [
+        series: [
             {
                 name: '车辆统计',
                 type: 'pie',
-                radius : '55%',
+                radius: '55%',
                 center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'乘用车'},
-                    {value:310, name:'客车'},
-                    {value:234, name:'商务车'},
-                    {value:135, name:'专用车'},
-                    {value:500, name:'牵引车'}
+                data: [
+                    {value: 335, name: '乘用车'},
+                    {value: 310, name: '客车'},
+                    {value: 234, name: '商务车'},
+                    {value: 135, name: '专用车'},
+                    {value: 500, name: '牵引车'}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -69,37 +270,64 @@
             }
         ]
     };
-   carCharts.setOption(cars)
-    var equipmentCharts=echarts.init(document.getElementById('equipment'));
-    var equipments= {
-        title : {
+    carCharts.setOption(cars)
+    var carLineCarts = echarts.init(document.getElementById('car-line'))
+    var carLines = {
+        title: {
+            text: '车辆统计',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+    };
+    carLineCarts.setOption(carLines)
+
+    var equipmentContainer = document.getElementById('equipment');
+    var resizeEquipmentContainer = function () {
+        equipmentContainer.style.width = $('.left').width()+'px';
+    };
+    resizeEquipmentContainer();
+    var equipmentCharts = echarts.init(equipmentContainer);
+    // var equipmentCharts = echarts.init(document.getElementById('equipment'));
+    var equipments = {
+        title: {
             text: '设备统计',
             subtext: '',
-            x:'center'
+            x: 'center'
         },
-        tooltip : {
+        tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['A设备','B设备','C设备','D设备','E设备','F设备','G设备']
+            data: ['A设备', 'B设备', 'C设备', 'D设备', 'E设备', 'F设备', 'G设备']
         },
-        series : [
+        series: [
             {
                 name: '设备统计',
                 type: 'pie',
-                radius : '55%',
+                radius: '55%',
                 center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'A设备'},
-                    {value:310, name:'B设备'},
-                    {value:234, name:'C设备'},
-                    {value:135, name:'D设备'},
-                    {value:1000, name:'E设备'},
-                    {value:800, name:'F设备'},
-                    {value:136, name:'G设备'}
+                data: [
+                    {value: 335, name: 'A设备'},
+                    {value: 310, name: 'B设备'},
+                    {value: 234, name: 'C设备'},
+                    {value: 135, name: 'D设备'},
+                    {value: 1000, name: 'E设备'},
+                    {value: 800, name: 'F设备'},
+                    {value: 136, name: 'G设备'}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -112,35 +340,71 @@
         ]
     };
     equipmentCharts.setOption(equipments)
-    var personCharts=echarts.init(document.getElementById('person'));
-    var persons= {
-        title : {
+
+    var equipmentLineContainer = document.getElementById('equipment-line');
+    var resizeEquipmentLineContainer = function () {
+        equipmentLineContainer.style.width = $('.left').width()+'px';
+    };
+    resizeEquipmentLineContainer();
+    var equipmentLineCharts = echarts.init(equipmentLineContainer);
+    // var equipmentLineCharts = echarts.init(document.getElementById('equipment-line'))
+    var equipmentLines = {
+        title: {
+            text: '设备统计',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [15, 26, 9, 23, 10, 30, 8],
+            type: 'line'
+        }]
+    }
+    equipmentLineCharts.setOption(equipmentLines)
+
+
+    var personContainer = document.getElementById('person');
+    var resizePersonContainer = function () {
+        personContainer.style.width = $('.left').width()+'px';
+    };
+    resizePersonContainer();
+    var personCharts = echarts.init(personContainer);
+
+    // var personCharts = echarts.init(document.getElementById('person'));
+    var persons = {
+        title: {
             text: '人员统计',
             subtext: '',
-            x:'center'
+            x: 'center'
         },
-        tooltip : {
+        tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['领导','技术人员','销售人员','生产人员','安全人员','产品人员']
+            data: ['领导', '技术人员', '销售人员', '生产人员', '安全人员', '产品人员']
         },
-        series : [
+        series: [
             {
                 name: '人员统计',
                 type: 'pie',
-                radius : '55%',
+                radius: '55%',
                 center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'领导'},
-                    {value:310, name:'技术人员'},
-                    {value:234, name:'销售人员'},
-                    {value:135, name:'生产人员'},
-                    {value:300, name:'安全人员'},
-                    {value:548, name:'产品人员'}
+                data: [
+                    {value: 335, name: '领导'},
+                    {value: 310, name: '技术人员'},
+                    {value: 234, name: '销售人员'},
+                    {value: 135, name: '生产人员'},
+                    {value: 300, name: '安全人员'},
+                    {value: 548, name: '产品人员'}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -153,6 +417,34 @@
         ]
     };
     personCharts.setOption(persons)
+
+
+    var personLineContainer = document.getElementById('person-line');
+    var resizePersonLineContainer = function () {
+        personLineContainer.style.width = $('.left').width()+'px';
+    };
+    resizePersonLineContainer();
+    var personLineCharts = echarts.init(personLineContainer);
+    // var personLineCharts = echarts.init(document.getElementById('person-line'))
+    var personLines = {
+        title: {
+            text: '人员统计',
+            subtext: '',
+            x: 'center'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [5, 13, 21, 3, 28, 10, 20],
+            type: 'line'
+        }]
+    }
+    personLineCharts.setOption(personLines)
 
 </script>
 </body>
