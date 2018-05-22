@@ -54,7 +54,6 @@
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
-        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
     </div>
     <div class='search'>
@@ -69,7 +68,7 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>考核项目</td>
+            <td width='15%'>考核项目</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
                        autocomplete="off" class="layui-input"></td>
         </tr>
@@ -96,7 +95,7 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>考核项目</td>
+            <td width='15%'>考核项目</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
                        autocomplete="off" class="layui-input" value='工作态度'></td>
         </tr>
@@ -116,25 +115,6 @@
                 <input type="file" name="title">
             </td>
 
-        </tr>
-        </tbody>
-    </table>
-</div>
-<div id='detail' class="layui-hide">
-    <table class="layui-table">
-        <tbody>
-        <tr>
-            <td>考核项目</td>
-            <td>工作态度</td>
-        </tr>
-        <tr>
-            <td>考核内容和标准</td>
-            <td> 主动性：对职责范围内的事是否主动积极完成。不主动、不积极每次扣1分，下不保底
-                责任心:是否能勇于承担责任，工作不推诿。每发生一次推诿现象，扣1分，下不保底。</td>
-        </tr>
-        <tr>
-            <td>分值</td>
-            <td>2</td>
         </tr>
         </tbody>
     </table>
