@@ -173,7 +173,7 @@
         $ = layui.$;
         form.render();
     });
-    var _h = $(window).height()-60;
+    var _h = $(window).height()-70;
     layui.use('table', function () {
         var table = layui.table;
 
@@ -193,7 +193,7 @@
                     align: 'center'
                 }, {
                     field: 'title',
-                    title: '标题',
+                    title: '标题11',
                     align: 'center'
                 }, {
                     field: 'type',
@@ -217,7 +217,9 @@
                     align: 'center'
                 }]
             ],
+            limit:10,
             page: true
+
         });
     });
     layui.use('layer', function () { //独立版的layer无需执行这一句
