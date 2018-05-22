@@ -185,144 +185,145 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        table.render({
-            elem: '#test_1',
-            url:'../json/poli_man.json',
-            height: 'full-120',
-            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-            cols: [
-                [{
-                    type: 'checkbox'
-                }, {
-                    field: 'id',
-                    title: 'ID',
-                    width: 80,
-                    align: 'center'
-                }, {
-                    field: 'title',
-                    title: '标题',
-                    align: 'center'
-                }, {
-                    field: 'type',
-                    title: '类别',
-                    align: 'center'
-                }, {
-                    field: 'time',
-                    title: '时间',
-                    align: 'center'
-                }, {
-                    field: 'Enclosure',
-                    title: '附件',
-                    align: 'center'
-                }, {
-                    field: 'state',
-                    title: '状态',
-                    align: 'center'
-                }, {
-                    field: 'remarks',
-                    title: '备注',
-                    align: 'center'
-                }]
-            ],
-            page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
-                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
-                //,curr: 5 //设定初始在第 5 页
-                , groups: 1 //只显示 1 个连续页码
-                , first: false //不显示首页
-                , last: false //不显示尾页
-
-            }
+        $.getJSON('../json/poli_man.json',function(data){
+            table.render({
+                elem: '#test_1',
+                height: 'full-120',
+                data:data.data,
+                cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'title',
+                        title: '标题',
+                        align: 'center'
+                    }, {
+                        field: 'type',
+                        title: '类别',
+                        align: 'center'
+                    }, {
+                        field: 'time',
+                        title: '时间',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }, {
+                        field: 'state',
+                        title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'remarks',
+                        title: '备注',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
         });
+
     });
 
     layui.use('table', function () {
         var table = layui.table;
-        table.render({
-            elem: '#test_2',
-            url:'../json/poli_man.json',
-            height: 'full-120',
-            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-            cols: [
-                [{
-                    type: 'checkbox'
-                }, {
-                    field: 'id',
-                    title: 'ID',
-                    width: 80,
-                    align: 'center'
-                }, {
-                    field: 'title',
-                    title: '标题',
-                    align: 'center'
-                }, {
-                    field: 'type',
-                    title: '类别',
-                    align: 'center'
-                }, {
-                    field: 'time',
-                    title: '时间',
-                    align: 'center'
-                }, {
-                    field: 'Enclosure',
-                    title: '附件',
-                    align: 'center'
-                }, {
-                    field: 'state',
-                    title: '状态',
-                    align: 'center'
-                }, {
-                    field: 'remarks',
-                    title: '备注',
-                    align: 'center'
-                }]
-            ],
-            page: true
-        })
-    });
+        $.getJSON('../json/poli_man.json',function(data){
+            table.render({
+                elem: '#test_2',
+                height: 'full-220',
+                data:data.data,
+                cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'title',
+                        title: '标题',
+                        align: 'center'
+                    }, {
+                        field: 'type',
+                        title: '类别',
+                        align: 'center'
+                    }, {
+                        field: 'time',
+                        title: '时间',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }, {
+                        field: 'state',
+                        title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'remarks',
+                        title: '备注',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
+        });
 
+    });
     layui.use('table', function () {
         var table = layui.table;
-        table.render({
-            elem: '#test_3',
-            url:'../json/poli_man.json',
-            height: 'full-120',
-            cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-            cols: [
-                [{
-                    type: 'checkbox'
-                }, {
-                    field: 'id',
-                    title: 'ID',
-                    width: 80,
-                    align: 'center'
-                }, {
-                    field: 'title',
-                    title: '标题',
-                    align: 'center'
-                }, {
-                    field: 'type',
-                    title: '类别',
-                    align: 'center'
-                }, {
-                    field: 'time',
-                    title: '时间',
-                    align: 'center'
-                }, {
-                    field: 'Enclosure',
-                    title: '附件',
-                    align: 'center'
-                }, {
-                    field: 'state',
-                    title: '状态',
-                    align: 'center'
-                }, {
-                    field: 'remarks',
-                    title: '备注',
-                    align: 'center'
-                }]
-            ],
-            page: true
+        $.getJSON('../json/poli_man.json',function(data){
+            table.render({
+                elem: '#test_3',
+                height: 'full-220',
+                data:data.data,
+                cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'title',
+                        title: '标题',
+                        align: 'center'
+                    }, {
+                        field: 'type',
+                        title: '类别',
+                        align: 'center'
+                    }, {
+                        field: 'time',
+                        title: '时间',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }, {
+                        field: 'state',
+                        title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'remarks',
+                        title: '备注',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
         });
+
     });
 
     layui.use('layer', function () { //独立版的layer无需执行这一句
