@@ -1,0 +1,106 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "name": "张三",
+      "attitude": 2,
+      "discipline": 2,
+      "literacy": 3,
+      "coordination": 1,
+      "assessment": 3,
+      "professional": 5,
+      "improve": 2,
+      "communication": 5,
+      "problem-solving": 3,
+      "executive": 2,
+      "result": "优"
+    },
+    {
+      "name": "李四",
+      "attitude": 3,
+      "discipline": 1,
+      "literacy": 2,
+      "coordination": 3,
+      "assessment": 4,
+      "professional": 3,
+      "improve": 2,
+      "communication": 5,
+      "problem-solving": 3,
+      "executive": 2,
+      "result": "良"
+    },
+    {
+      "name": "闲心",
+      "attitude": 2,
+      "discipline": 2,
+      "literacy": 5,
+      "coordination": 3,
+      "assessment": 2,
+      "professional": 1,
+      "improve": 3,
+      "communication": 3,
+      "problem-solving": 4,
+      "executive": 1,
+      "result": "差"
+    },
+    {
+      "name": "张三",
+      "attitude": 2,
+      "discipline": 2,
+      "literacy": 3,
+      "coordination": 1,
+      "assessment": 3,
+      "professional": 5,
+      "improve": 2,
+      "communication": 5,
+      "problem-solving": 3,
+      "executive": 2,
+      "result": "优"
+    },
+    {
+      "name": "李四",
+      "attitude": 3,
+      "discipline": 1,
+      "literacy": 2,
+      "coordination": 3,
+      "assessment": 4,
+      "professional": 3,
+      "improve": 2,
+      "communication": 5,
+      "problem-solving": 3,
+      "executive": 2,
+      "result": "良"
+    },
+    {
+      "name": "闲心",
+      "attitude": 2,
+      "discipline": 2,
+      "literacy": 5,
+      "coordination": 3,
+      "assessment": 2,
+      "professional": 1,
+      "improve": 3,
+      "communication": 3,
+      "problem-solving": 4,
+      "executive": 1,
+      "result": "差"
+    },
+    {
+      "name": "张三",
+      "attitude": 2,
+      "discipline": 2,
+      "literacy": 3,
+      "coordination": 1,
+      "assessment": 3,
+      "professional": 5,
+      "improve": 2,
+      "communication": 5,
+      "problem-solving": 3,
+      "executive": 2,
+      "result": "优"
+    }
+
+  ]
+}
