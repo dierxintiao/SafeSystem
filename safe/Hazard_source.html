@@ -4,141 +4,280 @@
     <meta charset="UTF-8">
     <title>危险源</title>
     <link rel="stylesheet" href="assets/layui/css/layui.css">
+    <script type="text/javascript" src="assets/layui/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/layui/layui.all.js"></script>
+    <script type="text/javascript" src="assets/layui/echarts.min.js"></script>
+    <script type="text/javascript" src="assets/layui/china.js"></script>
+    <script type="text/javascript" src="assets/layui/scrollQ.js"></script>
+    <style>
+        body {
+            /*background: rgba(5, 39, 175, .8);*/
+            /*background-image: url("assets/layui/images/bg1.jpg") no-repeat;*/
+            /*background-size: 100% 100%;*/
+        }
 
+        #sItem {
+            width: 60%;
+            height: 250px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #sItem li {
+            width: 20%;
+            height: 250px;
+            float: left;
+            margin: 0 15px;
+            background: lightcyan;
+        }
+    </style>
 </head>
 <body>
-<div class="layui-container">
-    <div class="layui-row">
-        <div class="layui-col-md9">
-            <div id="main" style="height: 1000px;">
+<div class="layui-row">
+    <div class="layui-col-md9">
+        <div id="main" style="height: 700px;">
+
+        </div>
+    </div>
+    <div class="layui-col-md3">
+        <div class="content" style="padding: 15px;">
+            <div style="width: 100%;height: 600px;background: rgba(5,39,175,.5);">
 
             </div>
         </div>
-        <div class="layui-col-md3">
-            你的内容 3/12
-        </div>
     </div>
 </div>
-<script type="text/javascript" src="assets/layui/jquery.min.js"></script>
-<script type="text/javascript" src="assets/layui/layui.all.js"></script>
-<script type="text/javascript" src="assets/layui/echarts.js"></script>
 
-<script type="text/javascript">
-        // 全国省份列表
-        var dataMap = [{
-            name: '北京'
-        }, {
-            name: '天津'
-        }, {
-            name: '上海'
-        }, {
-            name: '重庆'
-        }, {
-            name: '河北'
-        }, {
-            name: '河南'
-        }, {
-            name: '云南'
-        }, {
-            name: '辽宁'
-        }, {
-            name: '黑龙江'
-        }, {
-            name: '湖南'
-        }, {
-            name: '安徽'
-        }, {
-            name: '山东'
-        },
-        {
-            name: '新疆'
-        }, {
-            name: '江苏'
-        }, {
-            name: '浙江'
-        }, {
-            name: '江西'
-        }, {
-            name: '湖北'
-        }, {
-            name: '广西'
-        }, {
-            name: '甘肃'
-        }, {
-            name: '山西'
-        }, {
-            name: '内蒙古'
-        }, {
-            name: '陕西'
-        }, {
-            name: '吉林'
-        }, {
-            name: '福建'
-        }, {
-            name: '贵州'
-        },
-        {
-            name: '广东'
-        }, {
-            name: '青海'
-        }, {
-            name: '西藏'
-        }, {
-            name: '四川'
-        }, {
-            name: '宁夏'
-        }, {
-            name: '海南'
-        }, {
-            name: '台湾'
-        }, {
-            name: '香港'
-        }, {
-            name: '澳门'
-        }
-    ]
-        // 绘制图表，准备数据
-        var option = {
-            tooltip: {
-                backgroundColor: "#ff7f50", //提示标签背景颜色
-                textStyle: {
-                    color: "#fff"
-                } //提示标签字体颜色
-            },
-            series: [{
-                name: '中国',
-                type: 'map',
-                mapType: 'china',
-                selectedMode: 'multiple',
-                label: {
-                    normal: {
-                        show: true, //显示省份标签
-                        // textStyle:{color:"#c71585"}//省份标签字体颜色
-                    },
-                    emphasis: {
-                        show: true, //对应的鼠标悬浮效果
-                        // textStyle:{color:"#800080"}
-                    }
-                },
-                itemStyle: {
-                    normal: {
-                        borderWidth: .5, //区域边框宽度
-                        // borderColor: '#009fe8',//区域边框颜色
-                        // areaColor:"#ffefd5",//区域颜色
-                    },
-                    emphasis: {
-                        borderWidth: .5,
-                        borderColor: '#4b0082',
-                        areaColor: "#ffdead",
-                    }
-                },
-                data: dataMap
-            }]
-        };
-        //初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
-        //使用制定的配置项和数据显示图表
-        myChart.setOption(option);
-</script>
+<!--<div class="layui-carousel" id="test2" style="margin: auto;">-->
+<!--<div carousel-item="">-->
+<!--<div>-->
+<!--<a href="#">-->
+<!--<img src="assets/layui/images/yc1.jpg" alt="" width="100%" height="100%">-->
+<!--</a>-->
+<!--</div>-->
+<!--<div>条目2</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="Broadcast">
+    <ul id="sItem">
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc1.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc2.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc3.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc4.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc1.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc2.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc3.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc4.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc5.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/layui/images/yc6.jpg" alt="" width="100%" height="100%">
+            </a>
+        </li>
+    </ul>
+</div>
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sItem").scrollQ();
+    });
+    // layui.use(['carousel', 'form'], function () {
+    //     var carousel = layui.carousel
+    //         , form = layui.form;
+    //
+    //     //改变下时间间隔、动画类型、高度
+    //     carousel.render({
+    //         elem: '#test2',
+    //         width: '50%',
+    //         interval: 1800,
+    //         anim: 'fade',
+    //         height: '200px',
+    //         indicator: 'none'
+    //     });
+    //
+    //     var $ = layui.$, active = {
+    //         set: function (othis) {
+    //             var THIS = 'layui-bg-normal'
+    //                 , key = othis.data('key')
+    //                 , options = {};
+    //
+    //             othis.css('background-color', '#5FB878').siblings().removeAttr('style');
+    //             options[key] = othis.data('value');
+    //             ins3.reload(options);
+    //         }
+    //     };
+    //
+    //     //监听开关
+    //     form.on('switch(autoplay)', function () {
+    //         ins3.reload({
+    //             autoplay: this.checked
+    //         });
+    //     });
+    //
+    //     $('.demoSet').on('keyup', function () {
+    //         var value = this.value
+    //             , options = {};
+    //         if (!/^\d+$/.test(value)) return;
+    //
+    //         options[this.name] = value;
+    //         ins3.reload(options);
+    //     });
+    //
+    //     //其它示例
+    //     $('.demoTest .layui-btn').on('click', function () {
+    //         var othis = $(this), type = othis.data('type');
+    //         active[type] ? active[type].call(this, othis) : '';
+    //     });
+    // });
+    // 全国省份列表
+    var dataMap = [{
+        name: '北京'
+    }, {
+        name: '天津'
+    }, {
+        name: '上海'
+    }, {
+        name: '重庆'
+    }, {
+        name: '河北'
+    }, {
+        name: '河南'
+    }, {
+        name: '云南'
+    }, {
+        name: '辽宁'
+    }, {
+        name: '黑龙江'
+    }, {
+        name: '湖南'
+    }, {
+        name: '安徽'
+    }, {
+        name: '山东'
+    },
+    {
+        name: '新疆'
+    }, {
+        name: '江苏'
+    }, {
+        name: '浙江'
+    }, {
+        name: '江西'
+    }, {
+        name: '湖北'
+    }, {
+        name: '广西'
+    }, {
+        name: '甘肃'
+    }, {
+        name: '山西'
+    }, {
+        name: '内蒙古'
+    }, {
+        name: '陕西'
+    }, {
+        name: '吉林'
+    }, {
+        name: '福建'
+    }, {
+        name: '贵州'
+    },
+    {
+        name: '广东'
+    }, {
+        name: '青海'
+    }, {
+        name: '西藏'
+    }, {
+        name: '四川'
+    }, {
+        name: '宁夏'
+    }, {
+        name: '海南'
+    }, {
+        name: '台湾'
+    }, {
+        name: '香港'
+    }, {
+        name: '澳门'
+    }];
+    // 绘制图表，准备数据
+    var option = {
+        tooltip: {
+            //backgroundColor: "rgba()", //提示标签背景颜色
+            textStyle: {
+                color: "#fff"
+            } //提示标签字体颜色
+        },
+        series: [{
+            name: '中国',
+            type: 'map',
+            mapType: 'china',
+            selectedMode: 'multiple',
+            label: {
+                normal: {
+                    show: true, //显示省份标签
+                    // textStyle:{color:"#c71585"}//省份标签字体颜色
+                },
+                emphasis: {
+                    show: true, //对应的鼠标悬浮效果
+                    // textStyle:{color:"#800080"}
+                }
+            },
+            itemStyle: {
+                normal: {
+                    borderWidth: .5, //区域边框宽度
+                    borderColor: '#91e6ff',//区域边框颜色
+                    areaColor: "#154e90",//区域颜色
+                },
+                emphasis: {
+                    borderWidth: .5,
+                    borderColor: '#91e6ff',
+                    areaColor: "#389BB7",
+                }
+            },
+            data: dataMap
+        }]
+    };
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(option);
+</script>
 </html>
