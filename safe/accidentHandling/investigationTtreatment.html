@@ -141,6 +141,19 @@
             </td>
 
         </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="addImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="addShow"></div>
+                    </blockquote>
+                </div>
+            </td>
+
+        </tr>
         </tbody>
     </table>
 </div>
@@ -216,6 +229,25 @@
             </td>
 
         </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="modifyImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="modifyShow">
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                            <img src="../assets/images/7.jpg" height=70>
+                            <img src="../assets/images/8.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
+            </td>
+
+        </tr>
         </tbody>
     </table>
 </div>
@@ -258,6 +290,28 @@
             <td>审核人</td>
             <td colspan=3>审核人A1
             </td>
+        </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="5">
+                <div class="layui-upload">
+                    <!--<button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="detailImg">多图片上传</button>-->
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="detailShow">
+                            <img src="../assets/images/8.jpg" height=70>
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                            <img src="../assets/images/4.jpg" height=70>
+                            <img src="../assets/images/5.jpg" height=70>
+                            <img src="../assets/images/6.jpg" height=70>
+                            <img src="../assets/images/7.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
+            </td>
+
         </tr>
         </tbody>
     </table>
@@ -451,6 +505,39 @@
         });
 
     });
+    //上传图片
+    layui.use('upload', function () {
+        var $ = layui.jquery
+            , upload = layui.upload;
+        upload.render({
+            elem: '#addImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#addShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+        upload.render({
+            elem: '#modifyImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#modifyShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+    })
 </SCRIPT>
 </body>
 </html>

@@ -13,9 +13,10 @@
         .layui-table-body {
             overflow: hidden;
         }
-.layui-layer-content{
-    padding: 10px;
-}
+
+        .layui-layer-content {
+            padding: 10px;
+        }
 
         .magin20 {
             margin-bottom: 10px
@@ -40,11 +41,13 @@
             right: 10px;
             top: 10px
         }
-        .layui-col-md2{
+
+        .layui-col-md2 {
             height: 100%;
             border-right: 2px solid #f0f4ff;
         }
-        .layui-col-md10{
+
+        .layui-col-md10 {
             padding: 10px;
         }
     </style>
@@ -62,7 +65,7 @@
         <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
     </div>
     <div class='search'>
-        <input type="text" name="title"  placeholder="请输入..." autocomplete="off"
+        <input type="text" name="title" placeholder="请输入..." autocomplete="off"
                class="layui-input padding35">
         <button class="layui-btn layui-btn-normal layui-btn-sm">搜索</button>
     </div>
@@ -79,12 +82,12 @@
             <td>部门</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">南区分公司</option>
+                        <option value="021">南区分公司1</option>
+                        <option value="0571">北区分公司</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -95,12 +98,12 @@
             <td>事故分类</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021">生产事故</option>
-                            <option value="0571">消防隐患</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">安全生产事故</option>
+                        <option value="021">生产事故</option>
+                        <option value="0571">消防隐患</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -108,12 +111,12 @@
             <td>事故级别</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">一般</option>
+                        <option value="021">二级</option>
+                        <option value="0571">三级</option>
+                    </select>
                 </div>
             </td>
             <td>经济损失</td>
@@ -131,12 +134,12 @@
             <td>事故责任分类</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021">其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">主要事故责任</option>
+                        <option value="021">其他事故责任</option>
+                        <option value="0571">三级</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -166,6 +169,19 @@
             </td>
 
         </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="addImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="addShow"></div>
+                    </blockquote>
+                </div>
+            </td>
+
+        </tr>
         </tbody>
     </table>
 </div>
@@ -179,12 +195,12 @@
             <td>部门</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010" selected>南区分公司</option>
+                        <option value="021">南区分公司1</option>
+                        <option value="0571">北区分公司</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -195,12 +211,12 @@
             <td>事故分类</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021" selected>生产事故</option>
-                            <option value="0571">消防隐患</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">安全生产事故</option>
+                        <option value="021" selected>生产事故</option>
+                        <option value="0571">消防隐患</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -208,12 +224,12 @@
             <td>事故级别</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010" selected>一般</option>
+                        <option value="021">二级</option>
+                        <option value="0571">三级</option>
+                    </select>
                 </div>
             </td>
             <td>经济损失</td>
@@ -231,12 +247,12 @@
             <td>事故责任分类</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021" selected>其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">主要事故责任</option>
+                        <option value="021" selected>其他事故责任</option>
+                        <option value="0571">三级</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -263,6 +279,23 @@
             <td>附件</td>
             <td colspan="3">
                 <input type="file" name="title">
+            </td>
+
+        </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="modifyImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="modifyShow">
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
             </td>
 
         </tr>
@@ -310,15 +343,8 @@
             <td>
                 责任分类
             </td>
-            <td>
-                <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021" selected>生产事故</option>
-                            <option value="0571">消防隐患</option>
-                        </select>
-                </div>
+            <td colspan=2>
+                生产事故
             </td>
         </tr>
         <tr>
@@ -363,6 +389,27 @@
             <td>
             </td>
         </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="5">
+                <div class="layui-upload">
+                    <!--<button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="detailImg">多图片上传</button>-->
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="detailShow">
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                            <img src="../assets/images/4.jpg" height=70>
+                            <img src="../assets/images/5.jpg" height=70>
+                            <img src="../assets/images/6.jpg" height=70>
+                            <img src="../assets/images/7.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
+            </td>
+
+        </tr>
         </tbody>
     </table>
 </div>
@@ -390,7 +437,7 @@
         var table = layui.table;
         table.render({
             elem: '#test'
-            ,height: 'full-40'
+            , height: 'full-40'
             , url: './accidentInformation.json'
             , cols: [[
                 {type: 'checkbox'}
@@ -404,7 +451,7 @@
                 , {field: 'enclosure', title: '附件', width: '10%'}
             ]]
             , page: true
-            ,even:true
+            , even: true
         });
     });
     // 增加
@@ -546,6 +593,40 @@
         });
 
     });
+    //上传图片
+    layui.use('upload', function () {
+        var $ = layui.jquery
+            , upload = layui.upload;
+        upload.render({
+            elem: '#addImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#addShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+        upload.render({
+            elem: '#modifyImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#modifyShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+    })
+
 </SCRIPT>
 </body>
 </html>
