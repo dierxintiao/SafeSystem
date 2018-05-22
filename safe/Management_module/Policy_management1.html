@@ -109,7 +109,7 @@
                 <td width="20%">类型</td>
                 <td colspan="3" width="80%">
                     <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="">
+                        <select name="interest" lay-filter="aihao">
                             <option value="">方针</option>
                             <option>规划</option>
 
@@ -181,6 +181,7 @@
             elem: '#test',
             url: '../json/poli_man.json',
             height: _h,
+            limit: 10,
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
             cols: [
