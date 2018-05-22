@@ -35,12 +35,15 @@
         .layui-nav-tree .layui-nav-item a:hover {
             background: #244dae;
         }
-     /*   .layui-nav-tree .layui-nav-item a:hover .layui-nav-more {
-            border-color: #fff transparent transparent;
-        }
-        .layui-nav .layui-nav-mored, .layui-nav-itemed > a:hover .layui-nav-more{
-            border-color: transparent transparent #fff !important;
+/*        .layui-nav-itemed{
+            background: rgba(36,77,174,.8);
         }*/
+        /*   .layui-nav-tree .layui-nav-item a:hover .layui-nav-more {
+               border-color: #fff transparent transparent;
+           }
+           .layui-nav .layui-nav-mored, .layui-nav-itemed > a:hover .layui-nav-more{
+               border-color: transparent transparent #fff !important;
+           }*/
     </style>
 </head>
 <body class="layui-layout-body">
@@ -70,7 +73,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <!-- <li class="layui-nav-item layui-nav-itemed"><a href="index.html">首页</a></li>-->
+                <li class="layui-nav-item layui-nav-itemed"><a href="javascript:void(0);">策划危险源辨识</a></li>
                 <li class="layui-nav-item layui-this"><a href="allused.html">通用模块</a></li>
                 <li class="layui-nav-item">
                     <a href="javascript:void(0);">管理模块</a>
@@ -184,6 +187,11 @@
                         </dd>
                         <dd>
                             <a href="javascript:void(0);">消防安全</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="fireSafety/firePatrolInspection.html">消防巡检</a></dd>
+                                <dd><a href="fireSafety/fireAccident.html">消防事故</a></dd>
+                                <dd><a href="fireSafety/fireStatistics.html">消防统计</a></dd>
+                            </dl>
                         </dd>
                         <dd>
                             <a href="javascript:void(0);">危险物品/作业</a>
@@ -208,9 +216,10 @@
                             <a href="javascript:void(0);">应急准备/响应</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="contingencyReserve/planManagement.html">预案管理</a></dd>
-                                <dd><a href="contingencyReserve/fieldPlanManagement.html">现场方案管理</a></dd>
-                                <dd><a href="contingencyReserve/accidentuSrvey.html">事故调查管理</a></dd>
-                                <dd><a href="contingencyReserve/accidentInvestigationProcessing.html">事故调查处理</a></dd>
+                                <dd><a href="contingencyReserve/fieldPlanManagement.html">现场处置方案管理</a></dd>
+                                <dd><a href="contingencyReserve/fieldPlanManagement.html">应急演练管理</a></dd>
+                              <!--  <dd><a href="contingencyReserve/accidentuSrvey.html">事故调查管理</a></dd>
+                                <dd><a href="contingencyReserve/accidentInvestigationProcessing.html">事故调查处理</a></dd>-->
                             </dl>
                         </dd>
                         <dd>
@@ -237,7 +246,7 @@
                         <dd>
                             <a href="javascript:void(0);">安全风险分级管控</a>
                             <dl class="layui-nav-child">
-                                <dd><a href="javascript:void(0);">策划危险源辨识</a></dd>
+
                                 <dd><a href="javascript:void(0);">策划危险源</a></dd>
                                 <dd><a href="javascript:void(0);">风险评价/等级确定</a></dd>
                                 <dd><a href="javascript:void(0);">危险源控制措施</a></dd>

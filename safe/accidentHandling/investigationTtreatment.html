@@ -55,7 +55,7 @@
 </div>
 <div class='layui-col-md10'>
     <div class="layui-btn-group magin20">
-        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>处理</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
@@ -76,95 +76,81 @@
             <td>填报日期</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
                        autocomplete="off" class="layui-input"></td>
-            <td>部门</td>
+            <td>部门负责人</td>
             <td>
-                <div class="layui-form">
-                    <div class="layui-inline">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
-                    </div>
-                </div>
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>事故发生时间</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
+            <td>事故责任人</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入"
                        autocomplete="off" class="layui-input"></td>
-            <td>事故分类</td>
+            <td>事故原因</td>
             <td>
                 <div class="layui-form">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021">生产事故</option>
-                            <option value="0571">消防隐患</option>
+                            <option value="010">直接原因</option>
+                            <option value="021">间接原因</option>
                         </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>事故级别</td>
+            <td>整改情况</td>
             <td>
                 <div class="layui-form">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
-                            <option value="010">一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
+                            <option value="010">未整改</option>
+                            <option value="021">待整改</option>
+                            <option value="0571">已整改</option>
                         </select>
                 </div>
             </td>
-            <td>经济损失</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="2"
-                       autocomplete="off" class="layui-input" style='display: inline-block'>
-            </td>
-        </tr>
-        <tr>
-            <td>通信阻断时间</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>事故责任分类</td>
+            <td>处理结果</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021">其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">未处理</option>
+                        <option value="021">待处理</option>
+                        <option value="0571">已处理</option>
+                    </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>伤员人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>死亡人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </td>
-        </tr>
-        <tr>
-            <td>事故详情及处理</td>
+            <td>处理意见</td>
             <td colspan="3">
                 <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
             </td>
-
+        </tr>
+        <tr>
+            <td>审核人</td>
+            <td colspan="3">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input">
+            </td>
         </tr>
         <tr>
             <td>附件</td>
             <td colspan="3">
                 <input type="file" name="title">
+            </td>
+
+        </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="addImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="addShow"></div>
+                    </blockquote>
+                </div>
             </td>
 
         </tr>
@@ -176,95 +162,89 @@
         <tbody>
         <tr>
             <td>填报日期</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
+            <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19" value='2015-03-19 16:30:12'
                        autocomplete="off" class="layui-input"></td>
-            <td>部门</td>
+            <td>部门负责人</td>
             <td>
-                <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
-                </div>
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入" value="经理A"
+                       autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>事故发生时间</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
+            <td>事故责任人</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="请输入" value='负责人A'
                        autocomplete="off" class="layui-input"></td>
-            <td>事故分类</td>
+            <td>事故原因</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021" selected>生产事故</option>
-                            <option value="0571">消防隐患</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">直接原因</option>
+                        <option value="021" selected>间接原因</option>
+                    </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>事故级别</td>
+            <td>整改情况</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">未整改</option>
+                        <option value="021" selected>待整改</option>
+                        <option value="0571">已整改</option>
+                    </select>
                 </div>
             </td>
-            <td>经济损失</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=10
-                       autocomplete="off" class="layui-input" style='display: inline-block'>
-            </td>
-        </tr>
-        <tr>
-            <td>通信阻断时间</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>事故责任分类</td>
+            <td>处理结果</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021" selected>其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010" selected>未处理</option>
+                        <option value="021">待处理</option>
+                        <option value="0571">已处理</option>
+                    </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>伤员人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=2
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>死亡人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=0
-                       autocomplete="off" class="layui-input">
-            </td>
-        </tr>
-        <tr>
-            <td>事故详情及处理</td>
+            <td>处理意见</td>
             <td colspan="3">
-                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故详情事故详情事故详情事故详情事故详情</textarea>
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见</textarea>
             </td>
-
+        </tr>
+        <tr>
+            <td>审核人</td>
+            <td colspan="3">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入" value='CEO'
+                       autocomplete="off" class="layui-input">
+            </td>
         </tr>
         <tr>
             <td>附件</td>
             <td colspan="3">
                 <input type="file" name="title">
+            </td>
+
+        </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="3">
+                <div class="layui-upload">
+                    <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="modifyImg">多图片上传</button>
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="modifyShow">
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                            <img src="../assets/images/7.jpg" height=70>
+                            <img src="../assets/images/8.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
             </td>
 
         </tr>
@@ -282,87 +262,56 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>统计项目</td>
-            <td colspan=2>安全生产事故</td>
-            <td>统计项目</td>
-            <td colspan=2>生产事故</td>
+            <td>部门负责人</td>
+            <td>负责人A1</td>
+            <td>事故责任人 </td>
+            <td>负责人A2</td>
         </tr>
         <tr>
-            <td>事故起数（起）</td>
-            <td>一般</td>
-            <td>重大</td>
-            <td>事故起数（起）</td>
-            <td>一般</td>
-            <td>重大</td>
+            <td>事故原因</td>
+            <td>直接原因</td>
+            <td>整改情况</td>
+            <td>未整改</td>
         </tr>
         <tr>
-            <td>经济损失（万元）</td>
-            <td>2</td>
-            <td>0</td>
-            <td>经济损失（万元）</td>
-            <td>2</td>
-            <td>0</td>
+            <td>处理结果</td>
+            <td>已处理</td>
+            <td>填表时间</td>
+            <td>2015-02-12 15:30:25</td>
         </tr>
         <tr>
-            <td>通信阻断时间（小时）</td>
-            <td>
-                0.03
-            </td>
-            <td>0.00</td>
-            <td>
-                责任分类
-            </td>
-            <td><div class="layui-form">
-                    <select name="city" lay-verify="required">
-                        <option value="">请选择</option>
-                        <option value="010">安全生产事故</option>
-                        <option value="021" selected>生产事故</option>
-                        <option value="0571">消防隐患</option>
-                    </select>
-
-            </div></td>
-        </tr>
-        <tr>
-            <td>伤亡人数</td>
-            <td>
-                受伤人数：0
-            </td>
-            <td>死亡人数：0</td>
-            <td>
-                主要事故责任
-            </td>
-            <td>
-                受伤人数：0
-            </td>
-            <td>
-                死亡人数：0
+            <td>处理意见</td>
+            <td colspan=3>
+                处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见
+                <!--<textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">处理意见处理意见处理意见处理意见处理意见处理意见处理意见处理意见</textarea>-->
             </td>
         </tr>
         <tr>
-            <td>安全生产事故合计</td>
-            <td>
-                事故起数（起）：2
-            </td>
-            <td>
-                经济损失（万元）：2
-            </td>
-            <td>
-                通信阻断时间（小时）
-            </td>
-            <td colspan=2>
-                0.03
-            </td>
-        </tr>
-        <tr>
-            <td>代表人</td>
-            <td>
-            </td>
             <td>审核人</td>
-            <td>
+            <td colspan=3>审核人A1
             </td>
-            <td>公司主管领导</td>
-            <td>
+        </tr>
+        <tr>
+            <td>现场图片</td>
+            <td colspan="5">
+                <div class="layui-upload">
+                    <!--<button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="detailImg">多图片上传</button>-->
+                    <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                        预览图：
+                        <div class="layui-upload-list" id="detailShow">
+                            <img src="../assets/images/8.jpg" height=70>
+                            <img src="../assets/images/1.jpg" height=70>
+                            <img src="../assets/images/2.jpg" height=70>
+                            <img src="../assets/images/3.jpg" height=70>
+                            <img src="../assets/images/4.jpg" height=70>
+                            <img src="../assets/images/5.jpg" height=70>
+                            <img src="../assets/images/6.jpg" height=70>
+                            <img src="../assets/images/7.jpg" height=70>
+                        </div>
+                    </blockquote>
+                </div>
             </td>
+
         </tr>
         </tbody>
     </table>
@@ -395,23 +344,23 @@
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-    var _h = $(window).height()-40;
+
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test'
-            ,height: _h
-            , url: './accidentInformation.json'
+            ,height:'full-40'
+            , url: './investigationTtreatment.json'
             , cols: [[
                 {type: 'checkbox'}
-                , {field: 'id', title: '部门', width: '15%'}
-                , {field: 'number', title: '事故编号', width: '12%'}
-                , {field: 'times', title: '事故发生时间', width: '13%'}
-                , {field: 'category', title: '事件分类', width: '16%'}
-                , {field: 'level', title: '事故级别', width: '10%'}
-                , {field: 'interdiction', title: '通信阻断时间', width: '10%'}
-                , {field: 'price', title: '经济损失', width: '10%'}
-                , {field: 'enclosure', title: '附件', width: '10%'}
+                , {field: 'manager', title: '部门负责人'}
+                , {field: 'person', title: '事故责任人 '}
+                , {field: 'reason', title: '事故原因'}
+                , {field: 'situation', title: '整改情况'}
+                , {field: 'opinion', title: '处理意见'}
+                , {field: 'result', title: '处理结果'}
+                , {field: 'auditor', title: '审核人'}
+                , {field: 'enclosure', title: '附件'}
             ]]
             , page: true
             ,even:true
@@ -556,6 +505,39 @@
         });
 
     });
+    //上传图片
+    layui.use('upload', function () {
+        var $ = layui.jquery
+            , upload = layui.upload;
+        upload.render({
+            elem: '#addImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#addShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+        upload.render({
+            elem: '#modifyImg'
+            , url: '/upload/'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#modifyShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        })
+    })
 </SCRIPT>
 </body>
 </html>

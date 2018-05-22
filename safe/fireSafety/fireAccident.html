@@ -14,10 +14,9 @@
             overflow: hidden;
         }
 
-        .layui-layer-content{
+        .layui-layer-content {
             padding: 10px;
         }
-
 
         .magin20 {
             margin-bottom: 10px
@@ -42,11 +41,13 @@
             right: 10px;
             top: 10px
         }
-        .layui-col-md2{
+
+        .layui-col-md2 {
             height: 100%;
             border-right: 2px solid #f0f4ff;
         }
-        .layui-col-md10{
+
+        .layui-col-md10 {
             padding: 10px;
         }
     </style>
@@ -64,13 +65,12 @@
         <button class="layui-btn layui-btn-normal layui-btn-sm">导出</button>
     </div>
     <div class='search'>
-        <input type="text" name="title"  placeholder="请输入..." autocomplete="off"
+        <input type="text" name="title" placeholder="请输入..." autocomplete="off"
                class="layui-input padding35">
         <button class="layui-btn layui-btn-normal layui-btn-sm">搜索</button>
     </div>
     <table class="layui-hide" id="test"></table>
 </div>
-
 <div id='popup' class="layui-hide">
     <table class="layui-table">
         <tbody>
@@ -81,12 +81,12 @@
             <td>部门</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">南区分公司</option>
+                        <option value="021">南区分公司1</option>
+                        <option value="0571">北区分公司</option>
+                    </select>
                 </div>
             </td>
         </tr>
@@ -94,33 +94,27 @@
             <td>发生时间</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
                        autocomplete="off" class="layui-input"></td>
-            <td>事件地点</td>
+            <td>事故地点</td>
             <td>
                 <input type="text" name="title" required lay-verify="required" placeholder="请输入"
                        autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>组织人</td>
+            <td>负责人</td>
             <td>
                 <input type="text" name="title" required lay-verify="required" placeholder="经理"
                        autocomplete="off" class="layui-input">
             </td>
-            <td>参加人数</td>
+            <td>伤亡人数</td>
             <td>
                 <input type="text" name="title" required lay-verify="required" placeholder="0"
                        autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>参加人员姓名</td>
+            <td>事故原因分析</td>
             <td colspan=3>
-                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>事件内容</td>
-            <td colspan="3">
                 <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
             </td>
         </tr>
@@ -139,52 +133,46 @@
         <tbody>
         <tr>
             <td>填报日期</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2018-01-01'
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2015-03-20 15:30:12'
                        autocomplete="off" class="layui-input"></td>
             <td>部门</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">南区分公司</option>
-                            <option value="021" selected>南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">南区分公司</option>
+                        <option value="021" selected>南区分公司1</option>
+                        <option value="0571">北区分公司</option>
+                    </select>
                 </div>
             </td>
         </tr>
         <tr>
             <td>发生时间</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2017-12-12'
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2015-03-20 10:30:12'
                        autocomplete="off" class="layui-input"></td>
-            <td>事件地点</td>
+            <td>事故地点</td>
             <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="请输入" value='南区分公司'
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入"
+                       autocomplete="off" class="layui-input" value='生产楼A1'>
+            </td>
+        </tr>
+        <tr>
+            <td>负责人</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="" value='生产组负责人'
+                       autocomplete="off" class="layui-input">
+            </td>
+            <td>伤亡人数</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="" value=1
                        autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>组织人</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="经理" value='经理A'
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>参加人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="0"
-                       autocomplete="off" class="layui-input" value=5>
-            </td>
-        </tr>
-        <tr>
-            <td>参加人员姓名</td>
+            <td>事故原因分析</td>
             <td colspan=3>
-                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">张三，李四，张三，李四，张三，李四，张三，李四</textarea>
-            </td>
-        </tr>
-        <tr>
-            <td>事件内容</td>
-            <td colspan="3">
-                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容事件内容</textarea>
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故原因分析事故原因分析事故原因分析事故原因分析事故原因分析事故原因分析</textarea>
             </td>
         </tr>
         <tr>
@@ -199,7 +187,7 @@
 </div>
 <div id='detail' class="layui-hide">
     <div style='padding: 10px 0 10px 10px'>
-        事件发生时间从<input type="text" name="title" required  placeholder=""
+        事件发生时间从<input type="text" name="title" required placeholder=""
                       autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
         事件发生时间到<input type="text" name="title" required
                       autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
@@ -238,14 +226,18 @@
             <td>
                 责任人
             </td>
-            <td colspan=2><div class="layui-form">
+            <td colspan=2>
+                <div class="layui-form">
+
                     <select name="city" lay-verify="required">
                         <option value="">请选择</option>
                         <option value="010">经理A</option>
                         <option value="021" selected>经理</option>
                         <option value="0571">经理B</option>
                     </select>
-            </div></td>
+
+                </div>
+            </td>
         </tr>
         <tr>
             <td>参加人数</td>
@@ -288,40 +280,35 @@
         },
         {
             name: "父节点2", open: false, children: [
-                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}, {name: "子节点1"}, {name: "子节点2"}, {name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}, {name: "子节点8"}]
+                {name: "子节点1"}, {name: "子节点2"}]
         },
         {
             name: "父节点3", open: false, children: [
-                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}]
-        },
-        {
-            name: "父节点4", open: false, children: [
-                {name: "子节点1"}, {name: "子节点2"},{name: "子节点3"}, {name: "子节点4"}, {name: "子节点5"}, {name: "子节点6"}, {name: "子节点7"}]
+                {name: "子节点1"}, {name: "子节点2"}]
         }
     ];
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-
+    var _h = $(window).height() - 40;
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test'
-            ,height:'full-40'
-            , url: './fieldPlanManagement.json'
+            , height: _h
+            , url: './accident.json'
             , cols: [[
                 {type: 'checkbox'}
-                , {field: 'id', title: '部门', width: '15%'}
-                , {field: 'number', title: '预案编号', width: '12%'}
-                , {field: 'times', title: '发生时间', width: '13%'}
-                , {field: 'category', title: '事件地点', width: '16%'}
-                , {field: 'level', title: '事件内容', width: '10%'}
-                , {field: 'interdiction', title: '组织人', width: '10%'}
-                , {field: 'price', title: '参加人数', width: '10%'}
-                , {field: 'enclosure', title: '附件', width: '10%'}
+                , {field: 'department', title: '部门'}
+                , {field: 'times', title: '发生时间',width:'15%'}
+                , {field: 'address', title: '事故地点',width:'15%'}
+                , {field: 'person', title: '负责人'}
+                , {field: 'casualties', title: '伤亡人数'}
+                , {field: 'cause', title: '事故原因分析',width:'20%'}
+                , {field: 'enclosure', title: '附件'}
             ]]
             , page: true
-            ,even:true
+            , even: true
         });
     });
     // 增加
@@ -428,13 +415,13 @@
                 layer.open({
                     type: 1 //此处以iframe举例
                     , title: '详情'
-                    , area: ['100%','100%']
+                    , area: ['100%', '100%']
                     , shade: 0.2
                     , maxmin: true
                     , offset: 'auto'
                     , content: $('#detail')
                     , btn: ['关闭'] //只是为了演示
-                    ,  yes: function (index) {
+                    , yes: function (index) {
                         $("#detail").addClass('layui-hide');
                         layer.close(index);
                     }

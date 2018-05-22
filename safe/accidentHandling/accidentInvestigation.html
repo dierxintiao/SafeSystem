@@ -55,7 +55,7 @@
 </div>
 <div class='layui-col-md10'>
     <div class="layui-btn-group magin20">
-        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>增加</button>
+        <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='addInfo'>调查</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='modifyBtn'>修改</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm">删除</button>
         <button class="layui-btn layui-btn-normal layui-btn-sm" data-method="setTop" id='detailBtn'>查看详情</button>
@@ -73,10 +73,10 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>填报日期</td>
+            <td>事故发生时间</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
                        autocomplete="off" class="layui-input"></td>
-            <td>部门</td>
+            <td>事故发生单位</td>
             <td>
                 <div class="layui-form">
                         <select name="city" lay-verify="required">
@@ -89,80 +89,73 @@
             </td>
         </tr>
         <tr>
-            <td>事故发生时间</td>
+            <td>事故发生地点</td>
             <td><input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
                        autocomplete="off" class="layui-input"></td>
-            <td>事故分类</td>
+            <td>事故原因</td>
             <td>
                 <div class="layui-form">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021">生产事故</option>
-                            <option value="0571">消防隐患</option>
+                            <option value="010">直接原因</option>
+                            <option value="021">间接原因</option>
                         </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>事故级别</td>
+            <td>事故性质</td>
             <td>
                 <div class="layui-form">
                         <select name="city" lay-verify="required">
                             <option value="">请选择</option>
-                            <option value="010">一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
+                            <option value="010">责任事故</option>
+                            <option value="021">非责任事故</option>
                         </select>
                 </div>
+            </td>
+            <td>事故类别</td>
+            <td>
+                <div class="layui-form">
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">轻伤事故</option>
+                        <option value="021">重伤事故</option>
+                        <option value="022">死亡事故</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>人员伤亡</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
+                       autocomplete="off" class="layui-input">
             </td>
             <td>经济损失</td>
             <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="1"
-                       autocomplete="off" class="layui-input" style='display: inline-block'>
-            </td>
-        </tr>
-        <tr>
-            <td>通信阻断时间</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="2010-03-19"
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>事故责任分类</td>
-            <td>
-                <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021">其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>伤员人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder=""
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>死亡人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder=""
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
                        autocomplete="off" class="layui-input">
             </td>
         </tr>
         <tr>
-            <td>事故详情及处理</td>
+            <td>事故发生经过</td>
             <td colspan="3">
                 <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
             </td>
 
         </tr>
         <tr>
-            <td>附件</td>
+            <td>事故责任分析及处理建议</td>
             <td colspan="3">
-                <input type="file" name="title">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+            </td>
+
+        </tr>
+        <tr>
+            <td>事故防范整改措施</td>
+            <td colspan="3">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
             </td>
 
         </tr>
@@ -173,96 +166,89 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>填报日期</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
-                       autocomplete="off" class="layui-input"></td>
-            <td>部门</td>
-            <td>
-                <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>南区分公司</option>
-                            <option value="021">南区分公司1</option>
-                            <option value="0571">北区分公司</option>
-                        </select>
-                </div>
-            </td>
-        </tr>
-        <tr>
             <td>事故发生时间</td>
-            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='2010-03-19 12:00:03'
                        autocomplete="off" class="layui-input"></td>
-            <td>事故分类</td>
+            <td>事故发生单位</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">安全生产事故</option>
-                            <option value="021" selected>生产事故</option>
-                            <option value="0571">消防隐患</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">南区分公司</option>
+                        <option value="021" selected>南区分公司1</option>
+                        <option value="0571">北区分公司</option>
+                    </select>
                 </div>
             </td>
         </tr>
         <tr>
-            <td>事故级别</td>
+            <td>事故发生地点</td>
+            <td><input type="text" name="title" required lay-verify="required" placeholder="" value='南区分公司'
+                       autocomplete="off" class="layui-input"></td>
+            <td>事故原因</td>
             <td>
                 <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010" selected>一般</option>
-                            <option value="021">二级</option>
-                            <option value="0571">三级</option>
-                        </select>
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010" selected>直接原因</option>
+                        <option value="021">间接原因</option>
+                    </select>
                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td>事故性质</td>
+            <td>
+                <div class="layui-form">
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010">责任事故</option>
+                        <option value="021" selected>非责任事故</option>
+                    </select>
+                </div>
+            </td>
+            <td>事故类别</td>
+            <td>
+                <div class="layui-form">
+                    <select name="city" lay-verify="required">
+                        <option value="">请选择</option>
+                        <option value="010" selected>轻伤事故</option>
+                        <option value="021">重伤事故</option>
+                        <option value="022">死亡事故</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>人员伤亡</td>
+            <td>
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
+                       autocomplete="off" class="layui-input" value=1>
             </td>
             <td>经济损失</td>
             <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=10
-                       autocomplete="off" class="layui-input" style='display: inline-block'>
+                <input type="text" name="title" required lay-verify="required" placeholder="0"
+                       autocomplete="off" class="layui-input" value=1.00>
             </td>
         </tr>
         <tr>
-            <td>通信阻断时间</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value='2010-05-19'
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>事故责任分类</td>
-            <td>
-                <div class="layui-form">
-                        <select name="city" lay-verify="required">
-                            <option value="">请选择</option>
-                            <option value="010">主要事故责任</option>
-                            <option value="021" selected>其他事故责任</option>
-                            <option value="0571">三级</option>
-                        </select>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>伤员人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=2
-                       autocomplete="off" class="layui-input">
-            </td>
-            <td>死亡人数</td>
-            <td>
-                <input type="text" name="title" required lay-verify="required" placeholder="" value=0
-                       autocomplete="off" class="layui-input">
-            </td>
-        </tr>
-        <tr>
-            <td>事故详情及处理</td>
+            <td>事故发生经过</td>
             <td colspan="3">
-                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故详情事故详情事故详情事故详情事故详情</textarea>
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故发生经过事故发生经过事故发生经过事故发生经过事故发生经过</textarea>
             </td>
 
         </tr>
         <tr>
-            <td>附件</td>
+            <td>事故责任分析及处理建议</td>
             <td colspan="3">
-                <input type="file" name="title">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故责任分析及处理建议事故责任分析及处理建议事故责任分析及处理建议事故责任分析及处理建议</textarea>
+            </td>
+
+        </tr>
+        <tr>
+            <td>事故防范整改措施</td>
+            <td colspan="3">
+                <textarea name="" required lay-verify="required" placeholder="请输入" class="layui-textarea">事故防范整改措施事故防范整改措施事故防范整改措施事故防范整改措施</textarea>
             </td>
 
         </tr>
@@ -280,85 +266,43 @@
     <table class="layui-table">
         <tbody>
         <tr>
-            <td>统计项目</td>
-            <td colspan=2>安全生产事故</td>
-            <td>统计项目</td>
-            <td colspan=2>生产事故</td>
+            <td>事故发生时间</td>
+            <td>2010-03-19 12:00:03</td>
+            <td>事故发生单位</td>
+            <td>南区分公司1</td>
+            <td>事故发生地点</td>
+            <td>南区分公司1</td>
         </tr>
         <tr>
-            <td>事故起数（起）</td>
-            <td>一般</td>
-            <td>重大</td>
-            <td>事故起数（起）</td>
-            <td>一般</td>
-            <td>重大</td>
+            <td>事故原因</td>
+            <td>直接原因</td>
+            <td>事故性质</td>
+            <td>非责任事故</td>
+            <td>事故类别</td>
+            <td>轻伤事故</td>
         </tr>
         <tr>
+            <td>人员伤亡</td>
+            <td colspan=2>2</td>
             <td>经济损失（万元）</td>
-            <td>2</td>
-            <td>0</td>
-            <td>经济损失（万元）</td>
-            <td>2</td>
-            <td>0</td>
+            <td colspan=2>0</td>
         </tr>
         <tr>
-            <td>通信阻断时间（小时）</td>
-            <td>
-                0.03
-            </td>
-            <td>0.00</td>
-            <td>
-                责任分类
-            </td>
-            <td><div class="layui-form">
-                    <select name="city" lay-verify="required">
-                        <option value="">请选择</option>
-                        <option value="010">安全生产事故</option>
-                        <option value="021" selected>生产事故</option>
-                        <option value="0571">消防隐患</option>
-                    </select>
-            </div></td>
-        </tr>
-        <tr>
-            <td>伤亡人数</td>
-            <td>
-                受伤人数：0
-            </td>
-            <td>死亡人数：0</td>
-            <td>
-                主要事故责任
-            </td>
-            <td>
-                受伤人数：0
-            </td>
-            <td>
-                死亡人数：0
+            <td>事故发生经过</td>
+            <td colspan=5>
+                事故发生经过事故发生经过事故发生经过事故发生经过事故发生经过
             </td>
         </tr>
         <tr>
-            <td>安全生产事故合计</td>
-            <td>
-                事故起数（起）：2
-            </td>
-            <td>
-                经济损失（万元）：2
-            </td>
-            <td>
-                通信阻断时间（小时）
-            </td>
-            <td colspan=2>
-                0.03
+            <td>事故责任分析及处理建议</td>
+            <td colspan=5>
+                事故发生经过事故发生经过事故发生经过事故发生经过事故发生经过
             </td>
         </tr>
         <tr>
-            <td>代表人</td>
-            <td>
-            </td>
-            <td>审核人</td>
-            <td>
-            </td>
-            <td>公司主管领导</td>
-            <td>
+            <td>事故防范整改措施</td>
+            <td colspan=5>
+                事故发生经过事故发生经过事故发生经过事故发生经过事故发生经过
             </td>
         </tr>
         </tbody>
@@ -388,23 +332,25 @@
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-    var _h = $(window).height()-40;
     layui.use('table', function () {
         var table = layui.table;
         table.render({
             elem: '#test'
-            ,height: _h
+            ,height: 'full-40'
             , url: './accidentInvestigation.json'
             , cols: [[
                 {type: 'checkbox'}
-                , {field: 'id', title: '部门', width: '15%'}
-                , {field: 'number', title: '事故编号', width: '12%'}
-                , {field: 'times', title: '事故发生时间', width: '13%'}
-                , {field: 'category', title: '事件分类', width: '16%'}
-                , {field: 'level', title: '事故级别', width: '10%'}
-                , {field: 'interdiction', title: '通信阻断时间', width: '10%'}
-                , {field: 'price', title: '经济损失', width: '10%'}
-                , {field: 'enclosure', title: '附件', width: '10%'}
+                , {field: 'department', title: '单位'}
+                , {field: 'time', title: '时间'}
+                , {field: 'address', title: '地点'}
+                , {field: 'accident', title: '经过'}
+                , {field: 'casualty', title: '人员伤亡'}
+                , {field: 'economic', title: '经济损失'}
+                , {field: 'reason', title: '原因'}
+                , {field: 'nature', title: '性质'}
+                , {field: 'type', title: '类型'}
+                , {field: 'suggest', title: '责任分析及处理建议'}
+                , {field: 'measures', title: '防范整改措施'}
             ]]
             , page: true
             ,even:true
@@ -420,7 +366,7 @@
                 var that = this;
                 layer.open({
                     type: 1 //此处以iframe举例
-                    , title: '新增'
+                    , title: '调查'
                     , area: '900px'
                     , shade: 0.2
                     , maxmin: true
