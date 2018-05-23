@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1fec48ae-2dde-4d87-92e4-517c895beeaf" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/analysisReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/analysisReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/assets/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/layui/css/layui.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/fireSafety/fireStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/fireSafety/fireStatistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +22,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/safe/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="273" column="74" selection-start-line="273" selection-start-column="74" selection-end-line="273" selection-end-column="74" />
+            <state relative-caret-position="200">
+              <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -37,23 +36,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analysisReport.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/safe/assessmentProject/analysisReport.html">
+      <file leaf-file-name="workProgress.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="35" column="36" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="36" />
+            <state relative-caret-position="83">
+              <caret line="240" column="13" selection-start-line="240" selection-start-column="13" selection-end-line="240" selection-end-column="13" />
               <folding>
-                <element signature="e#1989#3060#0" />
+                <element signature="e#2476#2744#0" />
+                <element signature="e#2761#2830#0" />
+                <element signature="e#3917#4030#0" />
+                <element signature="e#4143#4256#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fireStatistics.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/safe/fireSafety/fireStatistics.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -89,6 +82,10 @@
       <find>消防安全</find>
       <find>责任分类</find>
       <find>echarts</find>
+      <find>data</find>
+      <find>convertData</find>
+      <find>layui-layout-body</find>
+      <find>navbar-title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,15 +128,18 @@
         <option value="$PROJECT_DIR$/safe/accidentHandling/investigationTtreatment.html" />
         <option value="$PROJECT_DIR$/safe/assessmentProject/package.json" />
         <option value="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.json" />
-        <option value="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" />
         <option value="$PROJECT_DIR$/safe/assessmentProject/achievement.json" />
         <option value="$PROJECT_DIR$/safe/assessmentProject/achievement.html" />
-        <option value="$PROJECT_DIR$/safe/index.html" />
         <option value="$PROJECT_DIR$/safe/assessmentProject/analysisReport.html" />
         <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html" />
         <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html" />
-        <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" />
         <option value="$PROJECT_DIR$/safe/fireSafety/fireStatistics.html" />
+        <option value="$PROJECT_DIR$/safe/Hazard_source.html" />
+        <option value="$PROJECT_DIR$/../12/智慧工地原型图V1.2/index2.html" />
+        <option value="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" />
+        <option value="$PROJECT_DIR$/safe/assets/layui/css/layui.css" />
+        <option value="$PROJECT_DIR$/safe/index.html" />
+        <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" />
       </list>
     </option>
   </component>
@@ -159,9 +159,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="183" />
-    <option name="width" value="1143" />
-    <option name="height" value="730" />
+    <option name="x" value="265" />
+    <option name="y" value="37" />
+    <option name="width" value="973" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,41 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="layui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-              <item name="fireSafety" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -233,6 +199,50 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="layui" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,7 +250,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../auto-e/auto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js3" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -291,7 +301,8 @@
       <workItem from="1526864495086" duration="2807000" />
       <workItem from="1526869466728" duration="10759000" />
       <workItem from="1526952502476" duration="8580000" />
-      <workItem from="1526961995224" duration="5799000" />
+      <workItem from="1526961995224" duration="11662000" />
+      <workItem from="1527039255220" duration="11399000" />
     </task>
     <task id="LOCAL-00001" summary="统计分析/报表添加二级子菜单">
       <created>1526462532262</created>
@@ -391,17 +402,31 @@
       <option name="project" value="LOCAL" />
       <updated>1526972931547</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="修改引用js文件">
+      <created>1526973320613</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526973320613</updated>
+    </task>
+    <task id="LOCAL-00016" summary="考核模块修改">
+      <created>1526990632774</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1526990632774</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85345000" />
+    <option name="totallyTimeSpent" value="102607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="183" y="0" width="1143" height="730" extended-state="0" />
+    <frame x="492" y="51" width="973" height="696" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2479638" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18712273" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="13" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -424,25 +449,25 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="运行" order="8" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26220095" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="运行" order="8" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49902534" weight="0.37589929" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49902534" weight="0.21543986" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50097466" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="消息" order="14" weight="0.3290461" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49902534" weight="0.37589929" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="调试" order="13" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.2064632" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
@@ -467,43 +492,17 @@
     <MESSAGE value="事故/件处理与应急准备/响应的样式调整" />
     <MESSAGE value="增加消防安全，修改事故/件" />
     <MESSAGE value="考核模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="考核模块" />
+    <MESSAGE value="修改" />
+    <MESSAGE value="修改引用js文件" />
+    <MESSAGE value="考核模块修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="考核模块修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../亿百维/SafeSystem/safe/index_2.html" />
-    <entry file="file://$PROJECT_DIR$/../zTree_v3-master/zTree_v3-master/demo/en/index.html" />
-    <entry file="file://$PROJECT_DIR$/safe/zTree_v3-master/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Plan_management1.html" />
     <entry file="file://$PROJECT_DIR$/safe/contingencyReserve/planManagement.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -640,11 +639,6 @@
     <entry file="file://$PROJECT_DIR$/safe/assets/layui/images/admin.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/safe/1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/safe/Management_module/Plan_management1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5271">
@@ -659,40 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="148" column="31" lean-forward="true" selection-start-line="148" selection-start-column="31" selection-end-line="148" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/safe/assessmentProject/achievement.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="273" column="74" selection-start-line="273" selection-start-column="74" selection-end-line="273" selection-end-column="74" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,35 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="165" column="6" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#8;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#9;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#4309#4901#0" />
-            <element signature="e#4949#6512#0" />
-            <element signature="e#6560#8129#0" />
-            <element signature="e#8177#9749#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,41 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -785,22 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#td#3;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -808,55 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="246" column="22" selection-start-line="246" selection-start-column="22" selection-end-line="246" selection-end-column="22" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#blockquote#0;n#div#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#blockquote#0;n#div#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="230" column="40" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -864,13 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="311" lean-forward="true" selection-start-line="311" selection-end-line="311" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="e#288#325#0" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,13 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="304" selection-start-line="304" selection-end-line="304" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,12 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="304" lean-forward="true" selection-start-line="304" selection-end-line="304" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,12 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7">
           <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -918,16 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
           <caret line="274" column="17" selection-start-line="274" selection-start-column="17" selection-end-line="274" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#4;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,20 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/analysisReport.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="36" />
-          <folding>
-            <element signature="e#1989#3060#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,6 +741,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/1.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/Hazard_source.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/analysisReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../d3-china-map-master/d3-china-map-master/map_template.html" />
+    <entry file="file://$PROJECT_DIR$/../d3-china-map-master/d3-china-map-master/example.html" />
+    <entry file="file://$PROJECT_DIR$/../12/智慧工地原型图V1.2/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2471">
+          <caret line="263" column="36" lean-forward="true" selection-start-line="263" selection-start-column="36" selection-end-line="263" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="93" column="36" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#SCRIPT#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/equipmentPersonnelStatistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="971">
+          <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/reportStatistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1371">
+          <caret line="230" column="40" selection-start-line="230" selection-start-column="40" selection-end-line="230" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/assets/images/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/assets/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="3512" column="20" selection-start-line="3512" selection-start-column="20" selection-end-line="3512" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="82" column="54" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="240" column="13" selection-start-line="240" selection-start-column="13" selection-end-line="240" selection-end-column="13" />
+          <folding>
+            <element signature="e#2476#2744#0" />
+            <element signature="e#2761#2830#0" />
+            <element signature="e#3917#4030#0" />
+            <element signature="e#4143#4256#0" />
+          </folding>
         </state>
       </provider>
     </entry>
