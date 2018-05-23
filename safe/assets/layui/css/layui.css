@@ -64,7 +64,10 @@ button, input, optgroup, option, select, textarea {
 	font-weight: inherit;
 	outline: 0
 }
-
+option{
+	background: rgba(255,255,255,.1);
+	color: #000;
+}
 pre {
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
@@ -1886,7 +1889,9 @@ a cite {
 	height: 30px;
 	line-height: 30px;
 	padding: 0 10px;
-	font-size: 12px
+	font-size: 12px;
+	background: #01395e;
+
 }
 
 .layui-btn-sm i {
@@ -2285,9 +2290,8 @@ a cite {
 }
 
 .layui-form-checked[lay-skin=primary] i {
-	border-color: #5FB878;
-	background-color: #5FB878;
-	color: #fff
+	background: #47b0c4;
+	color: #fff;
 }
 
 .layui-checkbox-disbaled[lay-skin=primary] span {
@@ -2700,7 +2704,8 @@ a cite {
 	padding: 1px;
 	width: 100%;
 	height: 100%;
-	background-color: #009688
+	background:rgba(255,255,255,.3);
+	color: white;
 }
 
 .layui-laypage-em {
@@ -2818,10 +2823,18 @@ a cite {
 	font-weight: 400
 }
 
-.layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table[lay-even] tr:nth-child(even) {
+.layui-table-click, .layui-table-header,.layui-table-mend, .layui-table-patch, .layui-table-tool {
 	background-color: #f2f2f2
 }
-
+.layui-table[lay-even] tr:nth-child(even){
+	background: rgba(255,255,255,.1);
+}
+.layui-table tbody tr:hover,.layui-table-hover{
+	background: rgba(255,255,255,.2);
+}
+.layui-table thead tr{
+	background: none;
+}
 .layui-table td, .layui-table th, .layui-table-fixed-r, .layui-table-header, .layui-table-page, .layui-table-tips-main, .layui-table-tool, .layui-table-view, .layui-table[lay-skin=line], .layui-table[lay-skin=row] {
 	border-width: 1px;
 	border-style: solid;
@@ -2883,7 +2896,9 @@ a cite {
 .layui-table-view .layui-table {
 	position: relative;
 	width: auto;
-	margin: 0
+	margin: 0;
+	background: none;
+	color: white;
 }
 
 .layui-table-body, .layui-table-header .layui-table, .layui-table-page {
@@ -2915,7 +2930,8 @@ a cite {
 
 .layui-table-header {
 	border-width: 0 0 1px;
-	overflow: hidden
+	overflow: hidden;
+	background: rgba(255,255,255,.2);
 }
 
 .layui-table-sort {
@@ -3072,7 +3088,12 @@ a cite {
 
 .layui-table-page .layui-laypage span {
 	margin-left: 0;
-	padding: 0
+	padding: 0;
+	color: #fff;
+}
+
+.layui-table-page .layui-laypage a{
+	color: #fff;
 }
 
 .layui-table-page .layui-laypage .layui-laypage-prev {
@@ -3091,11 +3112,17 @@ a cite {
 }
 
 .layui-table-page .layui-laypage input {
-	width: 40px
+	width: 40px;
+	background: rgba(255,255,255,.3);
+	border: none;
+	color: #fff;
 }
 
 .layui-table-page .layui-laypage button {
-	padding: 0 10px
+	padding: 0 10px;
+	background: rgba(255,255,255,.3);
+	border: none;
+	color: #fff;
 }
 
 .layui-table-page select {
@@ -3103,7 +3130,10 @@ a cite {
 }
 
 .layui-table-view select[lay-ignore] {
-	display: inline-block
+	display: inline-block;
+	background: rgba(255,255,255,.3);
+	color: #fff;
+	border: none;
 }
 
 .layui-table-patch .layui-table-cell {

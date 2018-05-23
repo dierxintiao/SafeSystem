@@ -86,51 +86,52 @@
         var form = layui.form;
         form.render();
     });
-    var _h = $(window).height()-60;
     layui.use('table', function () {
         var table = layui.table;
-
-        table.render({
-            elem: '#test',
-            url: '../json/poli_man.json',
-            height: _h,
-            cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-            ,
-            cols: [
-                [{
-                    type: 'checkbox'
-                }, {
-                    field: 'id',
-                    title: 'ID',
-                    width: 80,
-                    align: 'center'
-                }, {
-                    field: 'title',
-                    title: '标题',
-                    align: 'center'
-                }, {
-                    field: 'type',
-                    title: '类别',
-                    align: 'center'
-                }, {
-                    field: 'time',
-                    title: '时间',
-                    align: 'center'
-                }, {
-                    field: 'Enclosure',
-                    title: '附件',
-                    align: 'center'
-                }, {
-                    field: 'state',
-                    title: '状态',
-                    align: 'center'
-                }, {
-                    field: 'remarks',
-                    title: '备注',
-                    align: 'center'
-                }]
-            ],
-            page: true
+        $.getJSON('../json/poli_man.json', function (data) {
+            table.render({
+                elem: '#test',
+                height: 'full-70',
+                data: data.data,
+                limit: 10,
+                cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                ,
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'title',
+                        title: '标题',
+                        align: 'center'
+                    }, {
+                        field: 'type',
+                        title: '类别',
+                        align: 'center'
+                    }, {
+                        field: 'time',
+                        title: '时间',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }, {
+                        field: 'state',
+                        title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'remarks',
+                        title: '备注',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
         });
     });
 
