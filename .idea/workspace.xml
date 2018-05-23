@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fec48ae-2dde-4d87-92e4-517c895beeaf" name="默认" comment="">
-      <change beforePath="$PROJECT_DIR$/safe/assets/images/tou1.png" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/images/tou1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/images/yc6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/assets/layui/scrollQ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/json/dan_sou.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/json/dan_sou1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/json/dan_sou2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/prevention/Ledger.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/prevention/Measures.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/prevention/dangerous_sources.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/safe/prevention/evaluate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/Hazard_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Hazard_source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/Management_module/Policy_management1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Policy_management1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/Management_module/Policy_management2.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Policy_management2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/achievement.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/achievement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/assets/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/layui/css/layui.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +40,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/safe/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="-2829">
               <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -35,24 +54,39 @@
                 <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#li#7;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#li#8;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workProgress.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/workProgress.html">
+      <file leaf-file-name="achievement.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/safe/assessmentProject/achievement.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="133" column="9" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+            <state relative-caret-position="124">
+              <caret line="165" column="6" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
               <folding>
-                <element signature="e#2476#2744#0" />
-                <element signature="e#2761#2830#0" />
-                <element signature="e#2558#3474#0" />
-                <element signature="e#3917#4030#0" />
-                <element signature="e#4143#4256#0" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#8;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#9;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -170,7 +204,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="278" />
     <option name="y" value="38" />
-    <option name="width" value="973" />
+    <option name="width" value="1006" />
     <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -219,6 +253,25 @@
               <item name="qq" type="b2602c69:ProjectViewProjectNode" />
               <item name="qq" type="462c0819:PsiDirectoryNode" />
               <item name="safe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assessmentProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -283,7 +336,7 @@
       <workItem from="1526869466728" duration="10759000" />
       <workItem from="1526952502476" duration="8580000" />
       <workItem from="1526961995224" duration="11662000" />
-      <workItem from="1527039255220" duration="19517000" />
+      <workItem from="1527039255220" duration="19767000" />
     </task>
     <task id="LOCAL-00001" summary="统计分析/报表添加二级子菜单">
       <created>1526462532262</created>
@@ -404,17 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1527055879463</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="首页样式修改，和统计报表修改">
+      <created>1527071724498</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527071724498</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110725000" />
+    <option name="totallyTimeSpent" value="110975000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="278" y="38" width="973" height="696" extended-state="0" />
-    <editor active="true" />
+    <frame x="278" y="38" width="1006" height="696" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18609625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30165288" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="13" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.24014337" />
@@ -484,7 +543,8 @@
     <MESSAGE value="修改引用js文件" />
     <MESSAGE value="考核模块修改" />
     <MESSAGE value="样式修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="样式修改" />
+    <MESSAGE value="首页样式修改，和统计报表修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页样式修改，和统计报表修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,13 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/achievement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="165" column="6" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/safe/accidentHandling/accidentInformation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -813,9 +866,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/safe/assessmentProject/achievement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="165" column="6" selection-start-line="165" selection-start-column="6" selection-end-line="165" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#1;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#2;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#3;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#4;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#5;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#6;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#7;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#8;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#tr#9;n#tbody#0;n#table#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/safe/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="-2829">
           <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -829,7 +912,6 @@
             <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#7;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#li#8;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
