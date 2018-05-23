@@ -16,11 +16,12 @@
         }
 
         .layui-layout-body {
-            background: url("assets/images/bj.png");
+            background: url("assets/images/bj.png") no-repeat;
+            background-size: cover;
         }
         .layui-bg-black{
             padding-top: 30px;
-            background: url("assets/images/bj_caidan.png");
+            background: url("assets/images/bj_caidan.png") no-repeat;
             background-size: 200px 100%;
         }
         .layui-nav-tree .layui-nav-bar {
@@ -28,8 +29,12 @@
             /*height: 0;*/
             /*background-color: #244dae;*/
         }
+        span.layui-nav-bar {
+            background: transparent;
+        }
         .layui-layout-admin .layui-side{
             top: 85px;
+            padding-bottom: 30px;
         }
         .layui-layout-admin .layui-body{
             top: 85px;
@@ -46,6 +51,23 @@
             padding-left: 2px;
             height: 45px;
             line-height: 39px;
+        }
+        .layui-nav-child {
+            position: absolute;
+            left: 0;
+            top: 37px;
+            /*min-width: 100%;*/
+            line-height: 36px;
+            padding: 5px 0;
+            box-shadow: none;
+            border: 0;
+            background-color: rgba(0, 27, 57,0.8);
+            z-index: 100;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+        .layui-nav .layui-nav-child a{
+            color: #fff;
         }
         .layui-layout-admin .layui-logo {
             position: absolute;
@@ -80,9 +102,16 @@
         .layui-layout-admin .layui-header {
             background: #244dae;
             height: 85px;
-            background: url("assets/images/tou1.png");
+            background: url("assets/images/tou1.png") no-repeat;
+            background-size: 100% 100%;
         }
-
+        .header-text{
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+            padding-top: 25px;
+        }
         .layui-nav-tree .layui-nav-item a:hover {
             background: #244dae;
         }
@@ -96,6 +125,7 @@
            .layui-nav .layui-nav-mored, .layui-nav-itemed > a:hover .layui-nav-more{
                border-color: transparent transparent #fff !important;
            }*/
+
     </style>
 </head>
 <body class="layui-layout-body">
@@ -105,6 +135,9 @@
             <a class="navbar-title" href="index.html">
                 返回首页
             </a>
+        </div>
+        <div class='header-text'>
+            安全管理系统
         </div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-right">
@@ -125,8 +158,60 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed"><a href="javascript:void(0);">策划危险源辨识</a></li>
-                <li class="layui-nav-item layui-this"><a href="allused.html">通用模块</a></li>
+                <li class="layui-nav-item layui-nav-itemed layui-this"><a href="javascript:void(0);">策划危险源辨识</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">双重防控建设</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:void(0);">安全风险分级管控</a>
+                            <dl class="layui-nav-child">
+
+                                <dd><a href="javascript:void(0);">策划危险源</a></dd>
+                                <dd><a href="javascript:void(0);">风险评价/等级确定</a></dd>
+                                <dd><a href="javascript:void(0);">危险源控制措施</a></dd>
+                                <dd><a href="javascript:void(0);">风险告知/预警</a></dd>
+                                <dd><a href="javascript:void(0);">危险源台帐</a></dd>
+                            </dl>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0);">隐患排查治理</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:void(0);">隐患发现</a></dd>
+                                <dd><a href="javascript:void(0);">隐患评价</a></dd>
+                                <dd><a href="javascript:void(0);">隐患治理</a></dd>
+                                <dd><a href="javascript:void(0);">隐患监控治理</a></dd>
+                                <dd><a href="javascript:void(0);">隐患验证销账</a></dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">考核模块</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="assessmentProject/assessmentProjectAllocation.html">考核项目配置</a></dd>
+                        <dd><a href="assessmentProject/achievement.html">考核成绩展示</a></dd>
+                        <dd><a href="assessmentProject/analysisReport.html">统计分析/报表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">统计分析/报表</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="atatisticalAnalysisReport/workProgress.html">工作进展</a></dd>
+                        <dd><a href="atatisticalAnalysisReport/equipmentPersonnelStatistics.html">设备人员统计</a></dd>
+                        <dd><a href="javascript:void(0);">隐患排查</a></dd>
+                        <dd><a href="atatisticalAnalysisReport/reportStatistics.html">报表统计</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:void(0);">安全文化</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:void(0);">文化手册</a></dd>
+                        <dd><a href="javascript:void(0);">文化活动</a></dd>
+                        <dd><a href="javascript:void(0);">图片管理</a></dd>
+                        <dd><a href="javascript:void(0);">文化学习</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="allused.html">通用模块</a></li>
                 <li class="layui-nav-item">
                     <a href="javascript:void(0);">管理模块</a>
                     <dl class="layui-nav-child">
@@ -293,49 +378,6 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">双重防控建设</a>
-                    <dl class="layui-nav-child">
-                        <dd>
-                            <a href="javascript:void(0);">安全风险分级管控</a>
-                            <dl class="layui-nav-child">
-
-                                <dd><a href="javascript:void(0);">策划危险源</a></dd>
-                                <dd><a href="javascript:void(0);">风险评价/等级确定</a></dd>
-                                <dd><a href="javascript:void(0);">危险源控制措施</a></dd>
-                                <dd><a href="javascript:void(0);">风险告知/预警</a></dd>
-                                <dd><a href="javascript:void(0);">危险源台帐</a></dd>
-                            </dl>
-                        </dd>
-                        <dd>
-                            <a href="javascript:void(0);">隐患排查治理</a>
-                            <dl class="layui-nav-child">
-                                <dd><a href="javascript:void(0);">隐患发现</a></dd>
-                                <dd><a href="javascript:void(0);">隐患评价</a></dd>
-                                <dd><a href="javascript:void(0);">隐患治理</a></dd>
-                                <dd><a href="javascript:void(0);">隐患监控治理</a></dd>
-                                <dd><a href="javascript:void(0);">隐患验证销账</a></dd>
-                            </dl>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:void(0);">考核模块</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="assessmentProject/assessmentProjectAllocation.html">考核项目配置</a></dd>
-                        <dd><a href="assessmentProject/achievement.html">考核成绩展示</a></dd>
-                        <dd><a href="assessmentProject/analysisReport.html">统计分析/报表</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:void(0);">统计分析/报表</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="atatisticalAnalysisReport/workProgress.html">工作进展</a></dd>
-                        <dd><a href="atatisticalAnalysisReport/equipmentPersonnelStatistics.html">设备人员统计</a></dd>
-                        <dd><a href="javascript:void(0);">隐患排查</a></dd>
-                        <dd><a href="atatisticalAnalysisReport/reportStatistics.html">报表统计</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
                     <a href="javascript:void(0);">自评模块</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:void(0);">岗位管理</a></dd>
@@ -353,15 +395,6 @@
                         <dd><a href="javascript:void(0);">预警参数</a></dd>
                         <dd><a href="javascript:void(0);">预警模型</a></dd>
                         <dd><a href="javascript:void(0);">预警结果</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:void(0);">安全文化</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:void(0);">文化手册</a></dd>
-                        <dd><a href="javascript:void(0);">文化活动</a></dd>
-                        <dd><a href="javascript:void(0);">图片管理</a></dd>
-                        <dd><a href="javascript:void(0);">文化学习</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
