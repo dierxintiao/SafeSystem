@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("images/bj.png") no-repeat;
+    background-attachment: fixed;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.header {
+    height: 180px;
+    background: url("images/bj_banner.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 32px 0 0 9px;
+}
+
+.header .logo {
+    width: 248px;
+    height: 80px;
+    margin-left: 96px;
+    background: url("images/logo.png") no-repeat;
+}
+.header .logo a{
+    width: 248px;
+    height: 80px;
+    display: block;
+}
+.header .logo a h1{
+    display: none;
+}
+.video-login {
+    padding: 30px 40px 0;
+}
+.video-login .video{
+    padding: 30px 48px 36px 26px;
+    background: url("images/bj_video.png") no-repeat;
+    background-size: 100% 334px;
+    margin-right: 50px;
+    height: 334px;
+    box-sizing: border-box;
+}
+.video-login .video img{
+    width: 100%;
+}
+.video-login .login{
+    padding: 18px 50px 0;
+    height: 334px;
+    box-sizing: border-box;
+    background: url("images/bj_login.png") no-repeat 0 -24px;
+    background-size: 100% 358px;
+}
+.video-login .login h4{
+    font-size: 18px;
+    text-align: center;
+    color:#85abff;
+}
+.video-login .login .sub-title{
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 32px;
+}
+.video-login .login .sub-title .line{
+    display: inline-block;
+    width: 82px;
+    height: 1px;
+    background: #769cef;
+    vertical-align: middle;
+}
+.video-login .login .sub-title .welcome{
+    font-size: 12px;
+    color: #6b90da;
+}
+.video-login .login .layui-form-item{
+    position: relative;
+    height: 36px;
+}
+.video-login .login .layui-form-item .layui-form-label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    width: 50px;
+    height: 36px;
+    line-height: 36px;
+    background: #769cef;
+    text-align: center;
+    z-index: 1;
+}
+.video-login .login .layui-form-item .layui-form-label i{
+    color: #0d2443;
+    font-size: 20px;
+}
+.video-login .login .layui-form-item .layui-input-inline{
+    width: 100%;
+    margin-left: 0;
+    height: 36px;
+    padding-left: 49px;
+    box-sizing: border-box;
+}
+.video-login .login .layui-form-item .layui-input-inline .layui-input{
+    height: 36px;
+    border: 1px solid #769cef;
+    background: transparent;
+}
+.video-login .login .password{
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    color: #6384cc;
+}
+.layui-form-checkbox[lay-skin=primary] span{
+    color: #6384cc;
+}
+.video-login .login .password span{
+    cursor: pointer;
+}
+.video-login .login .password span i{
+    width: 20px;
+    height: 20px;
+    background: #769cef;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 100%;
+    color: #192f52;
+}
+.video-login .login .layui-form-item .layui-input-block{
+    margin-left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.video-login .login .layui-form-item .layui-input-block .layui-btn{
+    width: 140px;
+    background: transparent;
+    color: #769cef;
+    border: 1px solid #769cef;
+}
+.video-login .login .layui-form-item .layui-input-block .layui-btn:hover{
+    background: #769cef;
+    color: #0d2443;
+}
+.news{
+    padding: 30px 40px 0;
+}
+.news .item{
+    padding: 14px 40px 44px 25px;
+}
+.news .item .title{
+    display: flex;
+    justify-content: space-between;
+}
+.news .item .title h3{
+    font-size: 18px;
+    color: #86acff;
+    line-height: 24px;
+    border-bottom: 3px solid #86acff;
+}
+.news .item .title span{
+    font-size: 14px;
+    color: #86acff;
+}
+.news .item .info li{
+    padding-top: 19px;
+    line-height: 24px;
+    border-bottom: 1px solid #6088ce;
+}
+.news .item .info li a{
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+    color: #6088ce;
+}
+.news .item.laws{
+    background: url("images/bj_laws.png") no-repeat;
+    background-size: 100% 305px;
+}
+.news .item.notice{
+    margin-left: 30px;
+    background: url("images/bj_notice.png") no-repeat;
+    background-size: 100% 305px;
+}
+.culture{
+    margin: 30px 40px 0;
+    padding: 16px 50px 40px 26px;
+    background: url("images/bj_play.png") no-repeat;
+    background-size: 100% 367px;
+}
+.culture .title{
+    color: #86acff;
+    display: flex;
+    justify-content: space-between;
+}
+.culture .title h3{
+    font-size: 18px;
+    line-height: 24px;
+    border-bottom: 3px solid #86acff;
+}
+.culture .title span{
+    font-size: 14px;
+    color: #86acff;
+}
+.culture .info{
+    padding-top: 22px;
+    color: #86acff;
+}
+.culture .info li img{
+    width: 100%;
+    height: 160px;
+}
+.culture .info li h4{
+    padding: 20px 0 10px;
+    font-size: 18px;
+}
+.culture .info li p{
+    line-height: 24px;
+    font-size: 12px;
+}
+.footer{
+    margin-top: 100px;
+    height: 150px;
+    font-size: 16px;
+    text-align: center;
+    color: #86acff;
+    line-height: 40px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    font-weight: bold;
+    background: rgba(134,172,255,0.16);
+}
