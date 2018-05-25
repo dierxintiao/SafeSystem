@@ -5,43 +5,448 @@
     <title>文化学习</title>
     <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .content_R{
+            width: 90%;
+            height:85%;
+            margin: auto;
+            margin-top: 4%;
+            overflow-y: scroll;
+        }
+        .file-box {
+            float: left;
+            width: 220px;
+        }
+
+        .file {
+            background: rgba(255, 255, 255, .2);
+            position: relative;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            padding: 0;
+
+        }
+
+        .file a {
+            color: #fff;
+            text-align: center;
+        }
+
+        .file-name {
+            background: rgba(255, 255, 255, .1);
+            padding: 10px 0;
+            border-top: 1px solid #013255;
+        }
+        .up{
+            height: 130px;
+        }
+    </style>
 </head>
 <body>
-<div class="layui-col-md3">
-    <div class="content_L"
-         style="height:560px;padding:20px;background: url('../assets/images/bj_sg.png') no-repeat;background-size:100% 100%; ">
-        <div class="layui-row">
-            <span style="color: white;font-size: 14px;">显示：</span>
-        </div>
-        <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal">所有</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal">文档</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal">图片</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal">视频</a>
-        </div>
-        <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" id="test3" style="width: 100%;">上传文件</a>
-        </div>
-        <!--<div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">-->
-        <!--<ul id="treeDemo" class="ztree"></ul>-->
-        <!--</div>-->
-        <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
-            <span style="color: white;font-size: 14px;">标签：</span>
-        </div>
-        <div class="layui-row" style="margin: 15px;padding-bottom:15px;">
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">活动</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">家庭</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">视频</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">心理</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">假期</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">音乐</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">照片</a>
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">讲座</a>
+<div class="layui-row" style="height: 100%;">
+    <div class="layui-col-md3">
+        <div class="content_L"
+             style="height:560px;padding:20px;background: url('../assets/images/bj_sg.png') no-repeat;background-size:100% 100%; ">
+            <div class="layui-row">
+                <span style="color: white;font-size: 14px;">显示：</span>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">所有</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">文档</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">图片</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">视频</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" id="test3" style="width: 100%;">上传文件</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <span style="color: white;font-size: 14px;">标签：</span>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">活动</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">家庭</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">视频</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">心理</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">假期</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">音乐</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">照片</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">讲座</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
         </div>
     </div>
-</div>
-<div class="layui-col-md9">
-
+    <div class="layui-col-md9"
+         style="height:100%;background: url('../assets/images/bj_gsqn.png') no-repeat;background-size:100% 100%;">
+        <div class="content_R">
+            <div class="layui-row" style="padding: 15px;">
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe655;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/4.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe601;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/7.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/8.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe655;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe64a;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/7.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/8.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe601;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe64a;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/layui/layui.all.js"></script>
