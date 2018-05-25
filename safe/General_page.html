@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>通用模版</title>
+    <link rel="stylesheet" href="assets/layui/css/layui.css">
+</head>
+
+<body style="padding: 15px;">
+<form action="" class="layui-form">
+    <div class="layui-btn-group" style="margin-bottom: 10px;">
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">新增</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">修改</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
+    </div>
+    <div class="demoTable search" style="float: right;margin-bottom: 10px;">
+        标题：
+        <div class="layui-inline" style="margin-right: 15px">
+            <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+        </div>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+    </div>
+    <table class="layui-table" id="test">
+
+    </table>
+</form>
+<script type="text/javascript" src="assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="assets/layui/layui.js"></script>
+<script>
+
+    layui.use(['form', 'code'], function () {
+        var form = layui.form;
+        $ = layui.$;
+        form.render();
+    });
+    layui.use('table', function () {
+        var table = layui.table;
+        $.getJSON('json/poli_man.json', function (data) {
+            table.render({
+                elem: '#test',
+                height: 'full-70',
+                data: data.data,
+                limit: 10,
+                cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                ,
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'title',
+                        title: '标题',
+                        align: 'center'
+                    }, {
+                        field: 'type',
+                        title: '类别',
+                        align: 'center'
+                    }, {
+                        field: 'time',
+                        title: '时间',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }, {
+                        field: 'remarks',
+                        title: '备注',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
+        });
+    });
+</script>
+</body>
+
+</html>

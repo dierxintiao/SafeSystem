@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文化手册</title>
+    <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-col-md2">
+    <div class="layui-btn-group" style="margin-bottom: 10px;">
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">增加节点</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">编辑节点</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除节点</a>
+    </div>
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+<div class="layui-col-md10">
+    <form action="" class="layui-form">
+        <div class="layui-btn-group" style="margin-bottom: 10px;">
+            <a class="layerd layui-btn layui-btn-sm layui-btn-normal" data-method="add">新增</a>
+            <a class="layerd layui-btn layui-btn-sm layui-btn-normal" data-method="add">修改</a>
+            <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
+        </div>
+        <div class="demoTable search" style="float: right;margin-bottom: 10px;">
+            标题：
+            <div class="layui-inline" style="margin-right: 15px">
+                <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+        </div>
+        <table class="layui-table" id="test">
+
+        </table>
+    </form>
+    <form action="" class="layui-form">
+        <div id="setTop" class="layui-hide" style="padding: 10px;">
+            <table class="layui-table">
+                <tr>
+                    <td width="20%">公司</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">部门</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">名称</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">编号</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">顺序码</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">备注</td>
+                    <td colspan="3" width="80%">
+                        <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="add" class="layui-hide" style="padding: 10px;">
+            <table class="layui-table">
+                <tr>
+                    <td width="20%">手册类别</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0" selected="">立项类</option>
+                                <option value="1">招投标类</option>
+                                <option value="2">合同类</option>
+                                <option value="3">开工准备类</option>
+                                <option value="4">支付类</option>
+                                <option value="5">变更类</option>
+                                <option value="6">日常类</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">手册编号</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">手册名称</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">手册存放位置</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">文件份数</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">立卷人</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">立卷日期</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="date" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">备注</td>
+                    <td colspan="3" width="80%">
+                        <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/layui/layui.all.js"></script>
+<script type="text/javascript" src="../zTree_v3-master/js/jquery.ztree.core.min.js"></script>
+<script>
+    var zTreeObj;
+    var setting = {};
+    var zNodes = [
+        {
+            name: "部门", open: true, children: [
+                { name: "新郑卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "郑州卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "许昌卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "安阳卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "南阳卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "驻马店卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "漯河卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "洛阳卷烟厂",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]},
+                { name: "河南卷烟工业烟草薄片有限公司",open:false,children:[
+                    {name: "制丝车间"},
+                    {name: "卷包车间"},
+                    {name: "动力车间"},
+                    {name: "生产部"},
+                    {name: "原料部"},
+                    {name: "物资供应部"},
+                    {name: "质监站"},
+                    {name: "厂办"},
+                    {name: "设备管理部"},
+                    {name: "企管部"}
+                ]}
+            ]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+    layui.use(['form', 'code'], function () {
+        var form = layui.form;
+        $ = layui.$;
+        form.render();
+    });
+    layui.use('table', function () {
+        var table = layui.table;
+        $.getJSON('../json/Cul_han.json', function (data) {
+            table.render({
+                elem: '#test',
+                height: 'full-70',
+                data: data.data,
+                limit: 10,
+                cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+                ,
+                cols: [
+                    [{
+                        type: 'checkbox'
+                    }, {
+                        field: 'id',
+                        title: 'ID',
+                        width: 80,
+                        align: 'center'
+                    }, {
+                        field: 'number',
+                        title: '手册编号',
+                        align: 'center'
+                    }, {
+                        field: 'name',
+                        title: '手册名称',
+                        align: 'center'
+                    }, {
+                        field: 'position',
+                        title: '手册存放位置',
+                        align: 'center'
+                    }, {
+                        field: 'copies',
+                        title: '文件份数',
+                        align: 'center'
+                    }, {
+                        field: 'people',
+                        title: '立卷人',
+                        align: 'center'
+                    }, {
+                        field: 'date',
+                        title: '日期',
+                        align: 'center'
+                    }, {
+                        field: 'Enclosure',
+                        title: '附件',
+                        align: 'center'
+                    }]
+                ],
+                page: true
+            });
+        });
+    });
+
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '节点管理',
+                    area: '700px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#setTop'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#setTop").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#setTop").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#setTop").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            add: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '手册管理',
+                    area: '700px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            modal: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
+                    ,
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#setTop").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layerd').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>
+</body>
+</html>
