@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/home1.css">
 </head>
 <body>
-<div class="news layui-row layui-col-space30">
+<div class="news layui-row">
     <div class="layui-col-md4">
         <div class='item'>
             <h3>待处理/To Be Treated</h3>
@@ -45,19 +45,46 @@
         </div>
     </div>
 </div>
-<div class='map'>
-    <div class='left'>
-        <button id="reload">重新加载地图</button>
-        <div id="main" style="width:100%;height:100%;"></div>
-    </div>
-    <div class='right'>
-        <div class='info'>
-            <h3>关于登封市数据信息详情展示</h3>
+<div class='map' id='map-box'>
+        <div class='left'>
+            <button id="reload">重新加载地图</button>
+            <div id="main" style="width:100%;height:100%;"></div>
         </div>
-    </div>
+        <div class='right'>
+            <div class='info'>
+                <h3>数据统计</h3>
+                <ul>
+                    <li><span class='pro'>项目数:</span><span class='pro-info'>10个</span></li>
+                    <li><span class='pro'>占地面积:</span><span class='pro-info'>1,253,367平方米</span></li>
+                    <li><span class='pro'>危险源数:</span><span class='pro-info'>100个</span></li>
+                    <li><span class='pro'>潜在危险源数:</span><span class='pro-info'>1个</span></li>
+                    <li><span class='pro'>已查的危险源:</span><span class='pro-info'>88个</span></li>
+                    <li><span class='pro'>待查的危险源:</span><span class='pro-info'>10个</span></li>
+                    <li>危险源控制方法:</li>
+                    <li>技术控制、人行为控制、管理控制</li>
+                </ul>
+            </div>
+        </div>
+</div>
+<div class='map' id='floor-box' style='display: none'>
+        <div class='left' style='text-align: center;padding: 30px 0 5px;position: relative'>
+            <button id='back' style='position: absolute;left: 50px;top: 30px;cursor: pointer'>返回</button>
+            <img src="assets/images/floor.png" height='100%'>
+        </div>
+        <div class='right'>
+            <div class='info'>
+                <h3 style='font-size: 20px'>河南省楼房危险源信息</h3>
+                <ul style='font-size: 16px'>
+                    <li><span class='pro'>危险源类型:</span><span class='pro-info'>明火</span></li>
+                    <li><span class='pro'>危险源位置:</span><span class='pro-info'>8楼</span></li>
+                    <li>问题描述:</li>
+                    <li>危险源是指一个系统中具有潜在能量和物质释放危险的、可造成人员伤害、在一定的触发因素作用下可转化为事故的部位、区域、场所、空间、岗位、设备及其位置。</li>
+                </ul>
+            </div>
+        </div>
 </div>
 <div class='info-container'>
-    <div class="layui-row layui-col-space20">
+    <div class="layui-row">
         <div class="layui-col-md4">
             <div class='accident'>
                 <h3>事故通报/Accident Notification</h3>
@@ -102,7 +129,7 @@
         <div class="layui-col-md8">
             <div class='right'>
                 <div class='top'>
-                    <div class="layui-row layui-col-space20">
+                    <div class="layui-row">
                         <div class="layui-col-md7">
                             <div id='accident-chart' style='width: 100%;height: 315px'></div>
 
@@ -438,16 +465,25 @@
         {name: '南阳卷烟厂', coord: [112.5589741874, 33.0009174027]},
         {name: '驻马店卷烟厂', coord: [114.0542500164,32.9700863502]},
         {name: '漯河卷烟厂', coord: [114.0554335241, 33.5825391655]},
-        {name: '洛阳卷烟厂', coord: [112.4165814003, 34.6436204358]}
-        /* {name: '濮阳市', coord: [114.35, 34.79]},
-         {name: '许昌市', coord: [113.65, 34.76]},
-         {name: '漯河市', coord: [114.35, 34.79]},
-         {name: '三门峡市', coord: [114.35, 34.79]},
-         {name: '商丘市', coord: [113.65, 34.76]},
-         {name: '周口市', coord: [114.35, 34.79]},
-         {name: '驻马店市', coord: [114.35, 34.79]},
-         {name: '南阳市', coord: [114.35, 34.79]},
-         {name: '信阳市', coord: [114.35, 34.79]}*/
+        {name: '洛阳卷烟厂', coord: [112.4165814003, 34.6436204358]},
+        {name: '濮阳市卷烟厂', coord: [115.02932,35.76274317786015]},
+        {name: '许昌市卷烟厂', coord: [113.85232999999998, 34.03692693095248]},
+         {name: '开封市卷烟厂', coord: [114.30730999999999, 34.79847580802668]},
+         {name: '三门峡市卷烟厂', coord: [111.2003, 34.77382617142532]},
+         {name: '商丘市卷烟厂', coord: [115.65634999999999, 34.415137393259535]},
+         {name: '周口市卷烟厂', coord: [114.69695000000002, 33.62706282769109]},
+         {name: '平顶山市卷烟厂', coord: [113.19241000000001 , 33.766964060181095]},
+         {name: '新乡市卷烟厂', coord: [113.92675000000001, 35.304438299228174]},
+         {name: '信阳市卷烟厂', coord: [114.09279000000001, 32.14803022161856]},
+         {name: '鹤壁市卷烟厂', coord: [114.29745, 35.748201635920736]},
+         {name: '济源市卷烟厂', coord: [112.60273, 35.067930566623794]}
+    ];
+    var zhenZhou=[
+        {name: '黄金叶生产制造中心', coord: [113.7507009324,34.7071833741]},
+        {name: '进出口公司', coord: [113.05027999999999 ,34.454346986391734]},
+        {name: '投资公司', coord: [113.39044000000003 ,34.54073959657943]},
+        {name: '天昌公司', coord: [113.74161000000001 ,34.39727169477578]},
+        {name: '培训中心', coord: [113.67739 ,34.75467385652638]},
     ];
     var convertData = function (data) {
         var res = [];
@@ -561,7 +597,16 @@
                     option.title = {
                         text: '河南中烟-黄金叶生产制造中心危险源分布',
                         subtext: '纯属虚构',
-                        x: 'center'
+                        x: 'center',
+                        textStyle: {
+                            color: '#769ced',
+                            fontSize:16,
+                            fontWeight:800,
+                            textShadowColor:'#000',
+                            textShadowBlur:3,
+                            textShadowOffsetX:1,
+                            textShadowOffsetY:3
+                        }
                     };
                     option.tooltip = {show:false};
                     option.visualMap = {color: ['#6986d2']};
@@ -614,14 +659,16 @@
                                 show: true,
                                 shadowBlur: 0
                             },
-                            data: convertData(test),
+                            data: convertData(zhenZhou),
                         }
                     };
                     echarts.dispose(document.getElementById('main'));//先去掉原来的地图
                     var myChart = echarts.init(document.getElementById('main'));
                     myChart.setOption(option, true);
                     myChart.on('click',function (){
-                        alert("111");
+                        // alert("111");
+                        $('#map-box').css('display','none')
+                        $('#floor-box').css('display','block')
                     })
                 });
             }
@@ -633,7 +680,10 @@
     $("#reload").on('click',function (){
         drawMap('河南', mydata);
     })
-
+$('#back').on('click',function () {
+    $('#map-box').css('display','block')
+    $('#floor-box').css('display','none')
+})
 </script>
 </body>
 </html>
