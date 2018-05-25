@@ -5,121 +5,448 @@
     <title>文化学习</title>
     <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .content_R{
+            width: 90%;
+            height:85%;
+            margin: auto;
+            margin-top: 4%;
+            overflow-y: scroll;
+        }
+        .file-box {
+            float: left;
+            width: 220px;
+        }
+
+        .file {
+            background: rgba(255, 255, 255, .2);
+            position: relative;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            padding: 0;
+
+        }
+
+        .file a {
+            color: #fff;
+            text-align: center;
+        }
+
+        .file-name {
+            background: rgba(255, 255, 255, .1);
+            padding: 10px 0;
+            border-top: 1px solid #013255;
+        }
+        .up{
+            height: 130px;
+        }
+    </style>
 </head>
 <body>
-<div class="layui-col-md2">
-    <ul id="treeDemo" class="ztree"></ul>
-</div>
-<div class="layui-col-md10">
-    <form action="" class="layui-form">
-        <div class="layui-btn-group" style="margin-bottom: 10px;">
-            <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="show">查看</a>
-        </div>
-        <div class="demoTable search" style="float: right;margin-bottom: 10px;">
-            标题：
-            <div class="layui-inline" style="margin-right: 15px">
-                <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+<div class="layui-row" style="height: 100%;">
+    <div class="layui-col-md3">
+        <div class="content_L"
+             style="height:560px;padding:20px;background: url('../assets/images/bj_sg.png') no-repeat;background-size:100% 100%; ">
+            <div class="layui-row">
+                <span style="color: white;font-size: 14px;">显示：</span>
             </div>
-            <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">所有</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">文档</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">图片</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal">视频</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" id="test3" style="width: 100%;">上传文件</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <span style="color: white;font-size: 14px;">标签：</span>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;">
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">活动</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">家庭</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">视频</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">心理</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">假期</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">音乐</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">照片</a>
+                <a class="layer layui-btn layui-btn-sm layui-btn-normal" style="margin:10px 0 0 0;">讲座</a>
+            </div>
+            <div class="layui-row" style="margin: 15px;padding-bottom:15px;border-bottom: 1px dashed #013255;">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
         </div>
-        <table class="layui-table" id="test">
-
-        </table>
-    </form>
-    <form action="" class="layui-form">
-        <div id="add" class="layui-hide" style="padding: 10px;">
-            <table class="layui-table">
-                <tr>
-                    <td width="20%">图片类别</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <select name="interest" lay-filter="aihao">
-                                <option value=""></option>
-                                <option value="0" selected="">立项类</option>
-                                <option value="1">招投标类</option>
-                                <option value="2">合同类</option>
-                                <option value="3">开工准备类</option>
-                                <option value="4">支付类</option>
-                                <option value="5">变更类</option>
-                                <option value="6">日常类</option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">图片编号</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="text" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">图片名称</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="text" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">图片存放位置</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="text" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">图片张数</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="text" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">保存人</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="text" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">保存日期</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-input-block" style="margin-left: 0;">
-                            <input type="date" name="title" autocomplete="off" class="layui-input">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">上传图片</td>
-                    <td colspan="3" width="80%">
-                        <div class="layui-upload">
-                            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="modifyImg">多图片上传
-                            </button>
-                            <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
-                                预览图：
-                                <div class="layui-upload-list" id="modifyShow">
-                                    <img src="../assets/images/1.jpg" height=70>
-                                    <img src="../assets/images/2.jpg" height=70>
-                                    <img src="../assets/images/3.jpg" height=70>
-                                </div>
-                            </blockquote>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="20%">备注</td>
-                    <td colspan="3" width="80%">
-                        <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-                    </td>
-                </tr>
-            </table>
+    </div>
+    <div class="layui-col-md9"
+         style="height:100%;background: url('../assets/images/bj_gsqn.png') no-repeat;background-size:100% 100%;">
+        <div class="content_R">
+            <div class="layui-row" style="padding: 15px;">
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe655;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/4.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe601;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/7.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/8.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe655;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe64a;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img_1.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/img2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/2.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/3.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/7.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <img src="../assets/images/8.jpg" alt="" width="100%" height="100%">
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe652;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.mp4<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe601;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.doc<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="file-box">
+                    <div class="file">
+                        <a href="#">
+                            <div class="up">
+                                <i class="layui-icon" style="display: inline-block;font-size: 80px;padding:25px 0 ;">&#xe64a;</i>
+                            </div>
+                            <div class="file-name">
+                                Document_2017.jpg<br>
+                                <small>
+                                    添加时间：2017-02-16
+                                </small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/layui/layui.all.js"></script>
@@ -129,282 +456,30 @@
     var setting = {};
     var zNodes = [
         {
-            name: "部门", open: true, children: [
-                {
-                    name: "新郑卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "郑州卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "许昌卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "安阳卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "南阳卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "驻马店卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "漯河卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "洛阳卷烟厂", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                },
-                {
-                    name: "河南卷烟工业烟草薄片有限公司", open: false, children: [
-                        {name: "制丝车间"},
-                        {name: "卷包车间"},
-                        {name: "动力车间"},
-                        {name: "生产部"},
-                        {name: "原料部"},
-                        {name: "物资供应部"},
-                        {name: "质监站"},
-                        {name: "厂办"},
-                        {name: "设备管理部"},
-                        {name: "企管部"}
-                    ]
-                }
+            name: "种类", open: true, children: [
+                {name: "文件"},
+                {name: "图片"},
+                {name: "视频"},
+                {name: "书籍"}
             ]
         }
     ];
     $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
-    layui.use(['form', 'code'], function () {
-        var form = layui.form;
-        $ = layui.$;
-        form.render();
-    });
-    layui.use('table', function () {
-        var table = layui.table;
-        $.getJSON('../json/Cul_han.json', function (data) {
-            table.render({
-                elem: '#test',
-                height: 'full-70',
-                data: data.data,
-                limit: 10,
-                cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
-                ,
-                cols: [
-                    [{
-                        type: 'checkbox'
-                    }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
-                    }, {
-                        field: 'department',
-                        title: '部门',
-                        align: 'center'
-                    }, {
-                        field: 'number',
-                        title: '文件编号',
-                        align: 'center'
-                    }, {
-                        field: 'name',
-                        title: '文件名称',
-                        align: 'center'
-                    }, {
-                        field: 'copies',
-                        title: '图片张数',
-                        align: 'center'
-                    }, {
-                        field: 'people',
-                        title: '保存人',
-                        align: 'center'
-                    }, {
-                        field: 'date',
-                        title: '保存日期',
-                        align: 'center'
-                    }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }]
-                ],
-                page: true
-            });
-        });
-    });
-
-    layui.use('layer', function () { //独立版的layer无需执行这一句
-        var $ = layui.jquery,
-            layer = layui.layer; //独立版的layer无需执行这一句
-        //触发事件
-        var active = {
-            add: function () {
-                var that = this;
-                //多窗口模式，层叠置顶
-                layer.open({
-                    type: 1 //此处以iframe举例
-                    ,
-                    title: '图片管理',
-                    area: '800px',
-                    shade: 0.2,
-                    maxmin: true,
-                    offset: 'auto',
-                    content: $('#add'),
-                    btn: ['保存', '取消'] //只是为了演示
-                    ,
-                    yes: function (index) {
-                        $("#add").addClass('layui-hide');
-                        layer.close(index);
-                    },
-                    btn2: function (index) {
-                        $("#add").addClass('layui-hide');
-                        layer.close(index);
-                    },
-                    cancel: function (index, layero) {
-                        $("#add").addClass('layui-hide');
-                        layer.close(index);
-                        return false;
-                    }
-                    ,
-                    zIndex: layer.zIndex //重点1
-                    ,
-                    success: function (layero) {
-                        layer.setTop(layero); //重点2
-                    }
-                });
-            },
-            modal: function (othis) {
-                var type = othis.data('type'),
-                    text = othis.text();
-                layer.confirm('确定要' + text + '么？', {
-                    btn: ['确认', '取消'] //可以无限个按钮
-                    ,
-                }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
-                }, function (index) {
-                    layer.msg('已取消', {icon: 2});
-                });
-            }
-        };
-        $('.layerd').on('click', function () {
-            $("#add").removeClass('layui-hide');
-            var othis = $(this),
-                method = othis.data('method');
-            active[method] ? active[method].call(this, othis) : '';
-        });
-        $('.layers').on('click', function () {
-            var othis = $(this), method = othis.data('method');
-            active[method] ? active[method].call(this, othis) : '';
-        });
-    });
-
-    //上传图片
     layui.use('upload', function () {
-        var $ = layui.jquery,
-            upload = layui.upload;
-
+        var $ = layui.jquery
+            , upload = layui.upload;
+        //指定允许上传的文件类型
         upload.render({
-            elem: '#modifyImg'
+            elem: '#test3'
             , url: '/upload/'
-            , multiple: true
-            , before: function (obj) {
-                //预读本地文件示例，不支持ie8
-                obj.preview(function (index, file, result) {
-                    $('#modifyShow').append('<img src="' + result + '" alt="' + file.name + '" class="layui-upload-img" height=70>')
-                });
-            }
+            , accept: 'file' //普通文件
             , done: function (res) {
-                //上传完毕
+                console.log(res)
             }
-        })
-    })
+        });
+    });
 </script>
 </body>
 </html>
