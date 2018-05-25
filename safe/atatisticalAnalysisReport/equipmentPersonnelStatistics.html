@@ -17,6 +17,21 @@
         .left{
             border-right: 1px solid #eee;
         }
+        .layui-table{
+            background: transparent;
+            color: #fff;
+        }
+        .layui-tab-title li{
+            color: #fff;
+        }
+        .layui-tab-brief > .layui-tab-title .layui-this {
+            color: #798cef;
+        }
+        .layui-tab-brief > .layui-tab-more li.layui-this:after, .layui-tab-brief > .layui-tab-title .layui-this:after {
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid #798cef;
+        }
     </style>
 </head>
 <body>
@@ -236,7 +251,16 @@
         title: {
             text: '车辆统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip: {
             trigger: 'item',
@@ -245,7 +269,10 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['乘用车', '客车', '商务车', '专用车', '牵引车']
+            data: ['乘用车', '客车', '商务车', '专用车', '牵引车'],
+            textStyle:{
+                color:'#fff'
+            }
         },
         series: [
             {
@@ -254,11 +281,11 @@
                 radius: '55%',
                 center: ['50%', '60%'],
                 data: [
-                    {value: 335, name: '乘用车'},
-                    {value: 310, name: '客车'},
-                    {value: 234, name: '商务车'},
-                    {value: 135, name: '专用车'},
-                    {value: 500, name: '牵引车'}
+                    {value: 335, name: '乘用车',itemStyle:{color:'#ec5a00'}},
+                    {value: 310, name: '客车',itemStyle:{color:'#fed401'}},
+                    {value: 234, name: '商务车',itemStyle:{color:'#00c4c9'}},
+                    {value: 135, name: '专用车',itemStyle:{color:'#005d8c'}},
+                    {value: 500, name: '牵引车',itemStyle:{color:'#ff01fd'}}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -276,14 +303,45 @@
         title: {
             text: '车辆统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
             data: [820, 932, 901, 934, 1290, 1330, 1320],
@@ -303,7 +361,16 @@
         title: {
             text: '设备统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip: {
             trigger: 'item',
@@ -312,7 +379,10 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['A设备', 'B设备', 'C设备', 'D设备', 'E设备', 'F设备', 'G设备']
+            data: ['A设备', 'B设备', 'C设备', 'D设备', 'E设备', 'F设备', 'G设备'],
+            textStyle:{
+                color:'#fff'
+            }
         },
         series: [
             {
@@ -321,13 +391,13 @@
                 radius: '55%',
                 center: ['50%', '60%'],
                 data: [
-                    {value: 335, name: 'A设备'},
-                    {value: 310, name: 'B设备'},
-                    {value: 234, name: 'C设备'},
-                    {value: 135, name: 'D设备'},
-                    {value: 1000, name: 'E设备'},
-                    {value: 800, name: 'F设备'},
-                    {value: 136, name: 'G设备'}
+                    {value: 335, name: 'A设备',itemStyle:{color:'#ec5a00'}},
+                    {value: 310, name: 'B设备',itemStyle:{color:'#fed401'}},
+                    {value: 234, name: 'C设备',itemStyle:{color:'#00c4c9'}},
+                    {value: 135, name: 'D设备',itemStyle:{color:'#005d8c'}},
+                    {value: 1000, name: 'E设备',itemStyle:{color:'#ff01fd'}},
+                    {value: 800, name: 'F设备',itemStyle:{color:'#00ddff'}},
+                    {value: 136, name: 'G设备',itemStyle:{color:'#ffccff'}}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -352,14 +422,45 @@
         title: {
             text: '设备统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
             data: [15, 26, 9, 23, 10, 30, 8],
@@ -381,7 +482,16 @@
         title: {
             text: '人员统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip: {
             trigger: 'item',
@@ -390,7 +500,10 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['领导', '技术人员', '销售人员', '生产人员', '安全人员', '产品人员']
+            data: ['领导', '技术人员', '销售人员', '生产人员', '安全人员', '产品人员'],
+            textStyle:{
+            color:'#fff'
+            }
         },
         series: [
             {
@@ -399,12 +512,12 @@
                 radius: '55%',
                 center: ['50%', '60%'],
                 data: [
-                    {value: 335, name: '领导'},
-                    {value: 310, name: '技术人员'},
-                    {value: 234, name: '销售人员'},
-                    {value: 135, name: '生产人员'},
-                    {value: 300, name: '安全人员'},
-                    {value: 548, name: '产品人员'}
+                    {value: 335, name: '领导',itemStyle:{color:'#ec5a00'}},
+                    {value: 310, name: '技术人员',itemStyle:{color:'#fed401'}},
+                    {value: 234, name: '销售人员',itemStyle:{color:'#00c4c9'}},
+                    {value: 135, name: '生产人员',itemStyle:{color:'#005d8c'}},
+                    {value: 300, name: '安全人员',itemStyle:{color:'#ff01fd'}},
+                    {value: 548, name: '产品人员',itemStyle:{color:'#00ddff'}}
                 ],
                 itemStyle: {
                     emphasis: {
@@ -430,14 +543,45 @@
         title: {
             text: '人员统计',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#6986d2',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
             data: [5, 13, 21, 3, 28, 10, 20],

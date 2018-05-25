@@ -5,6 +5,7 @@
 body{
     background: url("images/bj.png") no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 .clearfix:after {
     content: ".";

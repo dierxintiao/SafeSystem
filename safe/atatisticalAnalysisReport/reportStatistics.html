@@ -17,6 +17,21 @@
         .left{
             border-right: 1px solid #eee;
         }
+        .layui-table{
+            background: transparent;
+            color: #fff;
+        }
+        .layui-tab-title li{
+            color: #fff;
+        }
+        .layui-tab-brief > .layui-tab-title .layui-this {
+            color: #798cef;
+        }
+        .layui-tab-brief > .layui-tab-more li.layui-this:after, .layui-tab-brief > .layui-tab-title .layui-this:after {
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid #798cef;
+        }
     </style>
 </head>
 <body>
@@ -239,7 +254,10 @@
             }
         },
         legend: {
-            data: ['目前进度', '总进度']
+            data: ['目前进度', '总进度'],
+            textStyle: {
+                color: '#fff'
+            }
         },
         grid: {
             left: '3%',
@@ -248,11 +266,33 @@
             containLabel: true
         },
         xAxis:  {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
             type: 'category',
-            data: ['目前进度','总进度']
+            data: ['目前进度','总进度'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [
             {
@@ -263,7 +303,19 @@
                     normal: {
                         show: true,
                         position: 'insideRight'
-                    }
+                    },
+                },
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
                 },
                 data: [11,'']
             },
@@ -277,6 +329,18 @@
                         position: 'insideRight'
                     }
                 },
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
+                },
                 data: ['',100]
             }
         ]
@@ -287,14 +351,45 @@
         title: {
             text: '检查',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
             data: [820, 932, 901, 934, 1290, 1330, 1320],
@@ -319,7 +414,10 @@
             }
         },
         legend: {
-            data: ['目前进度', '总进度']
+            data: ['目前进度', '总进度'],
+            textStyle: {
+                color: '#fff'
+            }
         },
         grid: {
             left: '3%',
@@ -328,11 +426,33 @@
             containLabel: true
         },
         xAxis:  {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
             type: 'category',
-            data: ['目前进度','总进度']
+            data: ['目前进度','总进度'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [
             {
@@ -343,9 +463,21 @@
                     normal: {
                         show: true,
                         position: 'insideRight'
-                    }
+                    },
                 },
-                data: [32.6,'']
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
+                },
+                data: [89,'']
             },
             {
                 name: '总进度',
@@ -356,6 +488,18 @@
                         show: true,
                         position: 'insideRight'
                     }
+                },
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
                 },
                 data: ['',100]
             }
@@ -374,17 +518,48 @@
         title: {
             text: '培训',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
-            data: [12, 5, 20, 30, 35, 60, 80],
+            data: [80, 93, 18, 34, 129, 30, 20],
             type: 'line'
         }]
     };
@@ -407,7 +582,10 @@
             }
         },
         legend: {
-            data: ['目前进度', '总进度']
+            data: ['目前进度', '总进度'],
+            textStyle: {
+                color: '#fff'
+            }
         },
         grid: {
             left: '3%',
@@ -416,11 +594,33 @@
             containLabel: true
         },
         xAxis:  {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
             type: 'category',
-            data: ['目前进度','总进度']
+            data: ['目前进度','总进度'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [
             {
@@ -431,9 +631,21 @@
                     normal: {
                         show: true,
                         position: 'insideRight'
-                    }
+                    },
                 },
-                data: [71.9,'']
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
+                },
+                data: [33.6,'']
             },
             {
                 name: '总进度',
@@ -444,6 +656,18 @@
                         show: true,
                         position: 'insideRight'
                     }
+                },
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            1, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
                 },
                 data: ['',100]
             }
@@ -462,17 +686,48 @@
         title: {
             text: '计划',
             subtext: '',
-            x: 'center'
+            x: 'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         yAxis: {
-            type: 'value'
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#ffffff'
+                }
+            },
+            splitLine:{
+                show: true,
+                lineStyle:{
+                    color:'rgba(255,255,255,0.1)'
+                }
+            }
         },
         series: [{
-            data: [120, 86, 20, 30, 35, 60, 180],
+            data: [50, 90, 25, 37, 100, 45, 76],
             type: 'line'
         }]
     };
