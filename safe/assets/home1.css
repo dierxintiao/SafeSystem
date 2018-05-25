@@ -98,6 +98,7 @@
 padding: 15px 40px 70px 30px;
     background: url("images/bj_sg.png") no-repeat;
     background-size: 100% 705px;
+    min-height: 705px;
 }
 .info-container .accident h3{
     font-size: 16px;

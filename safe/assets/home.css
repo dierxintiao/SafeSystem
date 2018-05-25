@@ -113,6 +113,7 @@ body{
     height: 36px;
     border: 1px solid #769cef;
     background: transparent;
+    color: #769cef;
 }
 .video-login .login .password{
     padding-top: 12px;

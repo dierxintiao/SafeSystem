@@ -1,0 +1,99 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "statue": "可用",
+      "number": "A4521862",
+      "project": "项目一",
+      "level": "车间组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "李**",
+      "approver": "林**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "停用",
+      "number": "A7466545",
+      "project": "项目二",
+      "level": "班级组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "李**",
+      "approver": "林**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "可用",
+      "number": "B4521862",
+      "project": "项目三",
+      "level": "车间组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-07-12",
+      "author": "赵**",
+      "approver": "柳**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "可用",
+      "number": "A798161",
+      "project": "项目一",
+      "level": "车间组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "李**",
+      "approver": "林**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "停用",
+      "number": "B716554",
+      "project": "项目二",
+      "level": "班级组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "商**",
+      "approver": "任**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "可用",
+      "number": "A416556",
+      "project": "项目一",
+      "level": "车间组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "李**",
+      "approver": "林**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    },
+    {
+      "statue": "停用",
+      "number": "A712263",
+      "project": "项目一",
+      "level": "车间组",
+      "week": "月度",
+      "score": 100,
+      "edition": 1,
+      "time": "2015-05-12",
+      "author": "李**",
+      "approver": "林**",
+      "operation": "<a href='assessmentProject.html' style='color:#fff'>考核指标</a>"
+    }
+
+  ]
+}
