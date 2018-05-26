@@ -4,7 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <title>危险源控制措施</title>
-    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">\
+    <style type=text/css>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #add{
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -41,7 +83,7 @@
 
         </thead>
     </table>
-    <div id="add" class="layui-hide" style="padding: 15px;">
+    <div id="add" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td>编号</td>

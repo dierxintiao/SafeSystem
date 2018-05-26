@@ -1,0 +1,73 @@
+
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "empty": "<i class='layui-icon' style='font-size:18px; color: #ff0000;'>&#xe66c;</i>",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "2.30",
+      "budget":"2.00",
+      "isBudget":"是"
+    },
+    {
+      "empty": "",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "1.00",
+      "budget":"2.00",
+      "isBudget":"否"
+    },
+    {
+      "empty": "<i class='layui-icon' style='font-size:18px; color: #ff0000;'>&#xe66c;</i>",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "2.00",
+      "budget":"1.00",
+      "isBudget":"是"
+    },
+    {
+      "empty": "<i class='layui-icon' style='font-size:18px; color: #ff0000;'>&#xe66c;</i>",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "3.00",
+      "budget":"2.00",
+      "isBudget":"是"
+    },
+    {
+      "empty": "",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "2.00",
+      "budget":"5.00",
+      "isBudget":"否"
+    },{
+      "empty": "",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "1.00",
+      "budget":"2.00",
+      "isBudget":"否"
+    },
+    {
+      "empty": "",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "0.80",
+      "budget":"2.00",
+      "isBudget":"否"
+    },
+    {
+      "empty": "",
+      "style": "成本费用",
+      "equipment":"",
+      "pay": "2.00",
+      "budget":"5.00",
+      "isBudget":"否"
+    }
+  ]
+}
+
+

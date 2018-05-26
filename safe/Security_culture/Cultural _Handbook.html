@@ -5,6 +5,38 @@
     <title>文化手册</title>
     <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+        #setTop,#add{
+            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="layui-col-md2">
@@ -34,7 +66,7 @@
         </table>
     </form>
     <form action="" class="layui-form">
-        <div id="setTop" class="layui-hide" style="padding: 10px;">
+        <div id="setTop" class="layui-hide">
             <table class="layui-table">
                 <tr>
                     <td width="20%">公司</td>
@@ -84,7 +116,7 @@
                 </tr>
             </table>
         </div>
-        <div id="add" class="layui-hide" style="padding: 10px;">
+        <div id="add" class="layui-hide">
             <table class="layui-table">
                 <tr>
                     <td width="20%">手册类别</td>
