@@ -6,35 +6,60 @@
     <title>计划管理（基层）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
     <style type=text/css>
-        .layui-layer-title{
+        .layui-layer-title {
             background: #244dae !important;
             color: #fff !important;
             text-align: center;
             font-size: 16px !important;
             font-weight: bold;
         }
-        .layui-layer-content{
+
+        .layui-layer-content {
             background: #09315a;
         }
-        .layui-layer-page .layui-layer-btn{
+
+        .layui-layer-page .layui-layer-btn {
             background: #09315a;
         }
-        .layui-layer-btn .layui-layer-btn0{
+
+        .layui-layer-btn .layui-layer-btn0 {
             background: #244dae !important;
             border-color: #244dae !important;
         }
-        .layui-layer-content .layui-table{
+
+        .layui-layer-content .layui-table {
             background: #00213c;
             color: #fff;
         }
-        .layui-layer-content .layui-table .layui-form-selected dl{
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
             color: #000 !important;
         }
-        .layui-form-select dl dd.layui-this{
+
+        .layui-form-select dl dd.layui-this {
             background-color: #244dae !important;
         }
-        #draw,#jddraw,#yeardraw,#plandraw{
-            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;}
+
+        #draw, #jddraw, #yeardraw, #plandraw {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -64,18 +89,18 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_1">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_1"></table>
             </div>
@@ -96,18 +121,18 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_2">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_2"></table>
             </div>
@@ -128,25 +153,25 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_3">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_3"></table>
             </div>
         </div>
     </div>
 
-    <div id="draw" class="layui-hide" >
+    <div id="draw" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">计划编号</td>
@@ -209,7 +234,7 @@
             </tr>
         </table>
     </div>
-    <div id="jddraw" class="layui-hide" >
+    <div id="jddraw" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">计划编号</td>
@@ -263,7 +288,7 @@
             </tr>
         </table>
     </div>
-    <div id="yeardraw" class="layui-hide" >
+    <div id="yeardraw" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">计划编号</td>
@@ -317,7 +342,7 @@
             </tr>
         </table>
     </div>
-    <div id="plandraw" class="layui-hide" >
+    <div id="plandraw" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">安全任务名称</td>
@@ -357,7 +382,7 @@
 </html>
 <script>
 
-    layui.use(['form','table'], function () {
+    layui.use(['form', 'table'], function () {
         var form = layui.form;
         form.render();
         var table = layui.table;
@@ -366,11 +391,11 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man.json', function (data) {
             table.render({
                 elem: '#test_1',
                 height: 'full-120',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
@@ -395,7 +420,7 @@
                         field: 'person',
                         title: '起草人',
                         align: 'center'
-                    },  {
+                    }, {
                         field: 'company',
                         title: '所属部门',
                         align: 'center'
@@ -417,11 +442,11 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man2.json',function(data){
+        $.getJSON('../json/poli_man2.json', function (data) {
             table.render({
                 elem: '#test_2',
                 height: 'full-220',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
@@ -446,7 +471,7 @@
                         field: 'person',
                         title: '起草人',
                         align: 'center'
-                    },  {
+                    }, {
                         field: 'company',
                         title: '所属部门',
                         align: 'center'
@@ -467,11 +492,11 @@
     });
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man3.json',function(data){
+        $.getJSON('../json/poli_man3.json', function (data) {
             table.render({
                 elem: '#test_3',
                 height: 'full-220',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
@@ -496,7 +521,7 @@
                         field: 'person',
                         title: '起草人',
                         align: 'center'
-                    },  {
+                    }, {
                         field: 'company',
                         title: '所属部门',
                         align: 'center'
@@ -684,9 +709,9 @@
                     btn: ['确认', '取消'] //可以无限个按钮
                     ,
                 }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
+                    layer.msg('已'+ text + '！');
                 }, function (index) {
-                    layer.msg('已取消', {icon: 2});
+                    layer.msg('已取消');
                 });
             }
         };
@@ -721,6 +746,7 @@
             active[method] ? active[method].call(this, othis) : '';
         });
     });
+
     function plan() {
         layui.use('layer', function () { //独立版的layer无需执行这一句
             var $ = layui.jquery,

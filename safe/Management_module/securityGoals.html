@@ -42,6 +42,12 @@
             background: url(../assets/images/bg_table.png) no-repeat;
             background-size: 100% 100%;
         }
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -511,21 +517,29 @@
             modal: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
-                layer.open({
-                    type: 1,
-                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                // layer.open({
+                //     type: 1,
+                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                //     ,
+                //     id: 'layerDemo' + type //防止重复弹出
+                //     ,
+                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                //     btn: ['确认', '取消'],
+                //     btnAlign: 'c' //按钮居中
+                //     ,
+                //     shade: 0.2 //不显示遮罩
+                //     ,
+                //     yes: function (index) {
+                //         layer.close(index);
+                //     }
+                // });
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    id: 'layerDemo' + type //防止重复弹出
-                    ,
-                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                    btn: ['确认', '取消'],
-                    btnAlign: 'c' //按钮居中
-                    ,
-                    shade: 0.2 //不显示遮罩
-                    ,
-                    yes: function (index) {
-                        layer.close(index);
-                    }
+                }, function (index, layero) {
+                    layer.msg('已'+ text + '！');
+                }, function (index) {
+                    layer.msg('已取消');
                 });
             }
         };

@@ -6,35 +6,52 @@
     <title>方针管理（管理者）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
     <style type=text/css>
-        .layui-layer-title{
+        .layui-layer-title {
             background: #244dae !important;
             color: #fff !important;
             text-align: center;
             font-size: 16px !important;
             font-weight: bold;
         }
-        .layui-layer-content{
+
+        .layui-layer-content {
             background: #09315a;
         }
-        .layui-layer-page .layui-layer-btn{
+
+        .layui-layer-page .layui-layer-btn {
             background: #09315a;
         }
-        .layui-layer-btn .layui-layer-btn0{
+
+        .layui-layer-btn .layui-layer-btn0 {
             background: #244dae !important;
             border-color: #244dae !important;
         }
-        .layui-layer-content .layui-table{
+
+        .layui-layer-content .layui-table {
             background: #00213c;
             color: #fff;
         }
-        .layui-layer-content .layui-table .layui-form-selected dl{
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
             color: #000 !important;
         }
-        .layui-form-select dl dd.layui-this{
+
+        .layui-form-select dl dd.layui-this {
             background-color: #244dae !important;
         }
-        #proposal,#review{
-            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;}
+
+        #proposal, #review {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -56,7 +73,7 @@
 
     </table>
 
-    <div id="proposal" class="layui-hide" >
+    <div id="proposal" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">建议内容</td>
@@ -69,7 +86,7 @@
         </table>
     </div>
 
-    <div id="review" class="layui-hide" >
+    <div id="review" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">评审结果</td>
@@ -138,7 +155,7 @@
                         field: 'person',
                         title: '起草人',
                         align: 'center'
-                    },  {
+                    }, {
                         field: 'company',
                         title: '所属部门',
                         align: 'center'
