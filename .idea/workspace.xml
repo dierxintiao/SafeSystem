@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fec48ae-2dde-4d87-92e4-517c895beeaf" name="默认" comment="修改20180526">
-      <change afterPath="$PROJECT_DIR$/safe/Management_module/securityGoals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/Management_module/standardConfiguration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/Management_module/standingBook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/json/poli_man2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/json/poli_man3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/json/standardConfiguration.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe/json/standingBook.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Cost_budget1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Cost_budget1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Cost_budget2.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Cost_budget2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Plan_management1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Plan_management1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Plan_management2.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Plan_management2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Policy_management1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Policy_management1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Management_module/Policy_management2.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Management_module/Policy_management2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Security_culture/Cultural _Handbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Security_culture/Cultural _Handbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Security_culture/Cultural_activity.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Security_culture/Cultural_activity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/Security_culture/Picture_management.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/Security_culture/Picture_management.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/accidentHandling/accidentInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/accidentHandling/accidentInformation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/accidentHandling/accidentInvestigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/accidentHandling/accidentInvestigation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/accidentHandling/investigationTtreatment.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/accidentHandling/investigationTtreatment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/achievementDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/achievementDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/assessmentProject.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/assessmentProject.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/assessmentProjectAllocation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assessmentProject/assessmentScheme.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assessmentProject/assessmentScheme.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assets/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/contingencyReserve/accidentInvestigationProcessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/contingencyReserve/accidentInvestigationProcessing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/contingencyReserve/accidentuSrvey.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/contingencyReserve/accidentuSrvey.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/contingencyReserve/fieldPlanManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/contingencyReserve/fieldPlanManagement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/contingencyReserve/planManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/contingencyReserve/planManagement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/fireSafety/fireAccident.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/fireSafety/fireAccident.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/fireSafety/firePatrolInspection.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/fireSafety/firePatrolInspection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/fireSafety/fireStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/fireSafety/fireStatistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/json/Cost_bud.json" beforeDir="false" afterPath="$PROJECT_DIR$/safe/json/Cost_bud.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/json/poli_man.json" beforeDir="false" afterPath="$PROJECT_DIR$/safe/json/poli_man.json" afterDir="false" />
-    </list>
+    <list default="true" id="1fec48ae-2dde-4d87-92e4-517c895beeaf" name="默认" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -80,8 +43,8 @@
       <file leaf-file-name="investigationTtreatment.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/safe/accidentHandling/investigationTtreatment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="79" column="127" selection-start-line="79" selection-start-column="127" selection-end-line="79" selection-end-column="127" />
+            <state relative-caret-position="225">
+              <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
               <folding>
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -237,18 +200,6 @@
               <item name="qq" type="462c0819:PsiDirectoryNode" />
               <item name="safe" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-              <item name="accidentHandling" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qq" type="462c0819:PsiDirectoryNode" />
-              <item name="safe" type="462c0819:PsiDirectoryNode" />
-              <item name="Security_culture" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -345,7 +296,7 @@
       <workItem from="1527039255220" duration="20564000" />
       <workItem from="1527125527926" duration="28296000" />
       <workItem from="1527212109589" duration="26605000" />
-      <workItem from="1527299687115" duration="22027000" />
+      <workItem from="1527299687115" duration="22209000" />
     </task>
     <task id="LOCAL-00001" summary="统计分析/报表添加二级子菜单">
       <created>1526462532262</created>
@@ -508,22 +459,28 @@
       <option name="project" value="LOCAL" />
       <updated>1527251499447</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="修改20180526">
+      <created>1527325237667</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1527325237667</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188700000" />
+    <option name="totallyTimeSpent" value="188882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="11" width="1094" height="690" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.3125" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="13" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.5" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.5" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50097466" side_tool="true" weight="0.3293919" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50097466" side_tool="true" visible="true" weight="0.32789856" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49902534" weight="0.35283688" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.22037037" />
@@ -1198,8 +1155,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/safe/accidentHandling/investigationTtreatment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="79" column="127" selection-start-line="79" selection-start-column="127" selection-end-line="79" selection-end-column="127" />
+        <state relative-caret-position="225">
+          <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
           <folding>
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
