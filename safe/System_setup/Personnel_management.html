@@ -5,6 +5,42 @@
     <meta charset="UTF-8">
     <title>人员管理</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+        .layui-layer-btn{
+            background: #09315a;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -222,30 +258,13 @@
             del: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
-                // layer.open({
-                //     type: 1,
-                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
-                //     ,
-                //     id: 'layerDemo' + type //防止重复弹出
-                //     ,
-                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                //     btn: ['确认', '取消'],
-                //     btnAlign: 'c' //按钮居中
-                //     ,
-                //     shade: 0 //不显示遮罩
-                //     ,
-                //     yes: function (index) {
-                //         layer.close(index);
-                //     }
-                // });
                 layer.confirm('确定要' + text + '么？', {
                     btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    shade: 0.2,
                 }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
+                    layer.msg('已'+ text + '！');
                 }, function (index) {
-                    layer.msg('已取消', {icon: 2});
+                    layer.msg('已取消');
                 });
             }
         };
