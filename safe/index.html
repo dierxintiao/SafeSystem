@@ -138,16 +138,9 @@
         .layui-nav-tree .layui-nav-item a:hover {
             background: #244dae;
         }
-
-        /*        .layui-nav-itemed{
-                    background: rgba(36,77,174,.8);
-                }*/
-        /*   .layui-nav-tree .layui-nav-item a:hover .layui-nav-more {
-               border-color: #fff transparent transparent;
-           }
-           .layui-nav .layui-nav-mored, .layui-nav-itemed > a:hover .layui-nav-more{
-               border-color: transparent transparent #fff !important;
-           }*/
+        .layui-nav .layui-this:after{
+            background: none !important;
+        }
 
     </style>
 </head>
@@ -169,20 +162,20 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="login.html" target="_self" style="color: #fff;">注销</a></li>
+            <li class="layui-nav-item"><a href="home.html" target="_self" style="color: #fff;">注销</a></li>
         </ul>
     </div>
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed layui-this">
+                <li class="layui-nav-item layui-nav-itemed layui-this jump">
                     <a href="index1.html">首页</a>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="allused.html">安全管理通用模块</a>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="javascript:void(0);">安全基础管理模块</a>
                     <dl class="layui-nav-child">
                         <dd>
@@ -337,7 +330,7 @@
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">安全相关检查</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html" title="安全检查周期配置">安全检查周期配置</a></dd>
@@ -345,7 +338,7 @@
                         <dd><a href="General_page.html" title="不定期检查管理">不定期检查管理</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">双重防控建设</a>
                     <dl class="layui-nav-child">
                         <dd>
@@ -370,7 +363,7 @@
                         </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">考核评价与准则</a>
                     <dl class="layui-nav-child">
                         <dd><a href="assessmentProject/assessmentScheme.html" title="考核方案">考核方案</a></dd>
@@ -379,7 +372,7 @@
                         <dd><a href="assessmentProject/analysisReport.html" title="统计分析/报表">统计分析/报表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">统计分析查询报表</a>
                     <dl class="layui-nav-child">
                         <!--<dd><a href="atatisticalAnalysisReport/workProgress.html">工作进展</a></dd>-->
@@ -411,7 +404,7 @@
                         <dd><a href="javascript:void(0);" title="其他重要机械设备统计">其他重要机械设备统计</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">自评模块</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html" title="岗位管理">岗位管理</a></dd>
@@ -423,7 +416,7 @@
                         <dd><a href="General_page.html" title="达标自评">达标自评</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">安全风险预警</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html" title="预警参数">预警参数</a></dd>
@@ -431,7 +424,7 @@
                         <dd><a href="General_page.html" title="风险预警结果">风险预警结果</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">安全文化</a>
                     <dl class="layui-nav-child">
                         <dd><a href="Security_culture/Cultural%20_Handbook.html" title="文化手册">文化手册</a></dd>
@@ -440,7 +433,7 @@
                         <dd><a href="Security_culture/Cultural_learning.html" title="安全文化学习">安全文化学习</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="index1.html">系统设置</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html" title="参数设置">参数设置</a></dd>
@@ -453,7 +446,7 @@
                         <dd><a href="General_page.html" title="数据服务管理">数据服务管理</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item jump">
                     <a href="intelligentAnalysis/intelligentAnalysis.html" title="安全智能化分析">安全智能化分析</a>
                 </li>
             </ul>
@@ -476,7 +469,7 @@
         var element = layui.element;
         $ = layui.$;
     });
-    $('.layui-nav-item a').on('click', function (e) {
+    $('.jump a').on('click', function (e) {
         if (e && e.preventDefault) {
             e.preventDefault();
             var target = $(this).attr('href');
