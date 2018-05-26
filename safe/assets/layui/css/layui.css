@@ -6,8 +6,8 @@
 }
 .search .layui-inline #demoReload{
 	border-radius: 2px;
-	background: rgba(255,255,255,.3);
-	border: none;
+	background: rgba(255,255,255,.0);
+	box-shadow: 0 0 5px #fff;
 	color: rgba(72,118,255,.7);
 	text-shadow: 0px 0px 0px #fff;
 	-webkit-text-fill-color: transparent;
@@ -1899,7 +1899,7 @@ a cite {
 	line-height: 30px;
 	padding: 0 10px;
 	font-size: 12px;
-	background: #01395e;
+	background: #002856;
 
 }
 

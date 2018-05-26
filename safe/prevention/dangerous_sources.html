@@ -5,6 +5,35 @@
     <meta charset="UTF-8">
     <title>策划危险源</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -23,31 +52,32 @@
     </div>
     <table class="layui-table" lay-data="{height:'full-70',url:'../json/dan_sou.json',page: true}">
         <thead>
-            <tr>
-                <th lay-data="{checkbox:true}" rowspan="2"></th>
-                <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
-                <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
-                <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
-                <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
-                <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
-                <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
-                <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
-                <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
-                <th lay-data="{align:'center'}" colspan="3">评价结论</th>
-                <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
-            </tr>
-            <tr>
-                <th lay-data="{field:'LEC_L',align:'center'}">L</th>
-                <th lay-data="{field:'LEC_E',align:'center'}">E</th>
-                <th lay-data="{field:'LEC_C',align:'center'}">C</th>
-                <th lay-data="{field:'LEC_D',align:'center'}">D</th>
-                <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
-                <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
-                <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
-            </tr>
+        <tr>
+            <th lay-data="{checkbox:true}" rowspan="2"></th>
+            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
+            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
+            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
+            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
+            <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
+            <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
+            <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
+            <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
+            <th lay-data="{align:'center'}" colspan="3">评价结论</th>
+            <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
+        </tr>
+        <tr>
+            <th lay-data="{field:'LEC_L',align:'center'}">L</th>
+            <th lay-data="{field:'LEC_E',align:'center'}">E</th>
+            <th lay-data="{field:'LEC_C',align:'center'}">C</th>
+            <th lay-data="{field:'LEC_D',align:'center'}">D</th>
+            <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
+            <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
+            <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
+        </tr>
         </thead>
     </table>
-    <div id="add" class="layui-hide" style="padding: 15px;">
+    <div id="add" class="layui-hide"
+         style="margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;">
         <table class="layui-table">
             <tr>
                 <td width="20%">部门</td>
@@ -111,6 +141,7 @@
             </tr>
         </table>
     </div>
+
 </form>
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/layui/layui.js"></script>
@@ -121,7 +152,7 @@
         $ = layui.$;
         form.render();
     });
-    layui.use('table', function(){
+    layui.use('table', function () {
         var table = layui.table;
 
     });
