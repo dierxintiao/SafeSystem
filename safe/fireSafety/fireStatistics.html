@@ -43,7 +43,16 @@
         title: {
             text: '火灾逐月分析',
             x: '50%',
-            textAlign: 'center'
+            textAlign: 'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip : {
             trigger: 'axis',
@@ -63,12 +72,34 @@
                 data : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'nov', 'Dec'],
                 axisTick: {
                     alignWithLabel: true
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
                 }
             }
         ],
         yAxis : [
             {
-                type : 'value'
+                type : 'value',
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
+                }
             }
         ],
         series : [
@@ -76,7 +107,19 @@
                 name:'直接访问',
                 type:'bar',
                 barWidth: '60%',
-                data:[10, 52, 200, 334, 390, 330, 220,100,68,320,119,50]
+                data:[10, 52, 200, 334, 390, 330, 220,100,68,320,119,50],
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
+                }
             }
         ]
     };
@@ -87,19 +130,42 @@
         title : {
             text: '火灾片区分布',
             x:'50%',
-            textAlign: 'center'
+            textAlign: 'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip : {
             trigger: 'axis'
         },
         legend: {
             x: 'left',
-            data:['2016年','2017年']
+            data:['2016年','2017年'],
+            textStyle:{
+                color:'#fff'
+            }
         },
         xAxis : [
             {
                 type : 'category',
-                data : ['办公楼','厂房','科技楼','宿舍楼']
+                data : ['办公楼','厂房','科技楼','宿舍楼'],
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
+                }
             }
         ],
         yAxis : [
@@ -109,6 +175,17 @@
                     show: true,
                     interval: 'auto',
                     formatter: '{value} %'
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
                 }
             }
         ],
@@ -118,7 +195,14 @@
                 type:'bar',
                 itemStyle:{
                   normal:{
-                      label:{show:true,position:'top',formatter:'{c}%'}
+                      label:{show:true,position:'top',formatter:'{c}%'},
+                      color: new echarts.graphic.LinearGradient(
+                          0, 0, 0, 1,
+                          [
+                              {offset: 0, color: '#ae00ff'},
+                              {offset: 1, color: 'transparent'}
+                          ]
+                      )
                   }
                 },
                 data:[20.6, 4.9, 17.0, 23.2],
@@ -128,7 +212,14 @@
                 type:'bar',
                 itemStyle:{
                     normal:{
-                        label:{show:true,position:'top',formatter:'{c}%'}
+                        label:{show:true,position:'top',formatter:'{c}%'},
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#c23531'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
                     }
                 },
                 data:[12.6, 5.9, 9.0, 26.4],
@@ -143,7 +234,16 @@
         title : {
             text: '火灾伤亡人数分布',
             subtext: '',
-            x:'center'
+            x:'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip : {
             trigger: 'item',
@@ -152,7 +252,10 @@
         legend: {
             orient: 'vertical',
             left: 'left',
-            data: ['办公楼','厂房','科技楼','宿舍楼']
+            data: ['办公楼','厂房','科技楼','宿舍楼'],
+            textStyle:{
+                color:'#fff'
+            }
         },
         series : [
             {
@@ -161,10 +264,10 @@
                 radius : '55%',
                 center: ['50%', '60%'],
                 data:[
-                    {value:335, name:'办公楼'},
-                    {value:310, name:'厂房'},
-                    {value:234, name:'科技楼'},
-                    {value:135, name:'宿舍楼'},
+                    {value:335, name:'办公楼',itemStyle:{color:'#ec5a00'}},
+                    {value:310, name:'厂房',itemStyle:{color:'#fed401'}},
+                    {value:234, name:'科技楼',itemStyle:{color:'#00c4c9'}},
+                    {value:135, name:'宿舍楼',itemStyle:{color:'#005d8c'}},
                 ],
                 itemStyle: {
                     emphasis: {
@@ -183,7 +286,16 @@
         title : {
             text: '火灾分布情况',
             subtext: '',
-            x:'center'
+            x:'center',
+            textStyle: {
+                color: '#759bee',
+                fontSize:16,
+                fontWeight:800,
+                textShadowColor:'#000',
+                textShadowBlur:3,
+                textShadowOffsetX:1,
+                textShadowOffsetY:3
+            }
         },
         tooltip: {
             trigger: 'axis',
@@ -196,7 +308,10 @@
         },
         legend: {
             x: 'left',
-            data:['亡人','起数']
+            data:['亡人','起数'],
+            textStyle:{
+                color:'#fff'
+            }
         },
         xAxis: [
             {
@@ -204,16 +319,37 @@
                 data: ['00','02','04','06','08','10','12','14','16','18','20','22'],
                 axisPointer: {
                     type: 'shadow'
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
                 }
             }
         ],
         yAxis: [
             {
                 type: 'value',
-
                 min: 0,
                 max: 250,
                 interval: 50,
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
+                }
 
             },
             {
@@ -222,6 +358,17 @@
                 min: 0,
                 max: 2500,
                 interval: 500,
+                axisLine:{
+                    lineStyle:{
+                        color:'#759bee'
+                    }
+                },
+                splitLine:{
+                    show: true,
+                    lineStyle:{
+                        color:'rgba(255,255,255,0.1)'
+                    }
+                }
 
             }
         ],
@@ -230,13 +377,30 @@
             {
                 name:'亡人',
                 type:'bar',
-                data:[200.6, 50.9, 90.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+                data:[200.6, 50.9, 90.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#ae00ff'},
+                                {offset: 1, color: 'transparent'}
+                            ]
+                        )
+                    },
+
+                },
             },
             {
                 name:'起数',
                 type:'line',
                 yAxisIndex: 1,
-                data:[200.0, 253.2, 390.3, 400.5, 600.3, 1000.2, 2000.3, 2113.4, 2003.0, 1600.5, 120.0, 6.2]
+                data:[200.0, 253.2, 390.3, 400.5, 600.3, 1000.2, 2000.3, 2113.4, 2003.0, 1600.5, 120.0, 6.2],
+                itemStyle: {
+                    normal: {
+                        color: '#759bee'
+                    }
+                }
             }
         ]
     };

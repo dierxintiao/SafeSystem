@@ -1,0 +1,63 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "statue": "未考核",
+      "name": "河南烟草公司",
+      "unit": "郑州分公司",
+      "start": "2015-12-02",
+      "end": "2016-1-10",
+      "plan": "方案一",
+      "person": "王**",
+      "phone": "13801234567",
+      "operation": "<a href='assessmentProjectAllocation.html' style='color:#fff'>考核项目</a>"
+    },
+    {
+      "statue": "考核中",
+      "name": "河南烟草公司",
+      "unit": "郑州分公司",
+      "start": "2015-12-02",
+      "end": "2016-1-10",
+      "plan": "方案一",
+      "person": "王**",
+      "phone": "13801234567",
+      "operation": "<a href='assessmentProjectAllocation.html' style='color:#fff'>考核项目</a>"
+    },
+    {
+      "statue": "未考核",
+      "name": "河南烟草公司",
+      "unit": "郑州分公司",
+      "start": "2015-12-02",
+      "end": "2016-1-10",
+      "plan": "方案一",
+      "person": "王**",
+      "phone": "13801234567",
+      "operation": "<a href='assessmentProjectAllocation.html' style='color:#fff'>考核项目</a>"
+    },
+    {
+      "statue": "已考核",
+      "name": "河南烟草公司",
+      "unit": "郑州分公司",
+      "start": "2015-12-02",
+      "end": "2016-1-10",
+      "plan": "方案一",
+      "person": "王**",
+      "phone": "13801234567",
+      "operation": "<a href='achievementDetail.html' style='color:#fff'>考核项目</a>"
+    },
+    {
+      "statue": "已考核",
+      "name": "河南烟草公司",
+      "unit": "郑州分公司",
+      "start": "2015-12-02",
+      "end": "2016-1-10",
+      "plan": "方案一",
+      "person": "王**",
+      "phone": "13801234567",
+      "operation": "<a href='achievementDetail.html' style='color:#fff'>考核项目</a>"
+    }
+
+  ]
+}

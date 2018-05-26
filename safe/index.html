@@ -69,6 +69,9 @@
         .layui-nav .layui-nav-child a{
             color: #fff;
         }
+       .layui-nav-itemed>.layui-nav-child>.layui-nav-itemed>.layui-nav-child a{
+           padding-left: 50px;
+       }
         .layui-layout-admin .layui-logo {
             position: absolute;
             left: 0;
@@ -132,11 +135,11 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">
-            <a class="navbar-title" href="index.html">
-                返回首页
-            </a>
-        </div>
+        <!--<div class="layui-logo">-->
+            <!--&lt;!&ndash;<a class="navbar-title" href="index.html">&ndash;&gt;-->
+                <!--&lt;!&ndash;返回首页&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--</div>-->
         <div class='header-text'>
             安全管理系统
         </div>
@@ -159,12 +162,12 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed layui-this"><a href="home1.html">策划危险源辨识</a></li>
+                <li class="layui-nav-item layui-nav-itemed layui-this"><a href="index1.html">首页</a></li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">双重防控建设</a>
+                    <a href="index1.html">双重防控建设</a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:void(0);">安全风险分级管控</a>
+                            <a href="prevention/dangerous_sources.html">安全风险分级管控</a>
                             <dl class="layui-nav-child">
 
                                 <dd><a href="prevention/dangerous_sources.html">策划危险源</a></dd>
@@ -174,7 +177,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">隐患排查治理</a>
+                            <a href="General_page.html">隐患排查治理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">隐患发现</a></dd>
                                 <dd><a href="General_page.html">隐患评价</a></dd>
@@ -186,24 +189,48 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">考核模块</a>
+                    <a href="index1.html">考核模块</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="assessmentProject/assessmentProjectAllocation.html">考核项目配置</a></dd>
-                        <dd><a href="assessmentProject/achievement.html">考核成绩展示</a></dd>
+                        <dd><a href="assessmentProject/assessmentScheme.html">考核方案</a></dd>
+                        <dd><a href="assessmentProject/assessmentProject.html">考核项目配置</a></dd>
+                        <dd><a href="assessmentProject/achievementDetail.html">考核成绩展示</a></dd>
                         <dd><a href="assessmentProject/analysisReport.html">统计分析/报表</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">统计分析/报表</a>
+                    <a href="index1.html">统计分析/报表</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="atatisticalAnalysisReport/workProgress.html">工作进展</a></dd>
-                        <dd><a href="atatisticalAnalysisReport/equipmentPersonnelStatistics.html">设备人员统计</a></dd>
-                        <dd><a href="General_page.html">隐患排查</a></dd>
-                        <dd><a href="atatisticalAnalysisReport/reportStatistics.html">报表统计</a></dd>
+                        <!--<dd><a href="atatisticalAnalysisReport/workProgress.html">工作进展</a></dd>-->
+                        <!--<dd><a href="atatisticalAnalysisReport/equipmentPersonnelStatistics.html">设备人员统计</a></dd>-->
+                        <!--<dd><a href="General_page.html">隐患排查</a></dd>-->
+                        <!--<dd><a href="atatisticalAnalysisReport/reportStatistics.html">报表统计</a></dd>-->
+                        <dd><a href="atatisticalAnalysisReport/safetyCompletion.html">安全目标及计划完成情况统计</a></dd>
+                        <dd><a href="javascript:;">隐患情况统计</a></dd>
+                        <dd><a href="javascript:;">重大危险因素情况统计</a></dd>
+                        <dd><a href="javascript:;">安全检查情况统计</a></dd>
+                        <dd><a href="javascript:;">安全投入情况统计</a></dd>
+                        <dd><a href="javascript:;">安全事故情况统计</a></dd>
+                        <dd><a href="javascript:;">安全绩效情况统计</a></dd>
+                        <dd><a href="javascript:;">安全培训情况统计</a></dd>
+                        <dd><a href="javascript:;">应急救援预案及演练情况统计</a></dd>
+                        <dd><a href="javascript:;">安全管理人员情况统计</a></dd>
+                        <dd><a href="javascript:;">机动车辆情况统计</a></dd>
+                        <dd><a href="javascript:;">驾驶员情况统计</a></dd>
+                        <dd><a href="javascript:;">“两烟”仓库情况统计</a></dd>
+                        <dd><a href="javascript:;">特种设备情况统计</a></dd>
+                        <dd><a href="javascript:;">特种设备作业人员情况统计</a></dd>
+                        <dd><a href="javascript:;">特种作业人员及持证情况统计</a></dd>
+                        <dd><a href="javascript:;">相关方情况统计</a></dd>
+                        <dd><a href="javascript:;">电力设施情况统计</a></dd>
+                        <dd><a href="javascript:;">消防设施情况统计</a></dd>
+                        <dd><a href="javascript:;">防雷设施情况统计</a></dd>
+                        <dd><a href="javascript:;">特种防护用品情况统计</a></dd>
+                        <dd><a href="javascript:;">建设项目施工工程情况统计</a></dd>
+                        <dd><a href="javascript:;">其他重要机械设备统计</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">安全文化</a>
+                    <a href="index1.html">安全文化</a>
                     <dl class="layui-nav-child">
                         <dd><a href="Security_culture/Cultural%20_Handbook.html">文化手册</a></dd>
                         <dd><a href="Security_culture/Cultural_activity.html">文化活动</a></dd>
@@ -213,10 +240,10 @@
                 </li>
                 <li class="layui-nav-item"><a href="allused.html">通用模块</a></li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">管理模块</a>
+                    <a href="javascript:void(0);">安全基础管理模块</a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:void(0);">方针规划</a>
+                            <a href="Management_module/Policy_management1.html;">方针规划</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="Management_module/Policy_management1.html">方针管理（起草者）</a></dd>
                                 <dd><a href="Management_module/Policy_management2.html">方针管理（管理者）</a></dd>
@@ -225,7 +252,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">费用管理</a>
+                            <a href="Management_module/Cost_budget1.html">费用管理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="Management_module/Cost_budget1.html">费用预算（上报）</a></dd>
                                 <dd><a href="Management_module/Cost_budget2.html">费用预算（审核）</a></dd>
@@ -235,7 +262,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">法律法规</a>
+                            <a href="General_page.html">法律法规</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">法规登记</a></dd>
                                 <dd><a href="General_page.html">适用性评价</a></dd>
@@ -243,7 +270,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">文件管理</a>
+                            <a href="General_page.html">文件管理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">文件登记</a></dd>
                                 <dd><a href="General_page.html">文件修订</a></dd>
@@ -253,7 +280,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">机构职责</a>
+                            <a href="General_page.html">机构职责</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">委员会管理</a></dd>
                                 <dd><a href="General_page.html">例会管理</a></dd>
@@ -264,7 +291,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">培训教育</a>
+                            <a href="General_page.html">培训教育</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">计划管理</a></dd>
                                 <dd><a href="General_page.html">培训方案</a></dd>
@@ -276,7 +303,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">协商沟通情况</a>
+                            <a href="General_page.html">协商沟通情况</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">安全建议</a></dd>
                                 <dd><a href="General_page.html">通讯记录</a></dd>
@@ -286,7 +313,7 @@
                             <a href="General_page.html">'三同时'管理</a>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">车间/班组安全</a>
+                            <a href="General_page.html">车间/班组安全</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">人员台帐</a></dd>
                                 <dd><a href="General_page.html">活动管理</a></dd>
@@ -294,7 +321,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">相关方管理</a>
+                            <a href="General_page.html">相关方管理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">基础信息</a></dd>
                                 <dd><a href="General_page.html">活动管理</a></dd>
@@ -306,14 +333,14 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">安全标识</a>
+                            <a href="General_page.html">安全标识</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">标识登记</a></dd>
                                 <dd><a href="General_page.html">标识维护</a></dd>
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">设施安全</a>
+                            <a href="General_page.html">设施安全</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">设备信息</a></dd>
                                 <dd><a href="General_page.html">设备档案</a></dd>
@@ -323,7 +350,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">消防安全</a>
+                            <a href="General_page.html">消防安全</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="fireSafety/firePatrolInspection.html">消防巡检</a></dd>
                                 <dd><a href="fireSafety/fireAccident.html">消防事故</a></dd>
@@ -331,7 +358,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">危险物品/作业</a>
+                            <a href="General_page.html">危险物品/作业</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">危险物品</a></dd>
                                 <dd><a href="General_page.html">危险物品双管理</a></dd>
@@ -339,7 +366,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">交通安全</a>
+                            <a href="General_page.html">交通安全</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="General_page.html">车辆管理</a></dd>
                                 <dd><a href="General_page.html">驾驶员管理</a></dd>
@@ -350,7 +377,7 @@
                             <a href="General_page.html">职业危害作业</a>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">应急准备/响应</a>
+                            <a href="contingencyReserve/planManagement.html">应急准备/响应</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="contingencyReserve/planManagement.html">预案管理</a></dd>
                                 <dd><a href="contingencyReserve/fieldPlanManagement.html">现场处置方案管理</a></dd>
@@ -360,7 +387,7 @@
                             </dl>
                         </dd>
                         <dd>
-                            <a href="javascript:void(0);">事件/故处理</a>
+                            <a href="accidentHandling/accidentInformation.html">事件/故处理</a>
                             <dl class="layui-nav-child">
                                 <dd><a href="accidentHandling/accidentInformation.html">事故信息</a></dd>
                                 <dd><a href="accidentHandling/accidentInvestigation.html">事故调查</a></dd>
@@ -370,7 +397,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">安全检查</a>
+                    <a href="index1.html">安全检查</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html">周期配置</a></dd>
                         <dd><a href="General_page.html">项目配置</a></dd>
@@ -378,7 +405,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">自评模块</a>
+                    <a href="index1.html">自评模块</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html">岗位管理</a></dd>
                         <dd><a href="General_page.html">达标配置</a></dd>
@@ -390,7 +417,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">风险预警</a>
+                    <a href="index1.html">风险预警</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html">预警参数</a></dd>
                         <dd><a href="General_page.html">预警模型</a></dd>
@@ -398,7 +425,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:void(0);">系统设置</a>
+                    <a href="index1.html">系统设置</a>
                     <dl class="layui-nav-child">
                         <dd><a href="General_page.html">参数设置</a></dd>
                         <dd><a href="General_page.html">选择项管理</a></dd>
@@ -411,14 +438,14 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="General_page.html">智能化分析</a>
+                    <a href="intelligentAnalysis/intelligentAnalysis.html">智能化分析</a>
                 </li>
             </ul>
         </div>
     </div>
     <!-- 右侧内容区域 -->
     <div class="layui-body" style="overflow:hidden;">
-        <iframe id="iframe" src="home1.html" frameborder="0" width="100%" height="100%"></iframe>
+        <iframe id="iframe" src="index1.html" frameborder="0" width="100%" height="100%"></iframe>
     </div>
     <!-- 底部固定区域 -->
     <!--<div class="layui-footer">-->
