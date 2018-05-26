@@ -14,7 +14,6 @@
         <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报</a>
     </div>
     <div class="demoTable search" style="float: right;margin-bottom: 10px;">
-        工序/设备/人员：
         <div class="layui-inline" style="margin-right: 15px">
             <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
         </div>
@@ -24,16 +23,12 @@
         <thead>
         <tr>
             <th lay-data="{checkbox:true}" rowspan="2"></th>
-            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
-            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
-            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
-            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
-            <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
-            <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
-            <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
+            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">编号</th>
+            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">名称</th>
+            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">单位</th>
+            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">地点</th>
             <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
             <th lay-data="{align:'center'}" colspan="3">评价结论</th>
-            <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
         </tr>
         <tr>
             <th lay-data="{field:'LEC_L',align:'center'}">L</th>
@@ -48,94 +43,44 @@
     </table>
     <div id="add" class="layui-hide" style="padding: 15px;">
         <table class="layui-table">
-            <tr>
-                <td width="20%">部门</td>
-                <td colspan="3" width="80%">
-                    <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">公共部分</option>
-                            <option value="1" selected="">制丝车间</option>
-                            <option value="2">卷包车间</option>
-                            <option value="3">动力车间</option>
-                            <option value="4">生产部</option>
-                            <option value="5">原料部</option>
-                            <option value="6">物资供应部</option>
-                            <option value="7">质监站</option>
-                            <option value="8">厂办</option>
-                            <option value="9">设备管理部</option>
-                            <option value="10">企管部</option>
-                        </select>
-                    </div>
-                </td>
+           <!-- <tr>
+                <td>名称</td>
+                <td><input type="text" class="layui-input"></td>
+                <td>单位</td>
+                <td><input type="text" class="layui-input"></td>
             </tr>
             <tr>
-                <td width="20%">工序/设备/人员</td>
-                <td colspan="3" width="80%">
-                    <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">在岗人员</option>
-                            <option value="1" selected="">工作人员</option>
-                            <option value="2">人员密集场所/职工</option>
-                            <option value="3">吸烟/可燃物/吸烟者</option>
-                            <option value="4">行走/路面/行走人</option>
-                            <option value="5">膨胀烟丝线/操作工</option>
-                            <option value="6">车间/所有人员</option>
-                            <option value="7">维修/电焊工</option>
-                            <option value="8">上叶/抱车/驾驶员</option>
-                            <option value="9">执勤/队员</option>
-                            <option value="10">日常办公/电脑/人员</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
+                <td>地点</td>
+                <td colspan="3"><input type="text" class="layui-input"></td>
+            </tr>-->
             <tr>
-                <td width="20%">作业活动</td>
-                <td colspan="3" width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="正常工作" readonly>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">危险源</td>
-                <td colspan="3" width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="班中、班前饮酒" readonly>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">风险</td>
-                <td colspan="3" width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="导致各种事故" readonly>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%" rowspan="4">LEC评价法</td>
-                <td width="30%" align="center">L</td>
-                <td width="50%">
+                <td rowspan="4">LEC评价法</td>
+                <td align="center">L</td>
+                <td colspan="2">
                     <input type="text" name="" autocomplete="off" class="layui-input" value="">
                 </td>
             </tr>
             <tr>
-                <td width="30%" align="center">E</td>
-                <td width="50%">
+                <td align="center">E</td>
+                <td colspan="2">
                     <input type="text" name="" autocomplete="off" class="layui-input" value="">
                 </td>
             </tr>
             <tr>
-                <td width="30%" align="center">C</td>
-                <td width="50%">
+                <td align="center">C</td>
+                <td colspan="2">
                     <input type="text" name="" autocomplete="off" class="layui-input" value="">
                 </td>
             </tr>
             <tr>
-                <td width="30%" align="center">D</td>
-                <td width="50%">
+                <td align="center">D</td>
+                <td colspan="2">
                     <input type="text" name="" autocomplete="off" class="layui-input" value="">
                 </td>
             </tr>
             <tr>
-                <td width="20%">评价结论</td>
-                <td colspan="3" width="80%">
+                <td>评价结论</td>
+                <td colspan="3">
                     <div class="layui-input-block">
                         <input type="radio" name="evaluate" value="高度危险源" title="高度危险源" checked="">
                         <input type="radio" name="evaluate" value="中度危险源" title="中度危险源">
@@ -170,7 +115,7 @@
                 layer.open({
                     type: 1 //此处以iframe举例
                     ,
-                    title: '策划危险源',
+                    title: '风险评价',
                     area: '900px',
                     shade: 0.2,
                     maxmin: true,

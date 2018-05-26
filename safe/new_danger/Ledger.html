@@ -9,32 +9,7 @@
 
 <body style="padding: 15px;">
 <form action="" class="layui-form">
-    <table class="layui-table" lay-data="{url:'../json2/dan_sou2.json',page: true}">
-        <thead>
-        <tr>
-            <th lay-data="{checkbox:true}" rowspan="2"></th>
-            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
-            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
-            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
-            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
-            <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
-            <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
-            <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
-            <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
-            <th lay-data="{align:'center'}" colspan="3">评价结论</th>
-            <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
-        </tr>
-        <tr>
-            <th lay-data="{field:'LEC_L',align:'center'}">L</th>
-            <th lay-data="{field:'LEC_E',align:'center'}">E</th>
-            <th lay-data="{field:'LEC_C',align:'center'}">C</th>
-            <th lay-data="{field:'LEC_D',align:'center'}">D</th>
-            <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
-            <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
-            <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
-        </tr>
-        </thead>
-    </table>
+
     <div class="layui-row" style="margin-top: 15px;">
         <div class="layui-col-md5" style="background: url('../assets/images/kuang1.png') no-repeat;background-size: 100% 100%;">
             <div id="Risk" style="height: 400px;width: 100%;">
@@ -47,6 +22,29 @@
             </div>
         </div>
     </div>
+    <table class="layui-table" lay-data="{height:'full-70',url:'../json2/dan_sou1.json',page: true}">
+        <thead>
+        <tr>
+            <th lay-data="{checkbox:true}" rowspan="2"></th>
+            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">编号</th>
+            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">名称</th>
+            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">单位</th>
+            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">地点</th>
+            <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
+            <th lay-data="{align:'center'}" colspan="3">评价结论</th>
+        </tr>
+        <tr>
+            <th lay-data="{field:'LEC_L',align:'center'}">L</th>
+            <th lay-data="{field:'LEC_E',align:'center'}">E</th>
+            <th lay-data="{field:'LEC_C',align:'center'}">C</th>
+            <th lay-data="{field:'LEC_D',align:'center'}">D</th>
+            <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
+            <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
+            <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
+        </tr>
+        </thead>
+    </table>
+
     <div id="add" class="layui-hide" style="padding: 15px;">
         <table class="layui-table">
             <tr>
