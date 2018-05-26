@@ -5,6 +5,54 @@
     <meta charset="UTF-8">
     <title>方针管理（管理者）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #proposal, #review {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -25,7 +73,7 @@
 
     </table>
 
-    <div id="proposal" class="layui-hide" style="padding: 15px;">
+    <div id="proposal" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">建议内容</td>
@@ -35,16 +83,10 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td width="20%">文件</td>
-                <td width="80%">
-                    <input type="file" name="file" id="test_1">
-                </td>
-            </tr>
         </table>
     </div>
 
-    <div id="review" class="layui-hide" style="padding: 15px;">
+    <div id="review" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">评审结果</td>
@@ -64,12 +106,6 @@
                     <div class="layui-input-block" style="margin-left: 0;">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">评审文件</td>
-                <td width="80%">
-                    <input type="file" name="file" id="test_2">
                 </td>
             </tr>
         </table>
@@ -100,11 +136,6 @@
                     [{
                         type: 'checkbox'
                     }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
-                    }, {
                         field: 'title',
                         title: '标题',
                         align: 'center'
@@ -117,12 +148,16 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    }, {
+                        field: 'company',
+                        title: '所属部门',
                         align: 'center'
                     }, {
                         field: 'remarks',

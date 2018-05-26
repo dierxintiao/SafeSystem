@@ -5,6 +5,55 @@
     <meta charset="UTF-8">
     <title>费用预算（审核）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #add, #deta {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -25,36 +74,15 @@
 
     </table>
 
-    <div id="add" class="layui-hide" style="padding: 10px;">
+    <div id="add" class="layui-hide">
         <table class="layui-table">
             <tr>
-                <td width="20%">审核结果</td>
-                <td width="80%">
-                    <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value="" selected="">通过</option>
-                            <option>不通过</option>
-
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">审核意见</td>
-                <td width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">评审文件</td>
-                <td width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </td>
+                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
             </tr>
         </table>
     </div>
 
-    <div id="deta" class="layui-hide" style="padding: 15px;">
+    <div id="deta" class="layui-hide">
         <div class="layui-form-item">
             <label class="layui-form-label">征集对象:</label>
             <div class="layui-input-block">
@@ -114,7 +142,7 @@
         });
 
     });
-    var _h = $(window).height()-60;
+    var _h = $(window).height() - 60;
     layui.use('table', function () {
         var table = layui.table;
 
@@ -127,11 +155,6 @@
             cols: [
                 [{
                     type: 'checkbox'
-                }, {
-                    field: 'id',
-                    title: 'ID',
-                    width: 80,
-                    align: 'center'
                 }, {
                     field: 'number',
                     title: '编号',
@@ -193,19 +216,23 @@
                 layer.open({
                     type: 1 //此处以iframe举例
                     ,
-                    title: '费用预算',
+                    title: '审核结果',
                     area: '1000px',
                     shade: 0.2,
                     maxmin: true,
                     offset: 'auto',
                     content: $('#add'),
-                    btn: ['保存', '取消'] //只是为了演示
+                    btn: ['通过', '不通过', '取消'] //只是为了演示
                     ,
                     yes: function (index) {
                         $("#add").addClass('layui-hide');
                         layer.close(index);
                     },
                     btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn3: function (index) {
                         $("#add").addClass('layui-hide');
                         layer.close(index);
                     },
@@ -244,11 +271,10 @@
                 layer.confirm('确定要' + text + '么？', {
                     btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    shade: 0.2,
                 }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
+                    layer.msg('已'+ text + '！');
                 }, function (index) {
-                    layer.msg('已取消', {icon: 2});
+                    layer.msg('已取消');
                 });
             }
         };

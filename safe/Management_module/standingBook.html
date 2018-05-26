@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>费用预算（上报）</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #add, #deta {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="padding: 15px;">
+<form action="" class="layui-form search layui-form-pane">
+
+
+    <table class="layui-table" id="test">
+
+    </table>
+
+    <div id="add" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">状态</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">费用类型</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">关联设备</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">标准单位</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">单位费用</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">总费用</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="deta" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">类型</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">名称</td>
+                <td width="30%">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">规格型号</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">数量</td>
+                <td width="30%">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">去年支付</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">费用标准</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">今年预算</td>
+                <td width=80%" colspan=3>
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</form>
+
+<script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/layui/layui.js"></script>
+</body>
+
+</html>
+<script>
+    layui.use('form', function () {
+        var form = layui.form;
+        form.render();
+    });
+
+    var tr = "<tr><td><input type='checkbox' name='test' lay-skin='primary'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td>";
+    tr = tr + "<td><input type='text' class='layui-input'/></td></tr>";
+
+    function add() {
+        $("#tabletest").append(tr);
+        layui.use('form', function () {
+            var form = layui.form;
+            form.render();
+        });
+    }
+
+    $(function () {
+        $("#dele").click(function () {
+            $("#tabletest input[name='test']:checked").each(function () { // 遍历选中的checkbox
+                n = $(this).parents("tr").index(); // 获取checkbox所在行的顺序
+                $("#tabletest").find("tr:eq(" + n + ")").remove();
+            });
+        });
+
+    });
+    var _h = $(window).height() - 30;
+    layui.use('table', function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#test',
+            url: '../json/standingBook.json',
+            height: _h,
+            cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,
+            cols: [
+                [{
+                    field: 'empty',
+                    title: '',
+                    align: 'center',
+                    width:60
+                }, {
+                    field: 'style',
+                    title: '费用类型',
+                    align: 'center'
+                }, {
+                    field: 'equipment',
+                    title: '关联设备',
+                    align: 'center'
+                }, {
+                    field: 'pay',
+                    title: '支出金额',
+                    align: 'center'
+                }, {
+                    field: 'budget',
+                    title: '预算',
+                    align: 'center'
+                }, {
+                    field: 'isBudget',
+                    title: '是否超出预算',
+                    align: 'center'
+                }]
+            ],
+            page: true
+        });
+    });
+
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            add: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '费用预算',
+                    area: '1000px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            deta: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '费用预算',
+                    area: '1000px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#deta'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#deta").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#deta").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#deta").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            modal: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                // layer.open({
+                //     type: 1,
+                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                //     ,
+                //     id: 'layerDemo' + type //防止重复弹出
+                //     ,
+                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                //     btn: ['确认', '取消'],
+                //     btnAlign: 'c' //按钮居中
+                //     ,
+                //     shade: 0.2 //不显示遮罩
+                //     ,
+                //     yes: function (index) {
+                //         layer.close(index);
+                //     }
+                // });
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
+                    ,
+                    shade: 0.2,
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+        $('.layerd').on('click', function () {
+            $("#deta").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+
+    //绑定原始文件域
+    upload.render({
+        elem: '#test_1',
+        url: '/upload/',
+        done: function (res) {
+            console.log(res)
+        }
+    });
+</script>

@@ -5,12 +5,90 @@
     <meta charset="UTF-8">
     <title>方针管理（起草者）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+
+    <link rel="stylesheet" href="../assets/layui/css/select.css">
+    <style type=text/css>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+        #popup,#modify,#detail{
+            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;}
+    </style>
+    <style>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+        #add,#Collection,#revise,#text {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+
+    </style>
 </head>
 
 <body style="padding: 15px;">
 <form action="" class="layui-form">
     <div class="layui-btn-group" style="margin-bottom: 10px;">
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">起草</a>
+        <a class="layertext layui-btn layui-btn-sm layui-btn-normal" data-method="text">编辑正文</a>
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">编辑</a>
         <a class="layerd layui-btn layui-btn-sm layui-btn-normal" data-method="Collection">征集</a>
         <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报评审</a>
@@ -27,7 +105,7 @@
     </div>
     <table class="layui-table" id="test">
     </table>
-    <div id="add" class="layui-hide" style="padding: 15px;">
+    <div id="add" class="layui-hide" >
         <table class="layui-table">
             <tr>
                 <td width="20%">类型</td>
@@ -60,13 +138,19 @@
                 </td>
             </tr>
             <tr>
-                <td width="20%">附件</td>
-                <td width="30%">
-                    <input type="file" name="file" id="test_1">
-                </td>
                 <td width="20%">版本</td>
                 <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">所属部门</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">综述</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
                 </td>
             </tr>
             <tr>
@@ -77,7 +161,7 @@
             </tr>
         </table>
     </div>
-    <div id="Collection" class="layui-hide" style="padding: 15px;">
+    <div id="Collection" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">征集对象</td>
@@ -102,7 +186,7 @@
             </tr>
         </table>
     </div>
-    <div id="revise" class="layui-hide" style="padding: 15px;">
+    <div id="revise" class="layui-hide" >
         <table class="layui-table">
             <tr>
                 <td width="20%">类型</td>
@@ -162,11 +246,99 @@
             </tr>
         </table>
     </div>
+    <div id="text" class="layui-hide" >
+            <textarea class="layui-textarea" id="demo_1" style="display: none"></textarea>
+    </div>
+
 </form>
+
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/layui/layui.js"></script>
-<script>
+<script type="text/javascript" src="../zTree_v3-master/js/jquery.ztree.core.min.js"></script>
 
+<script>
+    var zTreeObj;
+    var setting = {};
+    var zNodes = [
+        {
+            name: "目录", open: true, children: [
+                { name: "第一章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第二章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第三章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第四章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第五章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第六章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第七章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第八章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第九章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "第十章",open:false,children:[
+                        {name: "第一节"},
+                        {name: "第二节"},
+                        {name: "第三节"},
+                        {name: "第四节"},
+                        {name: "第五节"}
+                    ]},
+                { name: "总结",open:false}
+            ]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
     layui.use(['form','code'], function () {
         var form = layui.form;
         $ = layui.$;
@@ -186,11 +358,6 @@
                     [{
                         type: 'checkbox'
                     }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
-                    }, {
                         field: 'title',
                         title: '标题',
                         align: 'center'
@@ -203,12 +370,16 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    },  {
+                        field: 'company',
+                        title: '所属部门',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -330,24 +501,67 @@
                     }
                 });
             },
+            text: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '编辑正文',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#text'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#text").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#text").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#text").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
             modal: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
-                layer.open({
-                    type: 1,
-                    offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                // layer.open({
+                //     type: 1,
+                //     offset: 'auto' //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                //     ,
+                //     id: 'layerDemo' + type //防止重复弹出
+                //     ,
+                //     content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
+                //     btn: ['确认', '取消'],
+                //     btnAlign: 'c' //按钮居中
+                //     ,
+                //     shade: 0.2 //不显示遮罩
+                //     ,
+                //     yes: function (index) {
+                //         layer.close(index);
+                //     }
+                // });
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
                     ,
-                    id: 'layerDemo' + type //防止重复弹出
-                    ,
-                    content: '<div style="padding: 20px 100px;">确定要' + text + '么？</div>',
-                    btn: ['确认', '取消'],
-                    btnAlign: 'c' //按钮居中
-                    ,
-                    shade: 0.2 //不显示遮罩
-                    ,
-                    yes: function (index) {
-                        layer.close(index);
-                    }
+                }, function (index, layero) {
+                    layer.msg('已'+ text + '！');
+                }, function (index) {
+                    layer.msg('已取消');
                 });
             }
         };
@@ -371,12 +585,25 @@
                 method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
-
+        $('.layertext').on('click', function () {
+            $("#text").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
         $('.layers').on('click', function () {
             var othis = $(this), method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
     });
+
+    layui.use('layedit', function () {
+        var layedit = layui.layedit,
+            $ = layui.jquery;
+        //构建一个默认的编辑器
+        var index = layedit.build('demo_1');
+    });
+
 </script>
 </body>
 

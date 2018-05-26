@@ -1,0 +1,50 @@
+
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "state": "可用",
+      "price": "成本费用",
+      "equipment":"",
+      "company": "郑州市局（公司）",
+      "money":"2.00",
+      "cost":"5.00"
+    },
+    {
+      "state": "停用 ",
+      "price": "成本费用",
+      "equipment":"",
+      "company": "驻马店市局（公司）",
+      "money":"3.00",
+      "cost":"3.50"
+    },
+    {
+      "state": "停用",
+      "price": "成本费用",
+      "equipment":"",
+      "company": "平顶山市局（公司）",
+      "money":"1.00",
+      "cost":"2.00"
+    },
+    {
+      "state": "可用",
+      "price": "成本费用",
+      "equipment":"",
+      "company": "开封市局（公司）",
+      "money":"1.25",
+      "cost":"3.00"
+    },
+    {
+      "state": "可用",
+      "price": "成本费用",
+      "equipment":"",
+      "company": "洛阳市局（公司）",
+      "money":"0.00",
+      "cost":"1.00"
+    }
+  ]
+}
+
+

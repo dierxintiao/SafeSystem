@@ -5,6 +5,62 @@
     <meta charset="UTF-8">
     <title>计划管理（基层）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #draw, #jddraw, #yeardraw, #plandraw {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+
+        .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -33,25 +89,25 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_1">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_1"></table>
             </div>
             <div class="layui-tab-item">
                 <div class="layui-btn-group" style="margin-bottom: 10px;">
-                    <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="draw">拟定</a>
-                    <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="draw">编辑</a>
+                    <a class="layerjd layui-btn layui-btn-sm layui-btn-normal" data-method="jddraw">拟定</a>
+                    <a class="layerjd layui-btn layui-btn-sm layui-btn-normal" data-method="jddraw">编辑</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报审批</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">下发</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
@@ -65,25 +121,25 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_2">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_2"></table>
             </div>
             <div class="layui-tab-item">
                 <div class="layui-btn-group" style="margin-bottom: 10px;">
-                    <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="draw">拟定</a>
-                    <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="draw">编辑</a>
+                    <a class="yearlayer layui-btn layui-btn-sm layui-btn-normal" data-method="yeardraw">拟定</a>
+                    <a class="yearlayer layui-btn layui-btn-sm layui-btn-normal" data-method="yeardraw">编辑</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报审批</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">下发</a>
                     <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
@@ -97,28 +153,28 @@
                 </div>
 
                 <!--<table class="layui-table" lay-data="{url:'../json/poli_man.json', page: true}" id="test_3">-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th lay-data="{checkbox:true}"></th>-->
-                        <!--<th lay-data="{field:'id'}">ID</th>-->
-                        <!--<th lay-data="{field:'title'}">标题</th>-->
-                        <!--<th lay-data="{field:'type'}">类别</th>-->
-                        <!--<th lay-data="{field:'time'}">时间</th>-->
-                        <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
-                        <!--<th lay-data="{field:'state'}">状态</th>-->
-                        <!--<th lay-data="{field:'remarks'}">备注</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
+                <!--<thead>-->
+                <!--<tr>-->
+                <!--<th lay-data="{checkbox:true}"></th>-->
+                <!--<th lay-data="{field:'id'}">ID</th>-->
+                <!--<th lay-data="{field:'title'}">标题</th>-->
+                <!--<th lay-data="{field:'type'}">类别</th>-->
+                <!--<th lay-data="{field:'time'}">时间</th>-->
+                <!--<th lay-data="{field:'Enclosure'}">附件</th>-->
+                <!--<th lay-data="{field:'state'}">状态</th>-->
+                <!--<th lay-data="{field:'remarks'}">备注</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
                 <!--</table>-->
                 <table id="test_3"></table>
             </div>
         </div>
     </div>
 
-    <div id="draw" class="layui-hide" style="padding: 15px;">
+    <div id="draw" class="layui-hide">
         <table class="layui-table">
             <tr>
-                <td width="20%">计划类型</td>
+                <td width="20%">计划编号</td>
                 <td colspan="3" width="80%">
                     <div class="layui-block" style="margin-left: 0;">
                         <div class="layui-input-inline">
@@ -144,19 +200,84 @@
                 <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
                 </td>
-                <td width="20%">执行部门</td>
+                <td width="20%">起草部门</td>
                 <td width="30%">
                     <input type="text" name="" autocomplete="off" class="layui-input">
                 </td>
             </tr>
             <tr>
                 <td width="20%">日期</td>
-                <td width="30%">
-                    <input type="date" name="" autocomplete="off" class="layui-input">
+                <td width="30%" colspan=3>
+                    <select name="city" lay-verify="">
+                        <option value="">请选择日期</option>
+                        <option value="010">1月</option>
+                        <option value="021">2月</option>
+                        <option value="0571">3月</option>
+                        <option value="010">4月</option>
+                        <option value="021">5月</option>
+                        <option value="0571">6月</option>
+                        <option value="010">7月</option>
+                        <option value="021">8月</option>
+                        <option value="0571">9月</option>
+                        <option value="010">10月</option>
+                        <option value="021">11月</option>
+                        <option value="0571">12月</option>
+                    </select>
                 </td>
-                <td width="20%">附件</td>
+
+            </tr>
+            <tr>
+                <td width="20%">备注</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="jddraw" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">计划编号</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-block" style="margin-left: 0;">
+                        <div class="layui-input-inline">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">规划</option>
+                                <option value="1" selected="">方针</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">计划名称</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">规划单位</td>
                 <td width="30%">
-                    <input type="file" name="file">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">起草部门</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">日期</td>
+                <td width="30%" colspan=3>
+                    <select name="city" lay-verify="">
+                        <option value="">请选择日期</option>
+                        <option value="010">第一季度</option>
+                        <option value="021">第二季度</option>
+                        <option value="0571">第三季度</option>
+                        <option value="0571">第四季度</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -167,6 +288,91 @@
             </tr>
         </table>
     </div>
+    <div id="yeardraw" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">计划编号</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-block" style="margin-left: 0;">
+                        <div class="layui-input-inline">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">规划</option>
+                                <option value="1" selected="">方针</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">计划名称</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">规划单位</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">起草部门</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">日期</td>
+                <td width="30%" colspan=3>
+                    <select name="city" lay-verify="">
+                        <option value="">请选择日期</option>
+                        <option value="010">1年</option>
+                        <option value="021">2年</option>
+                        <option value="0571">3年</option>
+                        <option value="0571">4年</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">备注</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="plandraw" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">安全任务名称</td>
+                <td width="80%">
+                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">开始时间</td>
+                <td width="80%">
+                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">结束时间</td>
+                <td width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">执行部门</td>
+                <td width="80%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+        </table>
+    </div>
+
 </form>
 
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
@@ -176,7 +382,7 @@
 </html>
 <script>
 
-    layui.use(['form','table'], function () {
+    layui.use(['form', 'table'], function () {
         var form = layui.form;
         form.render();
         var table = layui.table;
@@ -185,20 +391,15 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man.json', function (data) {
             table.render({
                 elem: '#test_1',
                 height: 'full-120',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
                         type: 'checkbox'
-                    }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
                     }, {
                         field: 'title',
                         title: '标题',
@@ -212,12 +413,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    }, {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -233,20 +442,15 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man2.json', function (data) {
             table.render({
                 elem: '#test_2',
                 height: 'full-220',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
                         type: 'checkbox'
-                    }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
                     }, {
                         field: 'title',
                         title: '标题',
@@ -260,12 +464,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    }, {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -280,20 +492,15 @@
     });
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man3.json', function (data) {
             table.render({
                 elem: '#test_3',
                 height: 'full-220',
-                data:data.data,
+                data: data.data,
                 cellMinWidth: 50, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 cols: [
                     [{
                         type: 'checkbox'
-                    }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
                     }, {
                         field: 'title',
                         title: '标题',
@@ -307,12 +514,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    }, {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -366,6 +581,111 @@
                     }
                 });
             },
+            jddraw: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '建议',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#jddraw'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#jddraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#jddraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#jddraw").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            yeardraw: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '建议',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#yeardraw'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#yeardraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#yeardraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#yeardraw").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            plandraw: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '建议',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#plandraw'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#plandraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#plandraw").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#plandraw").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
             modal: function (othis) {
                 var type = othis.data('type'),
                     text = othis.text();
@@ -389,9 +709,9 @@
                     btn: ['确认', '取消'] //可以无限个按钮
                     ,
                 }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
+                    layer.msg('已'+ text + '！');
                 }, function (index) {
-                    layer.msg('已取消', {icon: 2});
+                    layer.msg('已取消');
                 });
             }
         };
@@ -401,7 +721,24 @@
                 method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
-
+        $('.layerjd').on('click', function () {
+            $("#jddraw").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+        $('.yearlayer').on('click', function () {
+            $("#yeardraw").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+        $('.layerplan').on('click', function () {
+            $("#plandraw").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
         $('.layers').on('click', function () {
             $("#review").removeClass('layui-hide');
             var othis = $(this),
@@ -409,4 +746,51 @@
             active[method] ? active[method].call(this, othis) : '';
         });
     });
+
+    function plan() {
+        layui.use('layer', function () { //独立版的layer无需执行这一句
+            var $ = layui.jquery,
+                layer = layui.layer; //独立版的layer无需执行这一句
+            //触发事件
+            var active = {
+                plandraw: function () {
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 1 //此处以iframe举例
+                        ,
+                        title: '建议',
+                        area: '900px',
+                        shade: 0.2,
+                        maxmin: true,
+                        offset: 'auto',
+                        content: $('#plandraw'),
+                        btn: ['保存', '取消'] //只是为了演示
+                        ,
+                        yes: function (index) {
+                            $("#plandraw").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        btn2: function (index) {
+                            $("#plandraw").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        cancel: function (index, layero) {
+                            $("#plandraw").addClass('layui-hide');
+                            layer.close(index);
+                            return false;
+                        }
+                        ,
+                        zIndex: layer.zIndex //重点1
+                        ,
+                        success: function (layero) {
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                },
+            };
+            $("#plandraw").removeClass('layui-hide');
+            active.plandraw();
+        });
+    }
 </script>
