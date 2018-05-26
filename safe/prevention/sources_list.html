@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>单位危险源列表</title>
+    <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        .layui-layer-dialog .layui-layer-content {
+            color: #fff;
+        }
+
+        .layui-layer-btn {
+            background: #09315a;
+        }
+    </style>
+</head>
+
+<body style="padding: 15px;">
+<div class="layui-col-md2">
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+<div class="layui-col-md10">
+    <form action="" class="layui-form">
+        <div class="layui-btn-group" style="margin-bottom: 10px;">
+            <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="add">新增</a>
+            <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">注销</a>
+            <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">重新提交</a>
+        </div>
+        <div class="demoTable search" style="float: right;margin-bottom: 10px;">
+            标题：
+            <div class="layui-inline" style="margin-right: 15px">
+                <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+        </div>
+        <table class="layui-table" lay-data="{height:'full-70',url:'../json/dan_sou1.json',page: true}">
+            <thead>
+            <tr>
+                <th lay-data="{checkbox:true}"></th>
+                <th lay-data="{field:'id',align:'center', width:100}">序号</th>
+                <th lay-data="{field:'department',align:'center', width:150}">部门</th>
+                <th lay-data="{field:'people',align:'center', width:150}">工序/设备/人员</th>
+                <th lay-data="{field:'active',align:'center', width:200}">作业活动</th>
+                <th lay-data="{field:'sources',align:'center', width:400}">危险源描述</th>
+                <th lay-data="{field:'state',align:'center'}">状态更新时间</th>
+            </tr>
+            </thead>
+        </table>
+    </form>
+    <form action="" class="layui-form">
+        <div id="add" class="layui-hide" style="padding: 10px;">
+            <table class="layui-table">
+                <tr>
+                    <td width="20%">部门</td>
+                    <td colspan="3" width="80%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0" selected="">省局（公司）</option>
+                                <option value="1">郑州市烟草公司</option>
+                                <option value="2">开封市烟草公司</option>
+                                <option value="3">洛阳市烟草公司</option>
+                                <option value="4">平顶山市烟草公司</option>
+                                <option value="5">安阳市烟草公司</option>
+                                <option value="6">鹤壁市烟草公司</option>
+                                <option value="7">新乡市烟草公司</option>
+                                <option value="8">焦作市烟草公司</option>
+                                <option value="9">济源市烟草公司</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">工序/设备/人员</td>
+                    <td width="30%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                    <td width="20%">作业活动</td>
+                    <td width="30%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="text" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">时间</td>
+                    <td width="30%">
+                        <div class="layui-input-block" style="margin-left: 0;">
+                            <input type="date" name="title" autocomplete="off" class="layui-input">
+                        </div>
+                    </td>
+                    <td width="20%"></td>
+                    <td width="30%">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">危险源描述</td>
+                    <td colspan="3" width="80%">
+                        <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/layui/layui.js"></script>
+<script type="text/javascript" src="../zTree_v3-master/js/jquery.ztree.core.min.js"></script>
+<script>
+    var zTreeObj;
+    var setting = {};
+    var zNodes = [
+        {
+            name: "河南烟草专卖系统", open: true, children: [
+                {
+                    name: "省局（公司）", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "郑州市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "开封市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "洛阳市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "平顶山市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "安阳市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "鹤壁市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "新乡市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "焦作市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "濮阳市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "郑州市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "许昌市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "漯河市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "三门峡市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "南阳市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "商丘市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "信阳市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "周口市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "驻马店市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "济源市烟草公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "中国烟草河南进出口公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "天昌国际烟草有限公司", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {
+                    name: "河南烟草职工培训中心", open: false, children: [
+                        {name: "制丝车间"},
+                        {name: "卷包车间"},
+                        {name: "动力车间"},
+                        {name: "生产部"},
+                        {name: "原料部"},
+                        {name: "物资供应部"},
+                        {name: "质监站"},
+                        {name: "厂办"},
+                        {name: "设备管理部"},
+                        {name: "企管部"}
+                    ]
+                },
+                {name: "管理组", open: false}
+            ]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+
+    layui.use(['form', 'code'], function () {
+        var form = layui.form;
+        $ = layui.$;
+        form.render();
+    });
+    layui.use('table', function () {
+        var table = layui.table;
+
+    });
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            add: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '策划危险源',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            modal: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
+                    ,
+                }, function (index, layero) {
+                    layer.msg('已' + text + '！');
+                }, function (index) {
+                    layer.msg('已取消');
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>
+</body>
+
+</html>
