@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <title>计划管理（基层）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style type=text/css>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+        #approval,#lower{
+            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;}
+    </style>
 </head>
 
 <body style="padding: 15px;">
@@ -106,7 +137,7 @@
         </div>
     </div>
 
-    <div id="approval" class="layui-hide" style="padding: 15px;">
+    <div id="approval" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">审批结果</td>
@@ -128,16 +159,11 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <td width="20%">审批文件文件</td>
-                <td width="80%">
-                    <input type="file" name="file">
-                </td>
-            </tr>
+
         </table>
     </div>
 
-    <div id="lower" class="layui-hide" style="padding: 15px;">
+    <div id="lower" class="layui-hide">
         <table class="layui-table">
             <tr>
                 <td width="20%">下发部门</td>
@@ -159,12 +185,6 @@
                     <div class="layui-input-block" style="margin-left: 0;">
                         <input type="text" name="title" autocomplete="off" class="layui-input">
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">审批文件文件</td>
-                <td width="80%">
-                    <input type="file" name="file">
                 </td>
             </tr>
         </table>
@@ -286,11 +306,6 @@
                     [{
                         type: 'checkbox'
                     }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
-                    }, {
                         field: 'title',
                         title: '标题',
                         align: 'center'
@@ -303,12 +318,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    },  {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -324,7 +347,7 @@
 
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man2.json',function(data){
             table.render({
                 elem: '#test_2',
                 height: 'full-220',
@@ -334,11 +357,6 @@
                     [{
                         type: 'checkbox'
                     }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
-                    }, {
                         field: 'title',
                         title: '标题',
                         align: 'center'
@@ -351,12 +369,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    },  {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',
@@ -371,7 +397,7 @@
     });
     layui.use('table', function () {
         var table = layui.table;
-        $.getJSON('../json/poli_man.json',function(data){
+        $.getJSON('../json/poli_man3.json',function(data){
             table.render({
                 elem: '#test_3',
                 height: 'full-220',
@@ -380,11 +406,6 @@
                 cols: [
                     [{
                         type: 'checkbox'
-                    }, {
-                        field: 'id',
-                        title: 'ID',
-                        width: 80,
-                        align: 'center'
                     }, {
                         field: 'title',
                         title: '标题',
@@ -398,12 +419,20 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'Enclosure',
-                        title: '附件',
-                        align: 'center'
-                    }, {
                         field: 'state',
                         title: '状态',
+                        align: 'center'
+                    }, {
+                        field: 'person',
+                        title: '起草人',
+                        align: 'center'
+                    },  {
+                        field: 'company',
+                        title: '所属部门',
+                        align: 'center'
+                    }, {
+                        field: 'plan',
+                        title: '计划项',
                         align: 'center'
                     }, {
                         field: 'remarks',

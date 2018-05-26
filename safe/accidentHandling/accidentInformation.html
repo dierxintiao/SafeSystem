@@ -50,6 +50,38 @@
         .layui-col-md10 {
             padding: 10px;
         }
+
+
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+        #popup,#modify,#detail{
+            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;
+        }
     </style>
 </head>
 <body>
@@ -303,13 +335,7 @@
     </table>
 </div>
 <div id='detail' class="layui-hide">
-    <div style='padding: 10px 0 10px 10px'>
-        事故发生时间从<input type="text" name="title" required placeholder=""
-                      autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
-        事故发生时间到<input type="text" name="title" required
-                      autocomplete="off" class="layui-input" style='display: inline-block;width: 200px;margin: 0 10px'>
-        <button class="layui-btn  layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px'>导出</button>
-    </div>
+        <button class="layui-btn  layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px;margin-bottom: 10px'>导出</button>
     <table class="layui-table">
         <tbody>
         <tr>

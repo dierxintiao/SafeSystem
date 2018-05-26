@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>费用预算（审核）</title>
+    <title>费用预算（上报）</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
     <style type=text/css>
         .layui-layer-title {
@@ -52,11 +52,14 @@
 <body style="padding: 15px;">
 <form action="" class="layui-form search layui-form-pane">
     <div class="layui-btn-group" style="margin-bottom: 10px;">
-        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="add">审核</a>
-        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">导出</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="add">新增</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="add">修改</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">启用</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">停用</a>
     </div>
     <div class="demoTable search" style="float: right;margin-bottom: 10px;">
-        编号：
+        标题：
         <div class="layui-inline" style="margin-right: 15px">
             <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
         </div>
@@ -70,28 +73,77 @@
     <div id="add" class="layui-hide">
         <table class="layui-table">
             <tr>
-                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                <td width="20%">状态</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">费用类型</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">关联设备</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">标准单位</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">单位费用</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">总费用</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
             </tr>
         </table>
     </div>
 
     <div id="deta" class="layui-hide">
-        <div class="layui-form-item">
-            <label class="layui-form-label">征集对象:</label>
-            <div class="layui-input-block">
-                <select name="interest" lay-filter="aihao">
-                    <option value=""></option>
-                    <option value="0">规划</option>
-                    <option value="1" selected="">方针</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">备注:</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
-            </div>
-        </div>
+        <table class="layui-table">
+            <tr>
+                <td width="20%">类型</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">名称</td>
+                <td width="30%">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">规格型号</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">数量</td>
+                <td width="30%">
+
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">去年支付</td>
+                <td width="30%">
+
+                </td>
+                <td width="20%">费用标准</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">今年预算</td>
+                <td width=80%" colspan=3>
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+        </table>
     </div>
 
 </form>
@@ -141,7 +193,7 @@
 
         table.render({
             elem: '#test',
-            url: '../json/Cost_bud.json',
+            url: '../json/standardConfiguration.json',
             height: _h,
             cellMinWidth: 50 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
             ,
@@ -149,48 +201,28 @@
                 [{
                     type: 'checkbox'
                 }, {
-                    field: 'number',
-                    title: '编号',
-                    align: 'center'
-                }, {
-                    field: 'year',
-                    title: '年度',
-                    align: 'center'
-                }, {
-                    field: 'project',
-                    title: '项目',
-                    align: 'center'
-                }, {
-                    field: 'department',
-                    title: '部门',
-                    align: 'center'
-                }, {
-                    field: 'type',
-                    title: '类别',
-                    align: 'center'
-                }, {
-                    field: 'people',
-                    title: '填报人',
-                    align: 'center'
-                }, {
-                    field: 'date',
-                    title: '填报时间',
-                    align: 'center'
-                }, {
-                    field: 'spend',
-                    title: '去年花费',
-                    align: 'center'
-                }, {
-                    field: 'standard',
-                    title: '标准',
-                    align: 'center'
-                }, {
-                    field: 'budget',
-                    title: '预算',
-                    align: 'center'
-                }, {
                     field: 'state',
                     title: '状态',
+                    align: 'center'
+                }, {
+                    field: 'price',
+                    title: '费用类型',
+                    align: 'center'
+                }, {
+                    field: 'equipment',
+                    title: '关联设备',
+                    align: 'center'
+                }, {
+                    field: 'company',
+                    title: '标准单位',
+                    align: 'center'
+                }, {
+                    field: 'money',
+                    title: '单位费用',
+                    align: 'center'
+                }, {
+                    field: 'cost',
+                    title: '总费用',
                     align: 'center'
                 }]
             ],
@@ -209,13 +241,13 @@
                 layer.open({
                     type: 1 //此处以iframe举例
                     ,
-                    title: '审核结果',
+                    title: '费用预算',
                     area: '1000px',
                     shade: 0.2,
                     maxmin: true,
                     offset: 'auto',
                     content: $('#add'),
-                    btn: ['通过', '不通过', '取消'] //只是为了演示
+                    btn: ['保存', '取消'] //只是为了演示
                     ,
                     yes: function (index) {
                         $("#add").addClass('layui-hide');
@@ -225,12 +257,43 @@
                         $("#add").addClass('layui-hide');
                         layer.close(index);
                     },
-                    btn3: function (index) {
+                    cancel: function (index, layero) {
                         $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            deta: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '费用预算',
+                    area: '1000px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#deta'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#deta").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#deta").addClass('layui-hide');
                         layer.close(index);
                     },
                     cancel: function (index, layero) {
-                        $("#add").addClass('layui-hide');
+                        $("#deta").addClass('layui-hide');
                         layer.close(index);
                         return false;
                     }
@@ -278,10 +341,25 @@
                 method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
+        $('.layerd').on('click', function () {
+            $("#deta").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
 
         $('.layers').on('click', function () {
             var othis = $(this), method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
+    });
+
+    //绑定原始文件域
+    upload.render({
+        elem: '#test_1',
+        url: '/upload/',
+        done: function (res) {
+            console.log(res)
+        }
     });
 </script>

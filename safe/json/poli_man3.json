@@ -1,0 +1,87 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "title": "XX方针",
+      "type":"年度计划",
+      "time": "2015-04-12",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"郑州市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    },
+    {
+      "id": "2",
+      "title": "XX方针",
+      "type":"年度计划",
+      "time": "2016-11-02",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"驻马店市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    },
+    {
+      "id": "3",
+      "title": "XX规划",
+      "type":"年度计划",
+      "time": "2017-03-02",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"开封市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    },
+    {
+      "id": "4",
+      "title": "XX规划",
+      "type":"年度计划",
+      "time": "2017-06-02",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"安阳市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    },
+    {
+      "id": "5",
+      "title": "XX规划",
+      "type":"年度计划",
+      "time": "2017-11-02",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"安阳市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    },
+    {
+      "id": "6",
+      "title": "XX规划",
+      "type":"年度计划",
+      "time": "2017-11-02",
+      "person":"刘**",
+      "state":"拟定",
+      "remarks":"无",
+      "company":"开封市分局",
+      "plan":"  <a class='plandraw layui-btn layui-btn-sm layui-btn-normal' data-method='plandraw' onclick='plan()'>计划项</a>",
+      "describe":"描述描述描述描述描述描述描述描述描述描述描述描述描述",
+      "global":"<a class='globaldraw layui-btn layui-btn-sm layui-btn-normal' data-method='globaldraw' onclick='global()'>目标项</a>"
+    }
+  ]
+}
+
+

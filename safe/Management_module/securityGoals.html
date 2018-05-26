@@ -8,37 +8,6 @@
     <link rel="stylesheet" href="../zTree_v3-master/css/zTreeStyle/zTreeStyle.css" type="text/css">
 
     <link rel="stylesheet" href="../assets/layui/css/select.css">
-    <style type=text/css>
-        .layui-layer-title{
-            background: #244dae !important;
-            color: #fff !important;
-            text-align: center;
-            font-size: 16px !important;
-            font-weight: bold;
-        }
-        .layui-layer-content{
-            background: #09315a;
-        }
-        .layui-layer-page .layui-layer-btn{
-            background: #09315a;
-        }
-        .layui-layer-btn .layui-layer-btn0{
-            background: #244dae !important;
-            border-color: #244dae !important;
-        }
-        .layui-layer-content .layui-table{
-            background: #00213c;
-            color: #fff;
-        }
-        .layui-layer-content .layui-table .layui-form-selected dl{
-            color: #000 !important;
-        }
-        .layui-form-select dl dd.layui-this{
-            background-color: #244dae !important;
-        }
-        #popup,#modify,#detail{
-            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;}
-    </style>
     <style>
         .layui-layer-title{
             background: #244dae !important;
@@ -67,7 +36,7 @@
         .layui-form-select dl dd.layui-this{
             background-color: #244dae !important;
         }
-        #add,#Collection,#revise,#text {
+        #add,#Collection,#revise,#text,#globaldraw {
             margin-top: 15px;
             padding: 40px;
             background: url(../assets/images/bg_table.png) no-repeat;
@@ -97,63 +66,45 @@
     </div>
     <table class="layui-table" id="test">
     </table>
-    <div id="add" class="layui-hide" >
+    <div id="add" class="layui-hide">
         <table class="layui-table">
             <tr>
-                <td width="20%">类型</td>
+                <td width="20%">计划名称</td>
                 <td colspan="3" width="80%">
-                    <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="">
-                            <option value="">方针</option>
-                            <option>规划</option>
-
-                        </select>
-                    </div>
+                    <input type="text" name="title" autocomplete="off" class="layui-input">
                 </td>
             </tr>
             <tr>
-                <td width="20%">标题</td>
-                <td colspan="3" width="80%">
-                    <div class="layui-input-block" style="margin-left: 0;">
-                        <input type="text" name="title" autocomplete="off" class="layui-input">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">日期</td>
-                <td width="30%">
-                    <input type="date" name="" autocomplete="off" class="layui-input">
-                </td>
-                <td width="20%">起草人</td>
-                <td width="30%">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">版本</td>
-                <td width="30%">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </td>
-                <td width="20%">所属部门</td>
-                <td width="30%">
-                    <input type="text" name="" autocomplete="off" class="layui-input">
-                </td>
-            </tr>
-            <tr>
-                <td width="20%">综述</td>
+                <td width="20%">目标描述</td>
                 <td colspan="3" width="80%">
                     <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
                 </td>
             </tr>
             <tr>
-                <td width="20%">备注</td>
+                <td width="20%">解决方案综述</td>
                 <td colspan="3" width="80%">
                     <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">目标描述</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">开始时间</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">结束时间</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
                 </td>
             </tr>
         </table>
     </div>
-    <div id="Collection" class="layui-hide">
+    <div id="Collection" class="layui-hide" >
         <table class="layui-table">
             <tr>
                 <td width="20%">征集对象</td>
@@ -239,9 +190,46 @@
         </table>
     </div>
     <div id="text" class="layui-hide" >
-            <textarea class="layui-textarea" id="demo_1" style="display: none"></textarea>
+        <textarea class="layui-textarea" id="demo_1" style="display: none"></textarea>
     </div>
+    <div id="globaldraw" class="layui-hide" >
+        <table class="layui-table">
+            <tr>
+                <td width="20%">安全任务名称</td>
+                <td width="80%" colspan=3>
+                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">开始时间</td>
+                <td width="30%">
+                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">结束时间</td>
+                <td width="30%">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
 
+            <tr>
+                <td width="20%">执行部门</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">费用预算</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">备注</td>
+                <td width="80%" colspan=3>
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
 </form>
 
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
@@ -351,7 +339,7 @@
                         type: 'checkbox'
                     }, {
                         field: 'title',
-                        title: '标题',
+                        title: '名称',
                         align: 'center'
                     }, {
                         field: 'type',
@@ -362,20 +350,12 @@
                         title: '时间',
                         align: 'center'
                     }, {
-                        field: 'state',
-                        title: '状态',
+                        field: 'describe',
+                        title: '描述',
                         align: 'center'
                     }, {
-                        field: 'person',
-                        title: '起草人',
-                        align: 'center'
-                    },  {
-                        field: 'company',
-                        title: '所属部门',
-                        align: 'center'
-                    }, {
-                        field: 'remarks',
-                        title: '备注',
+                        field: 'global',
+                        title: '目标项',
                         align: 'center'
                     }]
                 ],
@@ -575,6 +555,12 @@
                 method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
         });
+        $('.globallayer').on('click', function () {
+            $("#globaldraw").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
         $('.layers').on('click', function () {
             var othis = $(this), method = othis.data('method');
             active[method] ? active[method].call(this, othis) : '';
@@ -587,6 +573,53 @@
         //构建一个默认的编辑器
         var index = layedit.build('demo_1');
     });
+
+    function global() {
+        layui.use('layer', function () { //独立版的layer无需执行这一句
+            var $ = layui.jquery,
+                layer = layui.layer; //独立版的layer无需执行这一句
+            //触发事件
+            var active = {
+                globaldraw: function () {
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 1 //此处以iframe举例
+                        ,
+                        title: '建议',
+                        area: '900px',
+                        shade: 0.2,
+                        maxmin: true,
+                        offset: 'auto',
+                        content: $('#globaldraw'),
+                        btn: ['保存', '取消'] //只是为了演示
+                        ,
+                        yes: function (index) {
+                            $("#globaldraw").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        btn2: function (index) {
+                            $("#globaldraw").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        cancel: function (index, layero) {
+                            $("#globaldraw").addClass('layui-hide');
+                            layer.close(index);
+                            return false;
+                        }
+                        ,
+                        zIndex: layer.zIndex //重点1
+                        ,
+                        success: function (layero) {
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                },
+            };
+            $("#globaldraw").removeClass('layui-hide');
+            active.globaldraw();
+        });
+    }
 
 </script>
 </body>
