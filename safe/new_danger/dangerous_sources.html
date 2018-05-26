@@ -141,6 +141,14 @@
             </tr>
         </table>
     </div>
+    <div id="video" class="layui-hide"
+         style="margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;">
+        <div style="height: 350px;width:100%;">
+            <video src="../assets/images/2.mp4"  width="100%" height="100%" controls="controls">
+                您的浏览器不支持 video 标签。
+            </video>
+        </div>
+    </div>
 
 </form>
 <script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
@@ -221,6 +229,44 @@
             active[method] ? active[method].call(this, othis) : '';
         });
     });
+    function video(){
+        layui.use('layer', function () { //独立版的layer无需执行这一句
+            var $ = layui.jquery,
+                layer = layui.layer; //独立版的layer无需执行这一句
+            //触发事件
+            var active = {
+                setTop: function () {
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 1 //此处以iframe举例
+                        ,
+                        title: '危险源',
+                        area: '900px',
+                        shade: 0.2,
+                        maxmin: true,
+                        offset: 'auto',
+                        content: $('#video'),
+                        btn: ['关闭'] //只是为了演示
+                        ,
+                        cancel: function (index, layero) {
+                            $("#video").addClass('layui-hide');
+                            layer.close(index);
+                            return false;
+                        }
+                        ,
+                        zIndex: layer.zIndex //重点1
+                        ,
+                        success: function (layero) {
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                }
+            };
+            $("#video").removeClass('layui-hide');
+            active.setTop();
+        });
+    }
 </script>
 </body>
 
