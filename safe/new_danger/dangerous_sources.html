@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>策划危险源</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .layui-layer-title{
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+        .layui-layer-content{
+            background: #09315a;
+        }
+        .layui-layer-page .layui-layer-btn{
+            background: #09315a;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+        .layui-layer-content .layui-table{
+            background: #00213c;
+            color: #fff;
+        }
+        .layui-layer-content .layui-table .layui-form-selected dl{
+            color: #000 !important;
+        }
+        .layui-form-select dl dd.layui-this{
+            background-color: #244dae !important;
+        }
+
+
+        .layui-layer-title {
+            background: #244dae !important;
+            color: #fff !important;
+            text-align: center;
+            font-size: 16px !important;
+            font-weight: bold;
+        }
+
+        .layui-layer-content {
+            background: #09315a;
+        }
+
+        .layui-layer-page .layui-layer-btn {
+            background: #09315a;
+        }
+
+        .layui-layer-btn .layui-layer-btn0 {
+            background: #244dae !important;
+            border-color: #244dae !important;
+        }
+
+        .layui-layer-content .layui-table {
+            background: #00213c;
+            color: #fff;
+        }
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
+            color: #000 !important;
+        }
+
+        .layui-form-select dl dd.layui-this {
+            background-color: #244dae !important;
+        }
+
+        #add{
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body style="padding: 15px;">
+<form action="" class="layui-form">
+    <div class="layui-btn-group" style="margin-bottom: 10px;">
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">新增</a>
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">修改</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
+    </div>
+    <div class="demoTable search" style="float: right;margin-bottom: 10px;">
+        <div class="layui-inline" style="margin-right: 15px">
+            <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+        </div>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+    </div>
+    <table class="layui-table" lay-data="{height:'full-70',url:'../json2/dan_sou.json',page: true}">
+        <thead>
+        <tr>
+            <th lay-data="{checkbox:true}" rowspan="2"></th>
+            <th lay-data="{field:'a',align:'center', width:150}" rowspan="2">是否重大危险源</th>
+            <th lay-data="{field:'b',align:'center', width:150}" rowspan="2">危险源名称</th>
+            <th lay-data="{field:'c',align:'center', width:100}" rowspan="2">编号</th>
+            <th lay-data="{field:'d',align:'center', width:150}" rowspan="2">单位</th>
+            <th lay-data="{field:'e',align:'center', width:150}" rowspan="2">地点</th>
+            <th lay-data="{field:'f',align:'center', width:150}" rowspan="2">类别根源</th>
+            <th lay-data="{field:'g',align:'center', width:150}" rowspan="2">状态类别</th>
+            <th lay-data="{field:'h',align:'center', width:150}" rowspan="2">时态类别</th>
+            <th lay-data="{field:'i',align:'center', width:150}" rowspan="2">存在风险</th>
+            <th lay-data="{field:'j',align:'center', width:150}" rowspan="2">更新状态</th>
+            <th lay-data="{field:'k',align:'center', width:200}" rowspan="2">更新原因</th>
+            <th lay-data="{field:'l',align:'center', width:200}" rowspan="2">监控监视</th>
+        </tr>
+        </thead>
+    </table>
+    <div id="add" class="layui-hide">
+        <table class="layui-table">
+            <tr>
+                <td>危险源名称</td>
+                <td><input type="text" class="layui-input"></td>
+                <td>是否重大危险源</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">是</option>
+                        <option value="">否</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>编号</td>
+                <td><input type="text" class="layui-input"></td>
+                <td>单位</td>
+                <td><input type="text" class="layui-input"></td>
+            </tr>
+            <tr>
+                <td>地点</td>
+                <td colspan="3"><input type="text" class="layui-input"></td>
+            </tr>
+            <tr>
+                <td>类别根源</td>
+                <td>
+                    <select>
+                        <option value="">第一类危险源</option>
+                        <option value="">第一类危险源</option>
+                    </select>
+
+                </td>
+                <td>状态类别</td>
+                <td>
+                    <select>
+                        <option value="">正常</option>
+                        <option value="">异常</option>
+                        <option value="">紧急</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>时态类别</td>
+                <td>
+                    <select>
+                        <option value="">过去</option>
+                        <option value="">现在</option>
+                        <option value="">将来</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>存在风险</td>
+                <td colspan="3">
+                    <textarea class="layui-textarea"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>更新状态</td>
+                <td><select>
+                    <option value="">新增</option>
+                    <option value="">更新</option>
+                </select></td>
+                <td>更新原因</td>
+                <td><input type="text" class="layui-input"></td>
+            </tr>
+            <tr>
+                <td>监控监视</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</form>
+<script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/layui/layui.js"></script>
+<script>
+
+    layui.use(['form', 'code'], function () {
+        var form = layui.form;
+        $ = layui.$;
+        form.render();
+    });
+    layui.use('table', function () {
+        var table = layui.table;
+
+    });
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '策划危险源',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            modal: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
+                    ,
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>
+</body>
+
+</html>

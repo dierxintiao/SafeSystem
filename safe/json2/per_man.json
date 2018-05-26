@@ -1,0 +1,100 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "user_name": "admin",
+      "full_name":"超级管理员",
+      "sex": "男",
+      "organ_name":"烟草公司",
+      "Post_name":"维修组长",
+      "role":"管理员",
+      "remarks":"无"
+    },
+    {
+      "id": "2",
+      "user_name": "zhangsan",
+      "full_name":"张三",
+      "sex": "女",
+      "organ_name":"设备信息科",
+      "Post_name":"维修人员",
+      "role":"维修人员",
+      "remarks":"无"
+    },
+    {
+      "id": "3",
+      "user_name": "lisi",
+      "full_name":"李四",
+      "sex": "男",
+      "organ_name":"设备信息科",
+      "Post_name":"维修人员",
+      "role":"维修人员",
+      "remarks":"无"
+    },
+    {
+      "id": "4",
+      "user_name": "wangwu",
+      "full_name":"王五",
+      "sex": "男",
+      "organ_name":"烟叶生产中心",
+      "Post_name":"维修组长",
+      "role":"管理员",
+      "remarks":"无"
+    },
+    {
+      "id": "5",
+      "user_name": "zhaoliu",
+      "full_name":"赵六",
+      "sex": "男",
+      "organ_name":"烟叶技术中心",
+      "Post_name":"计划上报",
+      "role":"计划上报",
+      "remarks":"无"
+    },
+    {
+      "id": "6",
+      "user_name": "mengqi",
+      "full_name":"孟奇",
+      "sex": "女",
+      "organ_name":"烟叶生产中心",
+      "Post_name":"计划上报",
+      "role":"计划上报",
+      "remarks":"无"
+    },
+    {
+      "id": "7",
+      "user_name": "yangba",
+      "full_name":"杨八",
+      "sex": "男",
+      "organ_name":"设备信息科",
+      "Post_name":"配件出入库",
+      "role":"配件出入库",
+      "remarks":"无"
+    },
+    {
+      "id": "8",
+      "user_name": "liujiu",
+      "full_name":"刘九",
+      "sex": "男",
+      "organ_name":"烟叶生产中心",
+      "Post_name":"计划上报",
+      "role":"计划上报",
+      "remarks":"无"
+    },
+    {
+      "id": "9",
+      "user_name": "wangda",
+      "full_name":"王大",
+      "sex": "男",
+      "organ_name":"烟叶经营科",
+      "Post_name":"计划上报",
+      "role":"计划上报",
+      "remarks":"无"
+    }
+
+  ]
+}
+
+

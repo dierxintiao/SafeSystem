@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "name": "办公室",
+      "level":"A",
+      "number": "1543",
+      "remarks":"无"
+    },
+    {
+      "id": "2",
+      "name": "人事科",
+      "level":"A",
+      "number": "20",
+      "remarks":"无"
+    },
+    {
+      "id": "3",
+      "name": "审计科",
+      "level":"A",
+      "number": "21",
+      "remarks":"无"
+    },
+    {
+      "id": "4",
+      "name": "人事科",
+      "level":"A",
+      "number": "22",
+      "remarks":"无"
+    },
+    {
+      "id": "5",
+      "name": "纪检监察科",
+      "level":"A",
+      "number": "23",
+      "remarks":"无"
+    },
+    {
+      "id": "6",
+      "name": "安全管理科",
+      "level":"A",
+      "number": "24",
+      "remarks":"无"
+    },
+    {
+      "id": "7",
+      "name": "财务科",
+      "level":"A",
+      "number": "25",
+      "remarks":"无"
+    },
+    {
+      "id": "8",
+      "name": "设备信息科",
+      "level":"A",
+      "number": "26",
+      "remarks":"无"
+    },
+    {
+      "id": "9",
+      "name": "烟叶技术中心",
+      "level":"A",
+      "number": "27",
+      "remarks":"无"
+    }
+
+  ]
+}
+
+

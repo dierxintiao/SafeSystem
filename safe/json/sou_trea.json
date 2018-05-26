@@ -1,0 +1,132 @@
+
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "班中、班前饮酒",
+      "analysis":"<input class='layui-input layui-input-sm' value='导致各种事故'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "2",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "上下班途中驾驶或行走",
+      "analysis":"<input class='layui-input layui-input-sm' value='职工违反交通规则'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "3",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "工作状态",
+      "analysis":"<input class='layui-input layui-input-sm' value='工作效率低下'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "4",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "吸烟",
+      "analysis":"<input class='layui-input layui-input-sm' value='烟头乱扔'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='2'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='2'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "5",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "机械操作时违规作业",
+      "analysis":"<input class='layui-input layui-input-sm' value='技能不熟练'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='2'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='2'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "6",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "设备运行/维修",
+      "analysis":"<input class='layui-input layui-input-sm' value='燃气管道泄漏'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='4'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='4'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "7",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "防护棚搭设不规范",
+      "analysis":"<input class='layui-input layui-input-sm' value='业务技能短板'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='3'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='3'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "8",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "抱车作业",
+      "analysis":"<input class='layui-input layui-input-sm' value='驾驶员违章驾驶'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='2'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='1'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "9",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "电焊使用",
+      "analysis":"<input class='layui-input layui-input-sm' value='明火作业'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='4'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='4'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+    },
+    {
+      "id": "10",
+      "department":"省局（公司）",
+      "people":"在岗人员",
+      "active":"正常工作",
+      "sources": "安装装置失灵无效",
+      "analysis":"<input class='layui-input layui-input-sm' value='导致各种事故'>",
+      "R_level":"<input class='layui-input layui-input-sm' value='5'>",
+      "M_level":"<input class='layui-input layui-input-sm' value='5'>",
+      "input":"<input class='layui-input layui-input-sm'>",
+      "file":"<input type='file'>"
+
+    }
+
+  ]
+}
+
+

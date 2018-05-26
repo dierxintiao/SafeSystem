@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>策划危险源</title>
+    <title>危险源辨识活动管理</title>
     <link rel="stylesheet" href="../assets/layui/css/layui.css">
     <style>
         .layui-layer-title{
@@ -33,6 +33,13 @@
         .layui-form-select dl dd.layui-this{
             background-color: #244dae !important;
         }
+
+        .layui-layer-dialog .layui-layer-content{
+            color: #fff;
+        }
+        .layui-layer-btn{
+            background: #09315a;
+        }
     </style>
 </head>
 
@@ -42,6 +49,7 @@
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">新增</a>
         <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">修改</a>
         <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">删除</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报</a>
     </div>
     <div class="demoTable search" style="float: right;margin-bottom: 10px;">
         工序/设备/人员：
@@ -54,25 +62,15 @@
         <thead>
         <tr>
             <th lay-data="{checkbox:true}" rowspan="2"></th>
-            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
-            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
-            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
-            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
-            <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
-            <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
-            <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
-            <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
-            <th lay-data="{align:'center'}" colspan="3">评价结论</th>
-            <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
-        </tr>
-        <tr>
-            <th lay-data="{field:'LEC_L',align:'center'}">L</th>
-            <th lay-data="{field:'LEC_E',align:'center'}">E</th>
-            <th lay-data="{field:'LEC_C',align:'center'}">C</th>
-            <th lay-data="{field:'LEC_D',align:'center'}">D</th>
-            <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
-            <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
-            <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
+            <th lay-data="{field:'id',align:'center', width:100}">序号</th>
+            <th lay-data="{field:'company',align:'center', width:150}">开展单位</th>
+            <th lay-data="{field:'name',align:'center'}">活动名称</th>
+            <th lay-data="{field:'S_date',align:'center', width:150}">开始时间</th>
+            <th lay-data="{field:'J_date',align:'center', width:150}">结束时间</th>
+            <th lay-data="{field:'people',align:'center', width:150}">负责人</th>
+            <th lay-data="{field:'phone',align:'center'}">联系电话</th>
+            <th lay-data="{field:'state',align:'center'}">活动状态</th>
+            <th lay-data="{field:'operation',align:'center'}">操作</th>
         </tr>
         </thead>
     </table>
@@ -80,65 +78,62 @@
          style="margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;">
         <table class="layui-table">
             <tr>
-                <td width="20%">部门</td>
+                <td width="20%">开展单位</td>
                 <td colspan="3" width="80%">
                     <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">公共部分</option>
-                            <option value="1" selected="">制丝车间</option>
-                            <option value="2">卷包车间</option>
-                            <option value="3">动力车间</option>
-                            <option value="4">生产部</option>
-                            <option value="5">原料部</option>
-                            <option value="6">物资供应部</option>
-                            <option value="7">质监站</option>
-                            <option value="8">厂办</option>
-                            <option value="9">设备管理部</option>
-                            <option value="10">企管部</option>
-                        </select>
+                        <input type="text" name="" autocomplete="off" class="layui-input" value="">
                     </div>
                 </td>
             </tr>
             <tr>
-                <td width="20%">工序/设备/人员</td>
+                <td width="20%">活动名称</td>
                 <td colspan="3" width="80%">
                     <div class="layui-input-block" style="margin-left: 0;">
-                        <select name="interest" lay-filter="aihao">
-                            <option value=""></option>
-                            <option value="0">在岗人员</option>
-                            <option value="1" selected="">工作人员</option>
-                            <option value="2">人员密集场所/职工</option>
-                            <option value="3">吸烟/可燃物/吸烟者</option>
-                            <option value="4">行走/路面/行走人</option>
-                            <option value="5">膨胀烟丝线/操作工</option>
-                            <option value="6">车间/所有人员</option>
-                            <option value="7">维修/电焊工</option>
-                            <option value="8">上叶/抱车/驾驶员</option>
-                            <option value="9">执勤/队员</option>
-                            <option value="10">日常办公/电脑/人员</option>
-                        </select>
+                        <input type="text" name="" autocomplete="off" class="layui-input" value="">
                     </div>
                 </td>
             </tr>
             <tr>
-                <td width="20%">作业活动</td>
-                <td width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="正常工作">
+                <td width="20%">开始时间</td>
+                <td width="30%">
+                    <input type="date" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">结束时间</td>
+                <td width="30%">
+                    <input type="date" name="" autocomplete="off" class="layui-input">
                 </td>
             </tr>
             <tr>
-                <td width="20%">危险源</td>
-                <td width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="班中、班前饮酒">
+                <td width="20%">负责人</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
+                </td>
+                <td width="20%">联系电话</td>
+                <td width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
                 </td>
             </tr>
             <tr>
-                <td width="20%">风险</td>
-                <td width="80%">
-                    <input type="text" name="" autocomplete="off" class="layui-input" value="导致各种事故">
+                <td width="20%">状态</td>
+                <td colspan="3" width="30%">
+                    <input type="text" name="" autocomplete="off" class="layui-input">
                 </td>
             </tr>
+        </table>
+    </div>
+    <div id="show" class="layui-hide"
+         style="margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;">
+        <table class="layui-table" lay-data="{height:'full-70',url:'../json/dan_sou1.json',page: true}">
+            <thead>
+            <tr>
+                <th lay-data="{field:'id',align:'center', width:100}">序号</th>
+                <th lay-data="{field:'department',align:'center', width:150}">部门</th>
+                <th lay-data="{field:'people',align:'center', width:150}">工序/设备/人员</th>
+                <th lay-data="{field:'active',align:'center', width:200}">作业活动</th>
+                <th lay-data="{field:'sources',align:'center', width:400}">危险源描述</th>
+                <th lay-data="{field:'state',align:'center'}">状态更新时间</th>
+            </tr>
+            </thead>
         </table>
     </div>
 
@@ -203,9 +198,9 @@
                     btn: ['确认', '取消'] //可以无限个按钮
                     ,
                 }, function (index, layero) {
-                    layer.msg('操作成功', {icon: 1});
+                    layer.msg('已'+ text + '！');
                 }, function (index) {
-                    layer.msg('已取消', {icon: 2});
+                    layer.msg('已取消');
                 });
             }
         };
@@ -221,6 +216,53 @@
             active[method] ? active[method].call(this, othis) : '';
         });
     });
+
+    function modal(){
+        layui.use('layer', function () { //独立版的layer无需执行这一句
+            var $ = layui.jquery,
+                layer = layui.layer; //独立版的layer无需执行这一句
+            //触发事件
+            var active = {
+                show: function () {
+                    var that = this;
+                    //多窗口模式，层叠置顶
+                    layer.open({
+                        type: 1 //此处以iframe举例
+                        ,
+                        title: '危险源列表',
+                        area: ['100%','100%'],
+                        shade: 0.2,
+                        maxmin: true,
+                        offset: 'auto',
+                        content: $('#show'),
+                        btn: ['保存', '取消'] //只是为了演示
+                        ,
+                        yes: function (index) {
+                            $("#show").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        btn2: function (index) {
+                            $("#show").addClass('layui-hide');
+                            layer.close(index);
+                        },
+                        cancel: function (index, layero) {
+                            $("#show").addClass('layui-hide');
+                            layer.close(index);
+                            return false;
+                        }
+                        ,
+                        zIndex: layer.zIndex //重点1
+                        ,
+                        success: function (layero) {
+                            layer.setTop(layero); //重点2
+                        }
+                    });
+                }
+            };
+            $("#show").removeClass('layui-hide');
+            active.show();
+        });
+    }
 </script>
 </body>
 

@@ -504,8 +504,9 @@
     function drawMap(darwMapType, data) {
         var option = {
             backgroundColor: 'rgba(0,0,0,0)',
+
             title: {
-                text: '河南中烟-个单位危险源分布图',
+                text: '河南中烟-各单位危险源分布图',
                 subtext: '',
                 x: 'center',
                 textStyle: {
@@ -518,13 +519,13 @@
                     textShadowOffsetY:3
                 }
             },
-            visualMap: {color: ['#6986d2']},
+            visualMap: {color: ['#6986d2'],left:'-100%'},
             series: [
                 {
                     name: '',
                     type: 'map',
                     mapType: darwMapType,
-                    roam: true,
+                    roam: false,
                     label: {
                         normal: {
                             show: false
@@ -615,8 +616,8 @@
                         name: 'dataCity',
                         type: 'map',
                         mapType: selectedPro,
-                        width: '60%',
-                        roam: true,
+                        width: '70%',
+                        roam: false,
                         selectedMode: 'single',
                         itemStyle: {
                             normal: {

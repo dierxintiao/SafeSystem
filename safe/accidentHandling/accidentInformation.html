@@ -24,16 +24,21 @@
 
         .search {
             display: inline-block;
-            width: 260px;
             float: right;
             position: relative;
         }
 
         .search .padding35 {
-            width: 212px;
+            width: 182px;
             display: inline-block;
             height: 30px;
             line-height: 30px;
+            border-radius: 2px;
+            background: rgba(255,255,255,.0);
+            box-shadow: 0 0 5px #fff;
+            color: rgba(72,118,255,.7);
+            text-shadow: 0px 0px 0px #fff;
+            -webkit-text-fill-color: transparent;
         }
 
         .icon {
@@ -51,36 +56,45 @@
             padding: 10px;
         }
 
-
-        .layui-layer-title{
+        .layui-layer-title {
             background: #244dae !important;
             color: #fff !important;
             text-align: center;
             font-size: 16px !important;
             font-weight: bold;
         }
-        .layui-layer-content{
+
+        .layui-layer-content {
             background: #09315a;
         }
-        .layui-layer-page .layui-layer-btn{
+
+        .layui-layer-page .layui-layer-btn {
             background: #09315a;
         }
-        .layui-layer-btn .layui-layer-btn0{
+
+        .layui-layer-btn .layui-layer-btn0 {
             background: #244dae !important;
             border-color: #244dae !important;
         }
-        .layui-layer-content .layui-table{
+
+        .layui-layer-content .layui-table {
             background: #00213c;
             color: #fff;
         }
-        .layui-layer-content .layui-table .layui-form-selected dl{
+
+        .layui-layer-content .layui-table .layui-form-selected dl {
             color: #000 !important;
         }
-        .layui-form-select dl dd.layui-this{
+
+        .layui-form-select dl dd.layui-this {
             background-color: #244dae !important;
         }
-        #popup,#modify,#detail{
-            margin-top:15px;padding: 40px;background: url(../assets/images/bg_table.png) no-repeat;background-size: 100% 100%;
+
+        #popup, #modify, #detail {
+            margin-top: 15px;
+            padding: 40px;
+            background: url(../assets/images/bg_table.png) no-repeat;
+            background-size: 100% 100%;
         }
     </style>
 </head>
@@ -335,7 +349,9 @@
     </table>
 </div>
 <div id='detail' class="layui-hide">
-        <button class="layui-btn  layui-btn-sm  layui-btn-normal" style='float: right;margin-right: 10px;margin-bottom: 10px'>导出</button>
+    <button class="layui-btn  layui-btn-sm  layui-btn-normal"
+            style='float: right;margin-right: 10px;margin-bottom: 10px'>导出
+    </button>
     <table class="layui-table">
         <tbody>
         <tr>
@@ -448,7 +464,8 @@
     var zNodes = [
         {
             name: "河南烟草专卖系统", open: true, children: [
-                { name: "省局（公司）",open:false,children:[
+                {
+                    name: "省局（公司）", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -459,8 +476,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "郑州市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "郑州市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -471,8 +490,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "开封市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "开封市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -483,8 +504,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "洛阳市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "洛阳市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -495,8 +518,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "平顶山市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "平顶山市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -507,8 +532,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "安阳市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "安阳市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -519,8 +546,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "鹤壁市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "鹤壁市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -531,8 +560,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "新乡市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "新乡市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -543,8 +574,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "焦作市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "焦作市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -555,8 +588,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "濮阳市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "濮阳市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -567,8 +602,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "郑州市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "郑州市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -579,8 +616,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "许昌市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "许昌市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -591,8 +630,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "漯河市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "漯河市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -603,8 +644,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "三门峡市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "三门峡市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -615,8 +658,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "南阳市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "南阳市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -627,8 +672,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "商丘市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "商丘市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -639,8 +686,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "信阳市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "信阳市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -651,8 +700,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "周口市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "周口市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -663,8 +714,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "驻马店市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "驻马店市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -675,8 +728,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "济源市烟草公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "济源市烟草公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -687,8 +742,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "中国烟草河南进出口公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "中国烟草河南进出口公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -699,8 +756,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "天昌国际烟草有限公司",open:false,children:[
+                    ]
+                },
+                {
+                    name: "天昌国际烟草有限公司", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -711,8 +770,10 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "河南烟草职工培训中心",open:false,children:[
+                    ]
+                },
+                {
+                    name: "河南烟草职工培训中心", open: false, children: [
                         {name: "制丝车间"},
                         {name: "卷包车间"},
                         {name: "动力车间"},
@@ -723,8 +784,9 @@
                         {name: "厂办"},
                         {name: "设备管理部"},
                         {name: "企管部"}
-                    ]},
-                { name: "管理组",open:false}
+                    ]
+                },
+                {name: "管理组", open: false}
             ]
         }
     ];
