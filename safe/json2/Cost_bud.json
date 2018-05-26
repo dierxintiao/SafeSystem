@@ -1,0 +1,141 @@
+
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "通过",
+      "number": "01001",
+      "year":"2017年",
+      "project": "消防支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"35000",
+      "standard":"成本类",
+      "budget":"40000",
+      "state":""
+    },
+    {
+      "id": "通过",
+      "number": "01002",
+      "year":"2016年",
+      "project": "车辆税费支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"28500",
+      "standard":"成本类",
+      "budget":"30000",
+      "state":""
+    },
+    {
+      "id": "通过",
+      "number": "01003",
+      "year":"2015年",
+      "project": "社会保障补助支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"43090",
+      "standard":"成本类",
+      "budget":"45000",
+      "state":""
+    },
+    {
+      "id": "通过",
+      "number": "01004",
+      "year":"2014年",
+      "project": "医疗卫生支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"32190",
+      "standard":"成本类",
+      "budget":"35000",
+      "state":""
+    }
+  ,
+    {
+      "id": "不通过",
+      "number": "01005",
+      "year":"2013年",
+      "project": "文化活动支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"23440",
+      "standard":"成本类",
+      "budget":"30000",
+      "state":""
+    }
+  ,
+    {
+      "id": "不通过",
+      "number": "01006",
+      "year":"2012年",
+      "project": "土地有偿使用支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"42100",
+      "standard":"成本类",
+      "budget":"40000",
+      "state":""
+    },
+    {
+      "id": "不通过",
+      "number": "01007",
+      "year":"2011年",
+      "project": "专项支出",
+      "department":"维修部",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"55000",
+      "standard":"成本类",
+      "budget":"50000",
+      "state":""
+    },
+    {
+      "id": "不通过",
+      "number": "01008",
+      "year":"2010年",
+      "project": "其他支出",
+      "department":"办公室",
+      "type":"",
+      "people":"李某某",
+      "date":"2017-05-01",
+      "tbpeople":"张某某",
+      "tbdate":"2017-07-08",
+      "spend":"15000",
+      "standard":"成本类",
+      "budget":"20000",
+      "state":""
+    }
+
+  ]
+}
+
+

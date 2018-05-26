@@ -1,0 +1,110 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": "1",
+      "number": "98-2012-2015-C-01-001",
+      "name":"立项类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "2",
+      "number": "98-2012-2015-C-01-002",
+      "name":"招投标类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "3",
+      "number": "98-2012-2015-C-01-003",
+      "name":"合同类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "4",
+      "number": "98-2012-2015-C-01-004",
+      "name":"开工准备类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "5",
+      "number": "98-2012-2015-C-01-005",
+      "name":"支付类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "6",
+      "number": "98-2012-2015-C-01-006",
+      "name":"变更类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "7",
+      "number": "98-2012-2015-C-01-007",
+      "name":"日常类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "8",
+      "number": "98-2012-2015-C-01-008",
+      "name":"立项类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "9",
+      "number": "98-2012-2015-C-01-009",
+      "name":"招投标类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    },
+    {
+      "id": "2",
+      "number": "98-2012-2015-C-01-010",
+      "name":"合同类",
+      "position": "s001-12",
+      "copies": "<span class='layui-badge layui-bg-gray'>3</span>",
+      "people": "李某某",
+      "date": "2016-12-10",
+      "Enclosure":"<a href='../test.xlsx' style='color:white;'>附件.doc</a>"
+    }
+
+  ]
+}
+
+

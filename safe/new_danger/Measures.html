@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>危险源控制措施</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+</head>
+
+<body style="padding: 15px;">
+<form action="" class="layui-form">
+    <div class="layui-btn-group" style="margin-bottom: 10px;">
+        <a class="layer layui-btn layui-btn-sm layui-btn-normal" data-method="setTop">审批</a>
+        <a class="layers layui-btn layui-btn-sm layui-btn-normal" data-method="modal">上报</a>
+    </div>
+    <div class="demoTable search" style="float: right;margin-bottom: 10px;">
+        工序/设备/人员：
+        <div class="layui-inline" style="margin-right: 15px">
+            <input class="layui-input layui-input-sm" name="id" id="demoReload" autocomplete="off">
+        </div>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="reload">搜索</button>
+    </div>
+    <table class="layui-table" lay-data="{height:'full-70',url:'../json2/dan_sou2.json',page: true}">
+        <thead>
+        <tr>
+            <th lay-data="{checkbox:true}" rowspan="2"></th>
+            <th lay-data="{field:'id_z',align:'center', width:100}" rowspan="2">总序号</th>
+            <th lay-data="{field:'department',align:'center', width:150}" rowspan="2">部门</th>
+            <th lay-data="{field:'id_f',align:'center', width:100}" rowspan="2">分序号</th>
+            <th lay-data="{field:'people',align:'center', width:150}" rowspan="2">工序/设备/人员</th>
+            <th lay-data="{field:'active',align:'center', width:150}" rowspan="2">作业活动</th>
+            <th lay-data="{field:'sources',align:'center', width:150}" rowspan="2">危险源</th>
+            <th lay-data="{field:'danger',align:'center', width:150}" rowspan="2">风险</th>
+            <th lay-data="{align:'center'}" colspan="4">LEC评价法</th>
+            <th lay-data="{align:'center'}" colspan="3">评价结论</th>
+            <th lay-data="{field:'Measures',align:'center', width:200}" rowspan="2">措施</th>
+        </tr>
+        <tr>
+            <th lay-data="{field:'LEC_L',align:'center'}">L</th>
+            <th lay-data="{field:'LEC_E',align:'center'}">E</th>
+            <th lay-data="{field:'LEC_C',align:'center'}">C</th>
+            <th lay-data="{field:'LEC_D',align:'center'}">D</th>
+            <th lay-data="{field:'H_danger',align:'center', width:150}">高度危险源</th>
+            <th lay-data="{field:'C_danger',align:'center', width:150}">中度危险源</th>
+            <th lay-data="{field:'D_danger',align:'center', width:150}">低度危险源</th>
+        </tr>
+        </thead>
+    </table>
+    <div id="add" class="layui-hide" style="padding: 15px;">
+        <table class="layui-table">
+            <tr>
+                <td width="20%">部门</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0">公共部分</option>
+                            <option value="1" selected="">制丝车间</option>
+                            <option value="2">卷包车间</option>
+                            <option value="3">动力车间</option>
+                            <option value="4">生产部</option>
+                            <option value="5">原料部</option>
+                            <option value="6">物资供应部</option>
+                            <option value="7">质监站</option>
+                            <option value="8">厂办</option>
+                            <option value="9">设备管理部</option>
+                            <option value="10">企管部</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">工序/设备/人员</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block" style="margin-left: 0;">
+                        <select name="interest" lay-filter="aihao">
+                            <option value=""></option>
+                            <option value="0">在岗人员</option>
+                            <option value="1" selected="">工作人员</option>
+                            <option value="2">人员密集场所/职工</option>
+                            <option value="3">吸烟/可燃物/吸烟者</option>
+                            <option value="4">行走/路面/行走人</option>
+                            <option value="5">膨胀烟丝线/操作工</option>
+                            <option value="6">车间/所有人员</option>
+                            <option value="7">维修/电焊工</option>
+                            <option value="8">上叶/抱车/驾驶员</option>
+                            <option value="9">执勤/队员</option>
+                            <option value="10">日常办公/电脑/人员</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">作业活动</td>
+                <td colspan="3" width="80%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="正常工作" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">危险源</td>
+                <td colspan="3" width="80%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="班中、班前饮酒" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">风险</td>
+                <td colspan="3" width="80%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="导致各种事故" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%" rowspan="4">LEC评价法</td>
+                <td width="30%" align="center">L</td>
+                <td width="50%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="">
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="center">E</td>
+                <td width="50%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="">
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="center">C</td>
+                <td width="50%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="">
+                </td>
+            </tr>
+            <tr>
+                <td width="30%" align="center">D</td>
+                <td width="50%">
+                    <input type="text" name="" autocomplete="off" class="layui-input" value="">
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">评价结论</td>
+                <td colspan="3" width="80%">
+                    <div class="layui-input-block">
+                        <input type="radio" name="evaluate" value="高度危险源" title="高度危险源" checked="">
+                        <input type="radio" name="evaluate" value="中度危险源" title="中度危险源">
+                        <input type="radio" name="evaluate" value="低度危险源" title="低度危险源">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="20%">措施</td>
+                <td colspan="3" width="80%">
+                    <textarea placeholder="请输入内容" class="layui-textarea" name="desc"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+<script type="text/javascript" src="../assets/layui/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/layui/layui.js"></script>
+<script>
+
+    layui.use(['form', 'code'], function () {
+        var form = layui.form;
+        $ = layui.$;
+        form.render();
+    });
+    layui.use('table', function(){
+        var table = layui.table;
+
+    });
+    layui.use('layer', function () { //独立版的layer无需执行这一句
+        var $ = layui.jquery,
+            layer = layui.layer; //独立版的layer无需执行这一句
+        //触发事件
+        var active = {
+            setTop: function () {
+                var that = this;
+                //多窗口模式，层叠置顶
+                layer.open({
+                    type: 1 //此处以iframe举例
+                    ,
+                    title: '策划危险源',
+                    area: '900px',
+                    shade: 0.2,
+                    maxmin: true,
+                    offset: 'auto',
+                    content: $('#add'),
+                    btn: ['保存', '取消'] //只是为了演示
+                    ,
+                    yes: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    btn2: function (index) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                    },
+                    cancel: function (index, layero) {
+                        $("#add").addClass('layui-hide');
+                        layer.close(index);
+                        return false;
+                    }
+                    ,
+                    zIndex: layer.zIndex //重点1
+                    ,
+                    success: function (layero) {
+                        layer.setTop(layero); //重点2
+                    }
+                });
+            },
+            modal: function (othis) {
+                var type = othis.data('type'),
+                    text = othis.text();
+                layer.confirm('确定要' + text + '么？', {
+                    btn: ['确认', '取消'] //可以无限个按钮
+                    ,
+                }, function (index, layero) {
+                    layer.msg('操作成功', {icon: 1});
+                }, function (index) {
+                    layer.msg('已取消', {icon: 2});
+                });
+            }
+        };
+        $('.layer').on('click', function () {
+            $("#add").removeClass('layui-hide');
+            var othis = $(this),
+                method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+
+        $('.layers').on('click', function () {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+        });
+    });
+</script>
+</body>
+
+</html>
