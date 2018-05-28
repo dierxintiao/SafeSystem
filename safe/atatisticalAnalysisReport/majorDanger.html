@@ -3,68 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .title{
+            color: #6986d2;
+            font-size: 16px;
+            font-weight: 800;
+            text-shadow: 1px 1px 4px #000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .layui-table{
+            color: #fff;
+            background: transparent;
+            text-align: center;
+            margin-top: 4px;
+        }
+        .layui-table th{
+            text-align: center;
+            background-color: rgba(242,242,242,0.2);
+        }
+    </style>
 </head>
 <body>
-<div id="main" style="width: 800px;height:500px; margin:50px auto 0"></div>
-<script src='../assets/layui/echarts.min.js'></script>
-<script>
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
+<!--<h3 class='title'>重大危险源安全统计</h3>-->
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>公司</th>
+        <th>危险源</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>郑州市局（公司）</td>
+        <td>爆炸品</td>
+    </tr>
+    <tr>
+        <td>开封市局（公司）</td>
+        <td>易燃气体</td>
+    </tr>
+    <tr>
+        <td>开封市局（公司）</td>
+        <td>易燃气体</td>
+    </tr>
+    <tr>
+        <td>洛阳市局（公司）</td>
+        <td>毒性气体</td>
+    </tr>
+    <tr>
+        <td>平顶山市局（公司）</td>
+        <td>无</td>
+    </tr>
+    <tr>
+        <td>安阳市局（公司）</td>
+        <td>易燃液体</td>
+    </tr>
+    <tr>
+        <td>鹤壁市局（公司）</td>
+        <td>易于自燃的物质</td>
+    </tr>
+    <tr>
+        <td>新乡市局（公司）</td>
+        <td>无</td>
+    </tr><tr>
+        <td>焦作市局（公司）</td>
+        <td>遇水放出易燃气体的物质</td>
+    </tr><tr>
+        <td>濮阳市局（公司）</td>
+        <td>氧化性物质</td>
+    </tr><tr>
+        <td>许昌市局（公司）</td>
+        <td>毒性物质</td>
+    </tr><tr>
+        <td>漯河市局（公司）</td>
+        <td>具有火灾、爆炸、中毒危险的生产场所</td>
+    </tr>
+    <tr>
+        <td>三门峡市局（公司）</td>
+        <td>企业危险建筑（构）物</td>
+    </tr>
 
-    // 指定图表的配置项和数据
-    var option = {
-        title : {
-            text: '某站点用户访问来源',
-            subtext: '纯属虚构',
-            x:'center',
-            textStyle: {
-                color: '#6986d2',
-                fontSize:16,
-                fontWeight:800,
-                textShadowColor:'#000',
-                textShadowBlur:3,
-                textShadowOffsetX:1,
-                textShadowOffsetY:3
-            }
-        },
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            orient: 'vertical',
-            left: 'left',
-            data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎'],
-            textStyle:{
-                color:'#fff'
-            }
-        },
-        series : [
-            {
-                name: '访问来源',
-                type: 'pie',
-                radius : '55%',
-                center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'直接访问', itemStyle:{
-                            color:'#ec5a00'
-                        }},
-                    {value:310, name:'邮件营销',itemStyle:{color:'#fed401'}},
-                    {value:234, name:'联盟广告',itemStyle:{color:'#00c4c9'}},
-                    {value:135, name:'视频广告',itemStyle:{color:'#005d8c'}},
-                    {value:1548, name:'搜索引擎',itemStyle:{color:'#ff01fd'}}
-                ],
-                itemStyle: {
-                    emphasis: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        ]
-    };
-    myChart.setOption(option);
-</script>
+    <tr>
+        <td>南阳市局（公司）</td>
+        <td>锅炉</td>
+    </tr>
+
+    <tr>
+        <td>商丘市局（公司）</td>
+        <td>无</td>
+    </tr>
+    <tr>
+        <td>信阳市局（公司）</td>
+        <td>压力容器</td>
+    </tr>
+    <tr>
+        <td>周口市局（公司）</td>
+        <td>无</td>
+    </tr>
+    <tr>
+        <td>驻马店市局（公司）</td>
+        <td>无</td>
+    </tr>
+    <tr>
+        <td>济源市局（公司）</td>
+        <td>压力管道</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
