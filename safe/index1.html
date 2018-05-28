@@ -15,8 +15,6 @@
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
         </div>
     </div>
@@ -25,8 +23,6 @@
             <h3>异常处理/Exception Handling</h3>
             <ul class='info'>
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
@@ -38,8 +34,6 @@
             <ul class='info'>
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
         </div>
@@ -479,13 +473,6 @@
          {name: '焦作市局（公司）', coord: [113.24201000000001, 35.21648899742635]},
          {name: '济源市局（公司）', coord: [112.60273, 35.067930566623794]}
     ];
-    var zhenZhou=[
-        {name: '郑州市局（公司）', coord: [113.7507009324,34.7071833741]},
-        {name: '进出口公司', coord: [113.05027999999999 ,34.454346986391734]},
-        {name: '投资公司', coord: [113.39044000000003 ,34.54073959657943]},
-        {name: '天昌公司', coord: [113.74161000000001 ,34.39727169477578]},
-        {name: '培训中心', coord: [113.67739 ,34.75467385652638]},
-    ];
     var convertData = function (data) {
         var res = [];
         for (var i = 0; i < data.length; i++) {
@@ -661,7 +648,7 @@
                                 show: true,
                                 shadowBlur: 0
                             },
-                            data: convertData(zhenZhou),
+                            data: convertData(test),
                         }
                     };
                     echarts.dispose(document.getElementById('main'));//先去掉原来的地图
