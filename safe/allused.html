@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="assets/layui/css/layui.css">
     <style>
         .roll {
-            height: 100%;
+            height: 250px;
             line-height: 22px;
             overflow: hidden;
-            margin: 0 40px;
+            margin: 10px 40px 0 40px;
             color: #fff;
         }
 
@@ -22,8 +22,8 @@
             padding: 0 10px;
             margin: 0;
             list-style: none;
-            height: 45px;
-            line-height: 45px;
+            height: 35px;
+            line-height: 35px;
         }
 
         .roll ul li:hover, .roll ul li:hover a, .roll ul li:hover .time {
@@ -32,7 +32,7 @@
         }
 
         .roll a {
-            color: #fff;
+            color: rgb(100, 133, 205);
             display: inline-block;
             width: 60%;
             overflow: hidden;
@@ -48,6 +48,7 @@
             height: 30px;
             line-height: 30px;
             float: right;
+            color: rgb(100, 133, 205);
         }
 
         .layui-colla-title {
@@ -61,54 +62,64 @@
     <div class="box layui-col-md12">
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">待处理/To be treated</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="waiting roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>召开党建工作领导小组会议</a><span class="time">2018-06-02</span></li>
+                        <li><a>召开2018年党建人事工作会议</a><span class="time">2018-06-27</span></li>
+                        <li><a>召开2018年规范管理工作会议</a><span class="time">2018-06-26</span></li>
+                        <li><a>卷烟厂立足两个基地建设推进金叶制造提质升级</a><span class="time">2018-07-11</span></li>
+                        <li><a>召开2018年物资工作会议</a><span class="time">2018-07-16</span></li>
+                        <li><a>召开2018年内部审计委员会会议</a><span class="time">2018-06-30</span></li>
+                        <li><a>传达学习2018年全国烟草工作会议精神</a><span class="time">2018-07-13</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">安全异常预警/Anomaly warning</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="abnormal roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>推行质量目标动态管理模式</a><span class="time">2017-11-24</span></li>
+                        <li><a>精准施策助力制造升级</a><span class="time">2017-11-13</span></li>
+                        <li><a>“三个层面”打造新型质量管理生态系统</a><span class="time">2017-11-07</span></li>
+                        <li><a>积极安排部署四季度质量劳动竞赛活动</a><span class="time">2017-10-26</span></li>
+                        <li><a>多举措提升金叶制造动能保供能力</a><span class="time">2017-10-12</span></li>
+                        <li><a>保供降本齐发力助推柔性化生产</a><span class="time">2017-09-18</span></li>
+                        <li><a>动力部创新措施推进设备精益化管理</a><span class="time">2017-09-11</span></li>
+                        <li><a>召开降本增效工作专题研讨会议</a><span class="time">2017-09-05</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">安全专项工作/Special work</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="special roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>精准施策助力制造升级</a><span class="time">2017-11-13</span></li>
+                        <li><a>开展招标采购人员专题廉政教育</a><span class="time">2016-06-15</span></li>
+                        <li><a>举办政工干部培训班</a><span class="time">2016-06-03</span></li>
+                        <li><a>开展营销客服人员技能培训</a><span class="time">2016-05-27</span></li>
+                        <li><a>召开生产制造专家库负责人首次座谈会</a><span class="time">2017-05-25</span></li>
+                        <li><a>卷烟增香保润重大专项项目通过国家局验收</a><span class="time">2016-05-12</span></li>
+                        <li><a>开展“两学一做”学习教育</a><span class="time">2016-05-09</span></li>
                     </ul>
                 </div>
             </div>
@@ -119,54 +130,64 @@
     <div class="box layui-col-md12">
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">安全值班/Safety duty</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="rota roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>卷烟厂安排部署下半年党群工作</a><span class="time">2015-07-02</span></li>
+                        <li><a>强化监管确保产品质量安全</a><span class="time">2015-07-02</span></li>
+                        <li><a>积极推进物流中心实体化运行工作</a><span class="time">2015-06-29</span></li>
+                        <li><a>开展党风廉政警示教育活动</a><span class="time">2015-06-26</span></li>
+                        <li><a>启动定额标准体系建设工作</a><span class="time">2015-06-23</span></li>
+                        <li><a>认真落实国家局领导要求 扎实推进“黄金叶”品牌建设</a><span class="time">2018-06-16</span></li>
+                        <li><a>全面激发活力 加快“优秀卷烟工厂”创建步伐</a><span class="time">2018-06-15</span></li>
+                        <li><a>拟定安全设施建设中期规划 全面增强安全保障能力</a><span class="time">2018-06-02</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">安全事故通报/Accident Bulletin</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="notice roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>组织开展春季市场集中调研活动</a><span class="time">2016-03-29</span></li>
+                        <li><a>召开二届董事会九次会议</a><span class="time">2016-03-28</span></li>
+                        <li><a>多举措确保产品质量稳定提升</a><span class="time">2016-03-23</span></li>
+                        <li><a>积极参与全国细支卷烟消耗现状测试工作</a><span class="time">2016-03-21</span></li>
+                        <li><a>部署下半年重点工作</a><span class="time">2018-05-02</span></li>
+                        <li><a>深入推进“三提高”工作</a><span class="time">2017-07-24</span></li>
+                        <li><a>举办网络安全和信息化运维培训班</a><span class="time">2015-07-21</span></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="layui-col-md4">
             <div style="height:300px;padding: 20px;background: url('assets/images/bj_dcl.png') no-repeat;background-size: 100% 100%;">
+                <div class="layui-row" style="margin: 0 40px;">
+                    <p>
+                        <span style="color: #798cef;font-size: 16px;font-weight: bold">下级报告/Lower Report</span>
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" style="float: right;">更多</button>
+                    </p>
+                </div>
                 <div class="report roll">
                     <ul>
-                        <li><a>测试数据测试数据测试数据1</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据2</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据3</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据4</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据5</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据6</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据7</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据8</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据9</a><span class="time">2018-02-02</span></li>
-                        <li><a>测试数据测试数据测试数据10</a><span class="time">2018-02-02</span></li>
+                        <li><a>四措并举提升对标工作水平</a><span class="time">2018-05-02</span></li>
+                        <li><a>党组启动2018年第一批巡察工作</a><span class="time">2018-05-17</span></li>
+                        <li><a>召开全省系统离退休工作电视电话会议</a><span class="time">2018-05-14</span></li>
+                        <li><a>在全省系统开展宪法学习宣传活动</a><span class="time">2018-05-07</span></li>
+                        <li><a>举办全省系统企业管理培训班</a><span class="time">2018-04-26</span></li>
+                        <li><a>召开2016年科学技术委员会会议</a><span class="time">2018-04-19</span></li>
+                        <li><a>全力促进营销工作更上新台阶新水平</a><span class="time">2018-04-13</span></li>
                     </ul>
                 </div>
             </div>
@@ -190,7 +211,7 @@
     function scrollList(box) {
         var $this = $(box);
         var len = $this.find('li').length;
-        if (len >= 7) {
+        if (len > 7) {
             var scrollTimer;
             $this.hover(function () {
                 clearInterval(scrollTimer);
