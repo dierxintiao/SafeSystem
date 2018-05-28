@@ -31,6 +31,7 @@ body{
     height: 80px;
     margin-left: 96px;
     background: url("images/logo.png") no-repeat;
+    float: left;
 }
 .header .logo a{
     width: 248px;
@@ -39,6 +40,15 @@ body{
 }
 .header .logo a h1{
     display: none;
+}
+.sub_title{
+    float: left;
+    line-height: 35px;
+    font-size: 26px;
+    color: #fff;
+    border-left: 1px solid;
+    padding-left: 15px;
+    margin-top: 20px;
 }
 .video-login {
     padding: 30px 40px 0;
