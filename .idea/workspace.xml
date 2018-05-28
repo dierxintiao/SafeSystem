@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fec48ae-2dde-4d87-92e4-517c895beeaf" name="默认" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/safe/assets/home1.css" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/home1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/assets/images/floor.png" beforeDir="false" afterPath="$PROJECT_DIR$/safe/assets/images/floor.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/majorDanger.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/majorDanger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/index1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,73 +17,93 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6637555">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/safe/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="600">
-                  <caret line="385" column="81" selection-start-line="385" selection-start-column="81" selection-end-line="385" selection-end-column="81" />
-                  <folding>
-                    <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#li#5;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index1.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/safe/index1.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="61" column="26" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="26" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-                    <element signature="e#6681#9325#0" />
-                    <element signature="e#9463#11787#0" />
-                    <element signature="e#11909#14281#0" />
-                    <element signature="e#14337#15111#0" />
-                    <element signature="e#15130#15749#0" />
-                    <element signature="e#15770#17075#0" />
-                    <element signature="e#17115#17510#0" />
-                    <element signature="e#17552#24734#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="home1.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/safe/assets/home1.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/safe/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6925">
+              <caret line="385" column="81" selection-start-line="385" selection-start-column="81" selection-end-line="385" selection-end-column="81" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/safe/index1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-100">
+              <caret line="40" selection-start-line="39" selection-end-line="40" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#6681#9325#0" />
+                <element signature="e#9463#11787#0" />
+                <element signature="e#11909#14281#0" />
+                <element signature="e#14337#15111#0" />
+                <element signature="e#15130#15749#0" />
+                <element signature="e#15770#17075#0" />
+                <element signature="e#17115#17510#0" />
+                <element signature="e#17552#24734#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="securityCheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+              <folding>
+                <element signature="n#tr#1;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#3;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#2;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#3;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#4;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#5;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#6;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#7;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#8;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#9;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#10;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#11;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#12;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#13;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#14;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#15;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#16;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#tr#17;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home1.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/safe/assets/home1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="107" column="10" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -185,8 +203,8 @@
         <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/majorDanger.html" />
         <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/safetyInput.html" />
         <option value="$PROJECT_DIR$/safe/index.html" />
-        <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html" />
         <option value="$PROJECT_DIR$/safe/index1.html" />
+        <option value="$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html" />
         <option value="$PROJECT_DIR$/safe/assets/home1.css" />
       </list>
     </option>
@@ -207,10 +225,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="5" />
+    <option name="x" value="159" />
+    <option name="y" value="18" />
     <option name="width" value="1183" />
-    <option name="height" value="788" />
+    <option name="height" value="684" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -235,6 +253,12 @@
               <item name="qq" type="462c0819:PsiDirectoryNode" />
               <item name="safe" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qq" type="462c0819:PsiDirectoryNode" />
+              <item name="safe" type="462c0819:PsiDirectoryNode" />
+              <item name="atatisticalAnalysisReport" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -334,7 +358,7 @@
       <workItem from="1527212109589" duration="26605000" />
       <workItem from="1527299687115" duration="22209000" />
       <workItem from="1527325417216" duration="5211000" />
-      <workItem from="1527471150496" duration="13158000" />
+      <workItem from="1527471150496" duration="14475000" />
     </task>
     <task id="LOCAL-00001" summary="统计分析/报表添加二级子菜单">
       <created>1526462532262</created>
@@ -553,22 +577,29 @@
       <option name="project" value="LOCAL" />
       <updated>1527487739448</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="统计报表修改，首页修改">
+      <created>1527496051158</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1527496051158</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207251000" />
+    <option name="totallyTimeSpent" value="208568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="5" width="1183" height="788" extended-state="0" />
+    <frame x="159" y="18" width="1183" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4982079" weight="0.20262009" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982079" visible="true" weight="0.20262009" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="13" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50097466" side_tool="true" weight="0.32608697" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49902534" weight="0.35" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49902534" weight="0.34981686" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.50179213" side_tool="true" weight="0.22037037" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49902534" weight="0.21376811" />
@@ -593,7 +624,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
     <MESSAGE value="导航样式修改" />
     <MESSAGE value="应急和事故加链接" />
     <MESSAGE value="ztree插件" />
@@ -618,7 +648,8 @@
     <MESSAGE value="修改 3.1 20180526" />
     <MESSAGE value="首页样式修改" />
     <MESSAGE value="统计分析查询报表" />
-    <option name="LAST_COMMIT_MESSAGE" value="统计分析查询报表" />
+    <MESSAGE value="统计报表修改，首页修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="统计报表修改，首页修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -944,12 +975,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/safetyInput.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="31" lean-forward="true" selection-end-line="223" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6925">
+          <caret line="385" column="81" selection-start-line="385" selection-start-column="81" selection-end-line="385" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/safe/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="40" selection-start-line="39" selection-end-line="40" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#6681#9325#0" />
+            <element signature="e#9463#11787#0" />
+            <element signature="e#11909#14281#0" />
+            <element signature="e#14337#15111#0" />
+            <element signature="e#15130#15749#0" />
+            <element signature="e#15770#17075#0" />
+            <element signature="e#17115#17510#0" />
+            <element signature="e#17552#24734#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/securityCheck.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="346" column="7" selection-start-line="346" selection-start-column="7" selection-end-line="346" selection-end-column="7" />
+        <state relative-caret-position="262">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
-            <element signature="n#tr#0;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#tr#1;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#tr#2;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#tr#3;n#thead#0;n#table#0;n#body#0;n#html#0;n#!!top" />
@@ -975,61 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/safe/atatisticalAnalysisReport/safetyInput.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="31" lean-forward="true" selection-end-line="223" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="385" column="81" selection-start-line="385" selection-start-column="81" selection-end-line="385" selection-end-column="81" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#3;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#5;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="61" column="26" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="26" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#6681#9325#0" />
-            <element signature="e#9463#11787#0" />
-            <element signature="e#11909#14281#0" />
-            <element signature="e#14337#15111#0" />
-            <element signature="e#15130#15749#0" />
-            <element signature="e#15770#17075#0" />
-            <element signature="e#17115#17510#0" />
-            <element signature="e#17552#24734#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/safe/assets/home1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+        <state relative-caret-position="120">
+          <caret line="107" column="10" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
         </state>
       </provider>
     </entry>

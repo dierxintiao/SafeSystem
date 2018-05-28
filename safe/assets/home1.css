@@ -101,22 +101,23 @@
     position: relative;
 }
 #floor-box .left .floors{
-    height: 800px;
+    height: 700px;
     width: 258px;
     position: relative;
     left: 50%;
+    top: 80px;
     margin-left: -129px;
 }
 #dot{
     position: absolute;
-    left: 87%;
-    top: 395px;
+    left: 78%;
+    top: 340px;
     cursor: pointer;
 }
 #pic{
     position: absolute;
-    left: 34px;
-    top: 30px;
+    left: 50px;
+    top: 80px;
     display: none;
 }
 #pic img{
