@@ -20,7 +20,7 @@
 .news .item{
     padding: 15px 40px 45px 28px;
     background: url("images/bj_dcl.png") no-repeat;
-    background-size: 100% 330px;
+    background-size: 100% 236px;
 }
 .news .item h3{
     font-size: 16px;
@@ -96,6 +96,32 @@
     display: inline-block;
     width: 40%;
 }
+
+#floor-box .left{
+    position: relative;
+}
+#floor-box .left .floors{
+    height: 800px;
+    width: 258px;
+    position: relative;
+    left: 50%;
+    margin-left: -129px;
+}
+#dot{
+    position: absolute;
+    left: 87%;
+    top: 395px;
+    cursor: pointer;
+}
+#pic{
+    position: absolute;
+    left: 34px;
+    top: 30px;
+    display: none;
+}
+#pic img{
+    width: 370px;
+}
 .info-container{
     margin-top: 20px;
 }
@@ -103,7 +129,7 @@
 padding: 15px 40px 70px 30px;
     background: url("images/bj_sg.png") no-repeat;
     background-size: 100% 705px;
-    min-height: 705px;
+    min-height: 640px;
 }
 .info-container .accident h3{
     font-size: 16px;

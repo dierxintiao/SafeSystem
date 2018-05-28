@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/layui/css/layui.css">
+    <style>
+        .title {
+            color: #6986d2;
+            font-size: 16px;
+            font-weight: 800;
+            text-shadow: 1px 1px 4px #000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .layui-table {
+            color: #fff;
+            background: transparent;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        .layui-table th {
+            text-align: center;
+            background-color: rgba(242, 242, 242, 0.2);
+        }
+    </style>
+</head>
+<body>
+<!--<h3 class='title'>重大危险源安全统计</h3>-->
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th rowspan=4>单位名称</th>
+        <th colspan=3>一般隐患</th>
+        <th colspan=3>重大隐患</th>
+        <th colspan=7>其中：申请列入企业治理计划的多发或重大隐患</th>
+    </tr>
+    <tr>
+        <th rowspan=2>排查隐患</th>
+        <th rowspan=2>其中：已整改</th>
+        <th rowspan=2>整改率</th>
+        <th rowspan=2>排查治理重大隐患</th>
+        <th rowspan=2>其中：已整改销号</th>
+        <th rowspan=2>整改率</th>
+        <th colspan=6>其中：</th>
+        <th rowspan=2>累计落实治理资金</th>
+    </tr>
+    <tr>
+        <th>列入治理计划的</th>
+        <th>落实治理目标任务</th>
+        <th>落实治理经费物资</th>
+        <th>落实治理人员</th>
+        <th>落实治理时间要求</th>
+        <th>落实安全措施应急预案</th>
+    </tr>
+    <tr>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>%</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>%</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>（项）</th>
+        <th>（万元）</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>郑州市局（公司）</td>
+        <td>2</td>
+        <td>1</td>
+        <td>85</td>
+        <td>3</td>
+        <td>1</td>
+        <td>98</td>
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>开封市局（公司）</td>
+        <td>1</td>
+        <td>2</td>
+        <td>75</td>
+        <td>2</td>
+        <td>3</td>
+        <td>85</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+        <td>0</td>
+        <td>2</td>
+        <td>1</td>
+        <td>5.00</td>
+    </tr>
+    <tr>
+        <td>洛阳市局（公司）</td>
+        <td>1</td>
+        <td>1</td>
+        <td>92</td>
+        <td>0</td>
+        <td>2</td>
+        <td>88</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>4</td>
+        <td>2</td>
+        <td>0</td>
+        <td>2.00</td>
+    </tr>
+    <tr>
+        <td>平顶山市局（公司）</td>
+        <td>5</td>
+        <td>0</td>
+        <td>78</td>
+        <td>2</td>
+        <td>3</td>
+        <td>89</td>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.00</td>
+    </tr>
+    <tr>
+        <td>安阳市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>87</td>
+        <td>2</td>
+        <td>0</td>
+        <td>83</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.20</td>
+    </tr>
+    <tr>
+        <td>鹤壁市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>79</td>
+        <td>2</td>
+        <td>0</td>
+        <td>84</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>3.21</td>
+    </tr>
+    <tr>
+        <td>新乡市局（公司）</td>
+        <td>3</td>
+        <td>0</td>
+        <td>71</td>
+        <td>2</td>
+        <td>0</td>
+        <td>75</td>
+        <td>2</td>
+        <td>3</td>
+        <td>1</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2.31</td>
+    </tr>
+    <tr>
+        <td>焦作市局（公司）</td>
+        <td>4</td>
+        <td>2</td>
+        <td>97</td>
+        <td>2</td>
+        <td>0</td>
+        <td>89</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>2.21</td>
+    </tr>
+    <tr>
+        <td>濮阳市局（公司）</td>
+        <td>5</td>
+        <td>0</td>
+        <td>78</td>
+        <td>2</td>
+        <td>3</td>
+        <td>89</td>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.00</td>
+    </tr>
+    <tr>
+        <td>许昌市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>87</td>
+        <td>2</td>
+        <td>0</td>
+        <td>83</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.20</td>
+    </tr>
+    <tr>
+        <td>漯河市局（公司）</td>
+        <td>2</td>
+        <td>1</td>
+        <td>85</td>
+        <td>3</td>
+        <td>1</td>
+        <td>98</td>
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>三门峡市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>79</td>
+        <td>2</td>
+        <td>0</td>
+        <td>84</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>3</td>
+        <td>1</td>
+        <td>3.21</td>
+    </tr>
+    <tr>
+        <td>南阳市局（公司）</td>
+        <td>4</td>
+        <td>2</td>
+        <td>97</td>
+        <td>2</td>
+        <td>0</td>
+        <td>89</td>
+        <td>2</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>2.21</td>
+    </tr>
+    <tr>
+        <td>商丘市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>87</td>
+        <td>2</td>
+        <td>0</td>
+        <td>83</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.20</td>
+    </tr>
+    <tr>
+        <td>信阳市局（公司）</td>
+        <td>2</td>
+        <td>1</td>
+        <td>85</td>
+        <td>3</td>
+        <td>1</td>
+        <td>98</td>
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>周口市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>87</td>
+        <td>2</td>
+        <td>0</td>
+        <td>83</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.20</td>
+    </tr>
+    <tr>
+        <td>驻马店市局（公司）</td>
+        <td>2</td>
+        <td>1</td>
+        <td>85</td>
+        <td>3</td>
+        <td>1</td>
+        <td>98</td>
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td>5</td>
+        <td>3</td>
+        <td>4.00</td>
+    </tr>
+    <tr>
+        <td>济源市局（公司）</td>
+        <td>3</td>
+        <td>1</td>
+        <td>87</td>
+        <td>2</td>
+        <td>0</td>
+        <td>83</td>
+        <td>2</td>
+        <td>1</td>
+        <td>3</td>
+        <td>0</td>
+        <td>4</td>
+        <td>1</td>
+        <td>3.20</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

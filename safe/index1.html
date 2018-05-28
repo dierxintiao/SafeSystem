@@ -15,8 +15,6 @@
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
         </div>
     </div>
@@ -25,8 +23,6 @@
             <h3>异常处理/Exception Handling</h3>
             <ul class='info'>
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
@@ -38,8 +34,6 @@
             <ul class='info'>
                 <li><a href='javascript:;'><span>中华人民共和国烟草专卖法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>河南省烟草专卖管理条例</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>中华人民共和国行政许可法</span><span>2018年5月10日</span></a></li>
-                <li><a href='javascript:;'><span>烟草专卖许可证管理办法</span><span>2018年5月10日</span></a></li>
                 <li><a href='javascript:;'><span>烟草专卖许可证管理办法实......</span><span>2018年5月10日</span></a></li>
             </ul>
         </div>
@@ -54,14 +48,13 @@
             <div class='info'>
                 <h3 style="font-size: 22px;border-bottom: 1px solid;">数据统计</h3>
                 <ul>
-                    <li><span class='pro'>项目数:</span><span class='pro-info'>10个</span></li>
-                    <li><span class='pro'>占地面积:</span><span class='pro-info'>1,253,367平方米</span></li>
-                    <li><span class='pro'>危险源数:</span><span class='pro-info'>100个</span></li>
-                    <li><span class='pro'>潜在危险源数:</span><span class='pro-info'>1个</span></li>
-                    <li><span class='pro'>已查的危险源:</span><span class='pro-info'>88个</span></li>
-                    <li><span class='pro'>待查的危险源:</span><span class='pro-info'>10个</span></li>
-                    <li>危险源控制方法:</li>
-                    <li>技术控制、人行为控制、管理控制</li>
+                    <li><span class='pro'>危险源地点:</span><span class='pro-info'>郑州市分局（公司）</span></li>
+                    <li><span class='pro'>危险源名称:</span><span class='pro-info'>消防通道不畅</span></li>
+                    <li><span class='pro'>风险:</span><span class='pro-info'>火灾</span></li>
+                    <li><span class='pro'>负责人:</span><span class='pro-info'>某**</span></li>
+                    <li><span class='pro'>危害级别:</span><span class='pro-info'>一般危害</span></li>
+                    <li><span class='pro'>控制措施:</span><span class='pro-info'>清理消防通道障碍物</span></li>
+
                 </ul>
             </div>
         </div>
@@ -69,7 +62,12 @@
 <div class='map' id='floor-box' style='display: none'>
         <div class='left' style='text-align: center;padding: 30px 0 5px;position: relative'>
             <button id='back' style='position: absolute;left: 50px;top: 30px;cursor: pointer'>返回</button>
-            <img src="assets/images/floor.png" height='100%'>
+            <div class='floors'>
+                <img src="assets/images/floor.png" height='100%'>
+                <div id='dot'><img src="assets/images/dots.png"></div>
+            </div>
+
+            <div id='pic'><img src="assets/images/photo.png"></div>
         </div>
         <div class='right'>
             <div class='info'>
@@ -479,13 +477,6 @@
          {name: '焦作市局（公司）', coord: [113.24201000000001, 35.21648899742635]},
          {name: '济源市局（公司）', coord: [112.60273, 35.067930566623794]}
     ];
-    var zhenZhou=[
-        {name: '郑州市局（公司）', coord: [113.7507009324,34.7071833741]},
-        {name: '进出口公司', coord: [113.05027999999999 ,34.454346986391734]},
-        {name: '投资公司', coord: [113.39044000000003 ,34.54073959657943]},
-        {name: '天昌公司', coord: [113.74161000000001 ,34.39727169477578]},
-        {name: '培训中心', coord: [113.67739 ,34.75467385652638]},
-    ];
     var convertData = function (data) {
         var res = [];
         for (var i = 0; i < data.length; i++) {
@@ -661,7 +652,7 @@
                                 show: true,
                                 shadowBlur: 0
                             },
-                            data: convertData(zhenZhou),
+                            data: convertData(test),
                         }
                     };
                     echarts.dispose(document.getElementById('main'));//先去掉原来的地图
@@ -682,10 +673,16 @@
     $("#reload").on('click',function (){
         drawMap('河南', mydata);
     })
+
 $('#back').on('click',function () {
     $('#map-box').css('display','block')
     $('#floor-box').css('display','none')
 })
+
+ $('#dot').on('click',function () {
+     $('#pic').toggle()
+ })
+
 </script>
 </body>
 </html>
